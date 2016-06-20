@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head>
+	<style type='text/css'>
+		html { font-family:Helvetica; color:#222; }
+		h1 { color:steelblue; font-size:24px; margin-top:24px; }
+		button { margin:0 3px 10px; font-size:12px; }
+		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+	</style>
+</head><body>
+	<h1>WebViewJSBridge Demo</h1>
+	<script>
+	window.onerror = function(err) {
+		log('window.onerror: ' + err)
+	}
+	
+	function connectWebViewJavascriptBridge(callback) {  // 由于不确定WebViewJavascriptBridge的初始化情况，因此采用判断加监听等待该对象初始化
+		if (window.WebViewJavascriptBridge) {
+			callback(WebViewJavascriptBridge)
+		} else {
+			document.addEventListener('WebViewJavascriptBridgeReady', function() {   // 监听事件
+				callback(WebViewJavascriptBridge)
+			}, false)
+		}
+	}
+	
+	connectWebViewJavascriptBridge(function(bridge) {
+		var uniqueId = 1
+		function log(message, data) {
+			var log = document.getElementById('log')
+			var el = document.createElement('div')
+			el.className = 'logLine'
+			el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data)
+			if (log.children.length) {
+                log.insertBefore(el, log.children[0])
+            } else {
+                log.appendChild(el)
+            }
+		}
+                                   
+		bridge.init(function(data, responseCallback) {
+			log('JS got a message', data)
+            responseCallback(data)
+		})
+
+		bridge.registerHandler('alertHandler', function(data, responseCallback) {
+            var dataJson = JSON.stringify(data)
+            window.alert(dataJson)
+<!--			log('ObjC called alertHandler with', data)-->
+			responseCallback(data)
+		})
+
+		var button = document.getElementById('buttons').appendChild(document.createElement('button'))
+		button.innerHTML = 'call CM OC'
+		button.onclick = function(e) {
+			e.preventDefault()
+			var data = 'JS Data'
+			bridge.send(data, function(data) {
+				log('JS got response', data)
+			})
+		}
+
+		document.body.appendChild(document.createElement('br'))
+
+		var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
+		callbackButton.innerHTML = 'call hudHandler'
+		callbackButton.onclick = function(e) {
+			e.preventDefault()
+			bridge.callHandler('hudHandler', {'foo': 'bar'}, function(data) {
+<!--				log('JS got response', data)-->
+			})
+		}
+	})
+	</script>
+	<div id='buttons'></div> <div id='log'></div>
+</body></html>
