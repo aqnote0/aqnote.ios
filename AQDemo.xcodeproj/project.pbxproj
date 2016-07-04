@@ -10,16 +10,18 @@
 		686D47DA71B688B736746B57 /* libPods-AQDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEA99FCEF86F3C8D5C4700 /* libPods-AQDemoTests.a */; };
 		90ED808775395B28BD77DD79 /* libPods-AQDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BCA56D98D189ED436C645 /* libPods-AQDemoUITests.a */; };
 		975047D5A77E709F45AF261D /* libPods-AQDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9818A580B0476CCF22AF32 /* libPods-AQDemo.a */; };
+		9A235C171D2A2C1B00CEF560 /* LockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A235C161D2A2C1B00CEF560 /* LockTest.m */; };
+		9A235C1F1D2A637800CEF560 /* Signal.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A235C1D1D2A637800CEF560 /* Signal.c */; };
 		9A2980571D17DD8E0054D1AB /* AQDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980561D17DD8E0054D1AB /* AQDemoUITests.m */; };
 		9A2980881D17DDF70054D1AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980651D17DDF70054D1AB /* Images.xcassets */; };
 		9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980691D17DDF70054D1AB /* AppDelegate.m */; };
 		9A29809A1D17DDF70054D1AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980851D17DDF70054D1AB /* main.m */; };
 		9A2980A51D17DE520054D1AB /* EncodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809D1D17DE520054D1AB /* EncodeTest.m */; };
-		9A2980A61D17DE520054D1AB /* GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809E1D17DE520054D1AB /* GCDTests.m */; };
+		9A2980A61D17DE520054D1AB /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809E1D17DE520054D1AB /* GCDTest.m */; };
 		9A2980A71D17DE520054D1AB /* LLDBDebugTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809F1D17DE520054D1AB /* LLDBDebugTest.m */; };
 		9A2980A81D17DE520054D1AB /* NSArrayPerfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A01D17DE520054D1AB /* NSArrayPerfTest.m */; };
-		9A2980A91D17DE520054D1AB /* YDBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A21D17DE520054D1AB /* YDBenchmark.m */; };
-		9A2980AA1D17DE520054D1AB /* YDTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A41D17DE520054D1AB /* YDTestObject.m */; };
+		9A2980A91D17DE520054D1AB /* AQBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A21D17DE520054D1AB /* AQBenchmark.m */; };
+		9A2980AA1D17DE520054D1AB /* AQTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A41D17DE520054D1AB /* AQTestObject.m */; };
 		9A2980C31D17DF360054D1AB /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */; };
 		9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980AE1D17DF360054D1AB /* DemoViewController.m */; };
 		9A2980C51D17DF360054D1AB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B01D17DF360054D1AB /* MainViewController.m */; };
@@ -28,7 +30,6 @@
 		9A2980C81D17DF360054D1AB /* NSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B31D17DF360054D1AB /* NSMViewController.m */; };
 		9A2980C91D17DF360054D1AB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B41D17DF360054D1AB /* WebViewController.m */; };
 		9A2980D31D17DF420054D1AB /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D01D17DF420054D1AB /* webview.html */; };
-		9A2980D41D17DF420054D1AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D11D17DF420054D1AB /* Assets.xcassets */; };
 		9A2980D81D17E0570054D1AB /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D61D17E0570054D1AB /* WebViewJavascriptBridge.js.txt */; };
 		9A2980DA1D17E1390054D1AB /* AQDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D91D17E1390054D1AB /* AQDemo.bundle */; };
 		9A2980DD1D17E2E20054D1AB /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980DC1D17E2E20054D1AB /* WebViewJavascriptBridge.m */; };
@@ -56,6 +57,8 @@
 		0BB40D633674C182372A160D /* Pods-AQDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemo/Pods-AQDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		1CBB2905CD3E98446F86C3E7 /* Pods-AQDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoTests/Pods-AQDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		516701F10574EB8525579CAB /* Pods-AQDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoUITests/Pods-AQDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A235C161D2A2C1B00CEF560 /* LockTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockTest.m; sourceTree = "<group>"; };
+		9A235C1D1D2A637800CEF560 /* Signal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Signal.c; sourceTree = "<group>"; };
 		9A29802E1D17DD8E0054D1AB /* AQDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2980421D17DD8E0054D1AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2980471D17DD8E0054D1AB /* AQDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AQDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,13 +71,13 @@
 		9A2980691D17DDF70054D1AB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A2980851D17DDF70054D1AB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A29809D1D17DE520054D1AB /* EncodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeTest.m; sourceTree = "<group>"; };
-		9A29809E1D17DE520054D1AB /* GCDTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTests.m; sourceTree = "<group>"; };
+		9A29809E1D17DE520054D1AB /* GCDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
 		9A29809F1D17DE520054D1AB /* LLDBDebugTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDBDebugTest.m; sourceTree = "<group>"; };
 		9A2980A01D17DE520054D1AB /* NSArrayPerfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayPerfTest.m; sourceTree = "<group>"; };
-		9A2980A11D17DE520054D1AB /* YDBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBenchmark.h; sourceTree = "<group>"; };
-		9A2980A21D17DE520054D1AB /* YDBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBenchmark.m; sourceTree = "<group>"; };
-		9A2980A31D17DE520054D1AB /* YDTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTestObject.h; sourceTree = "<group>"; };
-		9A2980A41D17DE520054D1AB /* YDTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTestObject.m; sourceTree = "<group>"; };
+		9A2980A11D17DE520054D1AB /* AQBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQBenchmark.h; sourceTree = "<group>"; };
+		9A2980A21D17DE520054D1AB /* AQBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQBenchmark.m; sourceTree = "<group>"; };
+		9A2980A31D17DE520054D1AB /* AQTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTestObject.h; sourceTree = "<group>"; };
+		9A2980A41D17DE520054D1AB /* AQTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTestObject.m; sourceTree = "<group>"; };
 		9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListViewController.m; sourceTree = "<group>"; };
 		9A2980AE1D17DF360054D1AB /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		9A2980AF1D17DF360054D1AB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		9A2980B31D17DF360054D1AB /* NSMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMViewController.m; sourceTree = "<group>"; };
 		9A2980B41D17DF360054D1AB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9A2980D01D17DF420054D1AB /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
-		9A2980D11D17DF420054D1AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2980D61D17E0570054D1AB /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
 		9A2980D91D17E1390054D1AB /* AQDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AQDemo.bundle; sourceTree = "<group>"; };
 		9A2980DB1D17E2E20054D1AB /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
@@ -206,7 +208,6 @@
 				9A2980D91D17E1390054D1AB /* AQDemo.bundle */,
 				9A2980D61D17E0570054D1AB /* WebViewJavascriptBridge.js.txt */,
 				9A2980D01D17DF420054D1AB /* webview.html */,
-				9A2980D11D17DF420054D1AB /* Assets.xcassets */,
 				9A2980651D17DDF70054D1AB /* Images.xcassets */,
 			);
 			path = Resources;
@@ -229,13 +230,15 @@
 			isa = PBXGroup;
 			children = (
 				9A29809D1D17DE520054D1AB /* EncodeTest.m */,
-				9A29809E1D17DE520054D1AB /* GCDTests.m */,
+				9A29809E1D17DE520054D1AB /* GCDTest.m */,
 				9A29809F1D17DE520054D1AB /* LLDBDebugTest.m */,
 				9A2980A01D17DE520054D1AB /* NSArrayPerfTest.m */,
-				9A2980A11D17DE520054D1AB /* YDBenchmark.h */,
-				9A2980A21D17DE520054D1AB /* YDBenchmark.m */,
-				9A2980A31D17DE520054D1AB /* YDTestObject.h */,
-				9A2980A41D17DE520054D1AB /* YDTestObject.m */,
+				9A2980A11D17DE520054D1AB /* AQBenchmark.h */,
+				9A2980A21D17DE520054D1AB /* AQBenchmark.m */,
+				9A2980A31D17DE520054D1AB /* AQTestObject.h */,
+				9A2980A41D17DE520054D1AB /* AQTestObject.m */,
+				9A235C161D2A2C1B00CEF560 /* LockTest.m */,
+				9A235C1D1D2A637800CEF560 /* Signal.c */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -354,7 +357,7 @@
 				TargetAttributes = {
 					9A29802D1D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SPJA6W74V3;
+						DevelopmentTeam = U67X2L3L84;
 					};
 					9A2980461D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -396,7 +399,6 @@
 				9A2980881D17DDF70054D1AB /* Images.xcassets in Resources */,
 				9A2980D81D17E0570054D1AB /* WebViewJavascriptBridge.js.txt in Resources */,
 				9A2980DA1D17E1390054D1AB /* AQDemo.bundle in Resources */,
-				9A2980D41D17DF420054D1AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,12 +563,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A2980A91D17DE520054D1AB /* YDBenchmark.m in Sources */,
-				9A2980AA1D17DE520054D1AB /* YDTestObject.m in Sources */,
+				9A2980A91D17DE520054D1AB /* AQBenchmark.m in Sources */,
+				9A2980AA1D17DE520054D1AB /* AQTestObject.m in Sources */,
 				9A2980A81D17DE520054D1AB /* NSArrayPerfTest.m in Sources */,
-				9A2980A61D17DE520054D1AB /* GCDTests.m in Sources */,
+				9A2980A61D17DE520054D1AB /* GCDTest.m in Sources */,
 				9A2980A51D17DE520054D1AB /* EncodeTest.m in Sources */,
 				9A2980A71D17DE520054D1AB /* LLDBDebugTest.m in Sources */,
+				9A235C171D2A2C1B00CEF560 /* LockTest.m in Sources */,
+				9A235C1F1D2A637800CEF560 /* Signal.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,11 +686,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.AQDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -696,11 +702,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.AQDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

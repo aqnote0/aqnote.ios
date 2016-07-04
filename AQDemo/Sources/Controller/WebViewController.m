@@ -33,13 +33,13 @@
   _bridge = [WebViewJavascriptBridge
       bridgeForWebView:webView
        webViewDelegate:self
-               handler:^(id data, YDJBResponseCallback responseCallback) {
+               handler:^(id data, AQJBResponseCallback responseCallback) {
                  NSLog(@"received from JS: %@", data);
                  responseCallback(data);
                }];
 
   [_bridge registerHandler:@"hudHandler"
-                   handler:^(id data, YDJBResponseCallback responseCallback) {
+                   handler:^(id data, AQJBResponseCallback responseCallback) {
                      NSLog(@"callHUD called: %@", data);
                      [MBProgressHUD showTextOnly:self.view
                                          message:[self _serializeMessage:data]];

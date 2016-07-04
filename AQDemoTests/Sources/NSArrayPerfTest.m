@@ -1,13 +1,13 @@
 //
 //  NSArrayPerfTest.m
-//  YDDemo
+//  AQDemo
 //
 //  Created by madding.lip on 12/15/15.
 //  Copyright © 2015 madding. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import <AQFoundation/YDDate.h>
+#import <AQFoundation/AQDate.h>
 
 @interface NSArrayPerfTest : XCTestCase
 
@@ -24,26 +24,26 @@
 }
 
 - (void)test001_ {
-  NSNumber *begin = [YDDate currentTimeStampInMillSeconds];
+  NSNumber *begin = [AQDate currentTimeStampInMillSeconds];
   NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
   for(int i=0; i < 100000; i++) {
     [mutableArray addObject:[NSNumber numberWithInt:i]];
   }
-  NSNumber *end = [YDDate currentTimeStampInMillSeconds];
+  NSNumber *end = [AQDate currentTimeStampInMillSeconds];
   long long between = [end longLongValue] - [begin longLongValue];
   NSLog(@"insert 100k date, time cost: %lld", between);
   
-  begin = [YDDate currentTimeStampInMillSeconds];
+  begin = [AQDate currentTimeStampInMillSeconds];
   NSArray *array = [mutableArray copy];
-  end = [YDDate currentTimeStampInMillSeconds];
+  end = [AQDate currentTimeStampInMillSeconds];
   between = [end longLongValue] - [begin longLongValue];
   NSLog(@"copy 100k from mutable, time cost: %lld", between);
   
-  begin = [YDDate currentTimeStampInMillSeconds];
+  begin = [AQDate currentTimeStampInMillSeconds];
   for(int i=0; i< [array count];i++) {
     [array objectAtIndex:i];
   }
-  end = [YDDate currentTimeStampInMillSeconds];
+  end = [AQDate currentTimeStampInMillSeconds];
   between = [end longLongValue] - [begin longLongValue];
   NSLog(@"index 100k date, time cost: %lld", between);
   

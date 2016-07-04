@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YDBenchmark : NSObject
+@interface AQBenchmark : NSObject
 
 @end

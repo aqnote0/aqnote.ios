@@ -1,6 +1,6 @@
 //
-//  GCDTests.m
-//  YDDemo
+//  GCDTest.m
+//  AQDemo
 //
 //  Created by madding.lip on 11/24/15.
 //  Copyright © 2015 madding. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface GCDTests : XCTestCase
+@interface GCDTest : XCTestCase
 
 @end
 
-@implementation GCDTests
+@implementation GCDTest
 
 - (void)setUp {
     [super setUp];
@@ -23,7 +23,7 @@
 }
 
 - (void)test01_DeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_SERIAL);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_SERIAL);
   NSLog(@"1");
   dispatch_sync(queue, ^ {
     NSLog(@"2");
@@ -40,8 +40,8 @@
     2.sync2在执行时sync1必然已经添加到queue中，而queue时串行处理block
     3.导致sync1的block没执行完，sync2的block又添加不进去，无法执行；导致死锁
  */
-- (void)test01_DeadLock1 {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_SERIAL);
+- (void)test01_NoDeadLock1 {
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_SERIAL);
   NSLog(@"1");
   dispatch_async(queue, ^{  // sync1
     NSLog(@"2");
@@ -54,7 +54,7 @@
 }
 
 - (void)test01_NoDeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_SERIAL);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_SERIAL);
   NSLog(@"1");
   dispatch_sync(queue, ^{
     NSLog(@"2");
@@ -104,7 +104,7 @@
     4.由于queue要求其之后添加的任务必须之后运行，导致死锁
  */
 - (void)test04_DeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_CONCURRENT);
   NSLog(@"1");
   dispatch_barrier_async(queue, ^{ // sync1
     NSLog(@"2");
@@ -117,7 +117,7 @@
 }
 
 - (void)test05_NoDeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_CONCURRENT);
   NSLog(@"1");
   dispatch_sync(queue, ^{
     NSLog(@"2");
@@ -134,8 +134,8 @@
 }
 
 - (void)test06_NoDeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_CONCURRENT);
-  dispatch_queue_t queue1 = dispatch_queue_create("com.madding.queue.task1", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue1 = dispatch_queue_create("com.aqnote.queue.task1", DISPATCH_QUEUE_CONCURRENT);
   NSLog(@"1");
   for(int i=0; i<100; i++) {
   dispatch_barrier_async(queue, ^{
@@ -155,8 +155,8 @@
 }
 
 - (void)test07_NoDeadLock {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.task", DISPATCH_QUEUE_CONCURRENT);
-  dispatch_queue_t queue1 = dispatch_queue_create("com.madding.queue.task1", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_CONCURRENT);
+  dispatch_queue_t queue1 = dispatch_queue_create("com.aqnote.queue.task1", DISPATCH_QUEUE_CONCURRENT);
   NSLog(@"1");
   for(int i=0; i<100; i++) {
   dispatch_barrier_async(queue, ^{
@@ -182,8 +182,8 @@
 }
 
 - (void)test08_limit512 {
-  dispatch_queue_t queue = dispatch_queue_create("com.madding.queue.concurrent", DISPATCH_QUEUE_CONCURRENT);  // 8 threads
-  queue = dispatch_queue_create("com.madding.queue.concurrent", DISPATCH_QUEUE_SERIAL);  // 1 threads
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.concurrent", DISPATCH_QUEUE_CONCURRENT);  // 8 threads
+  queue = dispatch_queue_create("com.aqnote.queue.concurrent", DISPATCH_QUEUE_SERIAL);  // 1 threads
   
   for(int i=0; i < 512; i++) {
     dispatch_async(queue, ^{
@@ -196,4 +196,32 @@
   XCTAssert(true, @"failure");
 }
 
+- (void)test09 {
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.serial.tmp", DISPATCH_QUEUE_SERIAL);  // 8 threads
+  
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *documentsDirectory = [paths objectAtIndex:0];
+  NSString *dir = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"abc"];
+  
+  NSCondition *condition = [[NSCondition alloc] init];
+  
+  NSNumber * abc = [NSNumber numberWithLong:1111111];
+  dispatch_async(queue, ^{
+    int i= 0;
+    while(true) {
+      NSString *_dir = [NSString stringWithFormat:@"%@%d", dir, i++];
+      [NSKeyedArchiver archiveRootObject:abc toFile:_dir];
+//      sleep(1);
+      NSLog(@"1");
+    }
+    [condition lock];
+    [condition signal];
+    [condition unlock];
+  });
+  
+  [condition lock];
+  [condition wait];
+  [condition unlock];
+  NSLog(@"Done");
+}
 @end

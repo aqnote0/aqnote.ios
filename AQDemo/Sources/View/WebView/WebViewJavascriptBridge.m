@@ -9,25 +9,25 @@
 #import "WebViewJavascriptBridge.h"
 
 #if __has_feature(objc_arc_weak)
-#define YDJB_WEAK __weak
+#define AQJB_WEAK __weak
 #else
-#define YDJB_WEAK __unsafe_unretained
+#define AQJB_WEAK __unsafe_unretained
 #endif
 
-typedef NSDictionary YDJBMessage;
+typedef NSDictionary AQJBMessage;
 
 @implementation WebViewJavascriptBridge {
-  YDJB_WEAK YDJB_WEBVIEW_TYPE *_webView;
-  YDJB_WEAK id _webViewDelegate;
+  AQJB_WEAK AQJB_WEBVIEW_TYPE *_webView;
+  AQJB_WEAK id _webViewDelegate;
   NSMutableArray *_startupMessageQueue;
   NSMutableDictionary *_responseCallbacks;
   NSMutableDictionary *_messageHandlers;
   long _uniqueId;
-  YDJBHandler _messageHandler;
+  AQJBHandler _messageHandler;
 
   NSBundle *_resourceBundle;
 
-#if defined YDJB_PLATFORM_IOS
+#if defined AQJB_PLATFORM_IOS
   NSUInteger _numRequestsLoading;
 #endif
 }
@@ -40,23 +40,23 @@ static bool logging = false;
   logging = true;
 }
 
-+ (instancetype)bridgeForWebView:(YDJB_WEBVIEW_TYPE *)webView
-                         handler:(YDJBHandler)handler {
++ (instancetype)bridgeForWebView: (AQJB_WEBVIEW_TYPE *)webView
+                         handler: (AQJBHandler)handler {
   return [self bridgeForWebView:webView webViewDelegate:nil handler:handler];
 }
 
-+ (instancetype)bridgeForWebView:(YDJB_WEBVIEW_TYPE *)webView
-                 webViewDelegate:(YDJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
-                         handler:(YDJBHandler)messageHandler {
++ (instancetype)bridgeForWebView: (AQJB_WEBVIEW_TYPE *)webView
+                 webViewDelegate: (AQJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
+                         handler: (AQJBHandler)messageHandler {
   return [self bridgeForWebView:webView
                 webViewDelegate:webViewDelegate
                         handler:messageHandler
                  resourceBundle:nil];
 }
 
-+ (instancetype)bridgeForWebView:(YDJB_WEBVIEW_TYPE *)webView
-                 webViewDelegate:(YDJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
-                         handler:(YDJBHandler)messageHandler
++ (instancetype)bridgeForWebView: (AQJB_WEBVIEW_TYPE *)webView
+                 webViewDelegate: (AQJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
+                         handler: (AQJBHandler)messageHandler
                   resourceBundle:(NSBundle *)bundle {
   WebViewJavascriptBridge *bridge = [[WebViewJavascriptBridge alloc] init];
   [bridge _platformSpecificSetup:webView
@@ -70,7 +70,7 @@ static bool logging = false;
   [self send:data responseCallback:nil];
 }
 
-- (void)send:(id)data responseCallback:(YDJBResponseCallback)responseCallback {
+- (void)send:(id)data responseCallback: (AQJBResponseCallback)responseCallback {
   [self _sendData:data responseCallback:responseCallback handlerName:nil];
 }
 
@@ -84,13 +84,13 @@ static bool logging = false;
 
 - (void)callHandler:(NSString *)handlerName
                data:(id)data
-   responseCallback:(YDJBResponseCallback)responseCallback {
+   responseCallback: (AQJBResponseCallback)responseCallback {
   [self _sendData:data
       responseCallback:responseCallback
            handlerName:handlerName];
 }
 
-- (void)registerHandler:(NSString *)handlerName handler:(YDJBHandler)handler {
+- (void)registerHandler:(NSString *)handlerName handler: (AQJBHandler)handler {
   _messageHandlers[handlerName] = [handler copy];
 }
 
@@ -118,7 +118,7 @@ static bool logging = false;
 }
 
 - (void)_sendData:(id)data
- responseCallback:(YDJBResponseCallback)responseCallback
+ responseCallback: (AQJBResponseCallback)responseCallback
       handlerName:(NSString *)handlerName {
   NSMutableDictionary *message = [NSMutableDictionary dictionary];
 
@@ -139,7 +139,7 @@ static bool logging = false;
   [self _queueMessage:message];
 }
 
-- (void)_queueMessage:(YDJBMessage *)message {
+- (void)_queueMessage: (AQJBMessage *)message {
   if (_startupMessageQueue) {
     [_startupMessageQueue addObject:message];
   } else {
@@ -147,7 +147,7 @@ static bool logging = false;
   }
 }
 
-- (void)_dispatchMessage:(YDJBMessage *)message {
+- (void)_dispatchMessage: (AQJBMessage *)message {
   NSString *messageJSON = [self _serializeJSMessage:message];
 
   NSString *javascriptCommand = [NSString
@@ -156,7 +156,7 @@ static bool logging = false;
   if ([[NSThread currentThread] isMainThread]) {
     [_webView stringByEvaluatingJavaScriptFromString:javascriptCommand];
   } else {
-    __strong YDJB_WEBVIEW_TYPE *strongWebView = _webView;
+    __strong AQJB_WEBVIEW_TYPE *strongWebView = _webView;
     dispatch_sync(dispatch_get_main_queue(), ^{
       [strongWebView stringByEvaluatingJavaScriptFromString:javascriptCommand];
     });
@@ -174,8 +174,8 @@ static bool logging = false;
           [messages class], messages);
     return;
   }
-  for (YDJBMessage *message in messages) {
-    if (![message isKindOfClass:[YDJBMessage class]]) {
+  for  (AQJBMessage *message in messages) {
+    if (![message isKindOfClass:[AQJBMessage class]]) {
       NSLog(@"WebViewJavascriptBridge: WARNING: Invalid %@ received: %@",
             [message class], message);
       continue;
@@ -184,11 +184,11 @@ static bool logging = false;
 
     NSString *responseId = message[@"responseId"];
     if (responseId) {  // js请求
-      YDJBResponseCallback responseCallback = _responseCallbacks[responseId];
+      AQJBResponseCallback responseCallback = _responseCallbacks[responseId];
       responseCallback(message[@"responseData"]);
       [_responseCallbacks removeObjectForKey:responseId];
     } else {  // oc请求
-      YDJBResponseCallback responseCallback = NULL;
+      AQJBResponseCallback responseCallback = NULL;
       NSString *callbackId = message[@"callbackId"];
       if (callbackId) {
         responseCallback = ^(id responseData) {
@@ -196,7 +196,7 @@ static bool logging = false;
             responseData = [NSNull null];
           }
 
-          YDJBMessage *msg = @{
+          AQJBMessage *msg = @{
             @"responseId" : callbackId,
             @"responseData" : responseData
           };
@@ -208,7 +208,7 @@ static bool logging = false;
         };
       }
 
-      YDJBHandler handler;
+      AQJBHandler handler;
       if (message[@"handlerName"]) {
         handler = _messageHandlers[message[@"handlerName"]];
       } else {
@@ -279,11 +279,11 @@ static bool logging = false;
 
 /* Platform specific internals: OSX
  **********************************/
-#if defined YDJB_PLATFORM_OSX
+#if defined AQJB_PLATFORM_OSX
 
-- (void)_platformSpecificSetup:(YDJB_WEBVIEW_TYPE *)webView
-               webViewDelegate:(YDJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
-                       handler:(YDJBHandler)messageHandler
+- (void)_platformSpecificSetup: (AQJB_WEBVIEW_TYPE *)webView
+               webViewDelegate: (AQJB_WEBVIEW_DELEGATE_TYPE *)webViewDelegate
+                       handler: (AQJBHandler)messageHandler
                 resourceBundle:(NSBundle *)bundle {
   _messageHandler = messageHandler;
   _webView = webView;
@@ -427,11 +427,11 @@ static bool logging = false;
 
 /* Platform specific internals: iOS
  **********************************/
-#elif defined YDJB_PLATFORM_IOS
+#elif defined AQJB_PLATFORM_IOS
 
-- (void)_platformSpecificSetup:(YDJB_WEBVIEW_TYPE *)webView
+- (void)_platformSpecificSetup: (AQJB_WEBVIEW_TYPE *)webView
                webViewDelegate:(id<UIWebViewDelegate>)webViewDelegate
-                       handler:(YDJBHandler)messageHandler
+                       handler: (AQJBHandler)messageHandler
                 resourceBundle:(NSBundle *)bundle {
   _messageHandler = messageHandler;
   _webView = webView;
@@ -473,7 +473,7 @@ static bool logging = false;
     _startupMessageQueue = nil;
   }
 
-  __strong YDJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
+  __strong AQJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
   if (strongDelegate &&
       [strongDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
     [strongDelegate webViewDidFinishLoad:webView];
@@ -487,7 +487,7 @@ static bool logging = false;
 
   _numRequestsLoading--;
 
-  __strong YDJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
+  __strong AQJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
   if (strongDelegate &&
       [strongDelegate
           respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
@@ -503,7 +503,7 @@ static bool logging = false;
     return YES;
   }
   NSURL *url = [request URL];
-  __strong YDJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
+  __strong AQJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
   if ([[url scheme] isEqualToString:kCustomProtocolScheme]) {
     if ([[url host] isEqualToString:kQueueHasMessage]) {
       [self _flushMessageQueue];
@@ -533,7 +533,7 @@ static bool logging = false;
 
   _numRequestsLoading++;
 
-  __strong YDJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
+  __strong AQJB_WEBVIEW_DELEGATE_TYPE *strongDelegate = _webViewDelegate;
   if (strongDelegate &&
       [strongDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
     [strongDelegate webViewDidStartLoad:webView];
