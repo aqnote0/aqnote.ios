@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 PSPDFKit GmbH. All rights reserved.
 //
 
-#import "AQTestObject.h"
+#import "TestObject.h"
 
-@implementation AQTestObject
+@implementation TestObject
 
 - (id)copyWithZone:(NSZone *)zone {
-    AQTestObject *copy = [[AQTestObject alloc] init];
+    TestObject *copy = [[TestObject alloc] init];
     return copy;
 }
 

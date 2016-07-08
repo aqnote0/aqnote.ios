@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 PSPDFKit GmbH. All rights reserved.
 //
 
-#import "AQBenchmark.h"
-#import "AQTestObject.h"
+#import "Benchmark.h"
+#import "TestObject.h"
 #include <mach/mach_time.h>
 #import <stdlib.h>
 
-@implementation AQBenchmark
+@implementation Benchmark
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - NSObject
@@ -653,7 +653,7 @@ NSInteger localizedCaseInsensitiveCompareSort(id string1, id string2, void *cont
 - (void)cfDictionaryKeyCopyTest {
     CFMutableDictionaryRef dictRef = CFDictionaryCreateMutable(NULL, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
 
-    AQTestObject *obj = [AQTestObject new];
+    TestObject *obj = [TestObject new];
 
     // Setting via Core Foundation does not invoke copyWithZone: on the object.
     CFDictionarySetValue(dictRef, (__bridge const void *)(obj), CFSTR("Test1"));

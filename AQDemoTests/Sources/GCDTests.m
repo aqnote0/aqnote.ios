@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface GCDTest : XCTestCase
+@interface GCDTests : XCTestCase
 
 @end
 
-@implementation GCDTest
+@implementation GCDTests
 
 - (void)setUp {
     [super setUp];
@@ -196,32 +196,5 @@
   XCTAssert(true, @"failure");
 }
 
-- (void)test09 {
-  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.serial.tmp", DISPATCH_QUEUE_SERIAL);  // 8 threads
-  
-  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-  NSString *documentsDirectory = [paths objectAtIndex:0];
-  NSString *dir = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"abc"];
-  
-  NSCondition *condition = [[NSCondition alloc] init];
-  
-  NSNumber * abc = [NSNumber numberWithLong:1111111];
-  dispatch_async(queue, ^{
-    int i= 0;
-    while(true) {
-      NSString *_dir = [NSString stringWithFormat:@"%@%d", dir, i++];
-      [NSKeyedArchiver archiveRootObject:abc toFile:_dir];
-//      sleep(1);
-      NSLog(@"1");
-    }
-    [condition lock];
-    [condition signal];
-    [condition unlock];
-  });
-  
-  [condition lock];
-  [condition wait];
-  [condition unlock];
-  NSLog(@"Done");
-}
+
 @end

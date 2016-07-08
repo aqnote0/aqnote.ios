@@ -10,11 +10,11 @@
 
 
 
-@interface EncodeTest : XCTestCase
+@interface EncodeTests : XCTestCase
 
 @end
 
-@implementation EncodeTest
+@implementation EncodeTests
 
 - (void)setUp {
     [super setUp];

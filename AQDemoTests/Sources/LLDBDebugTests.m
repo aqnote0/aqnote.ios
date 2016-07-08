@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface LLDBDebugTest : XCTestCase
+@interface LLDBDebugTests : XCTestCase
 
 @end
 
-@implementation LLDBDebugTest
+@implementation LLDBDebugTests
 
 - (void)setUp {
     [super setUp];
@@ -26,7 +26,7 @@
   @autoreleasepool {
     NSInteger count = 99;
     NSString *objects = @"red";
-    NSLog(@"%lu %@", count, objects);
+    NSLog(@"%lu %@", (long)count, objects);
   }
 }
 

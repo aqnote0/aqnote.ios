@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import <AQFoundation/AQDate.h>
 
-@interface NSArrayPerfTest : XCTestCase
+@interface NSArrayPerfTests : XCTestCase
 
 @end
 
-@implementation NSArrayPerfTest
+@implementation NSArrayPerfTests
 
 - (void)setUp {
     [super setUp];
