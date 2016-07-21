@@ -1,24 +1,23 @@
 
-#import <AQFoundation/Reachability.h>
-#import <UIKit/UIKit.h>
+#import "AQViewController.h"
 
-@interface NSMViewController : UIViewController
+#import <AQFoundation/Reachability.h>
+
+
+@interface NetworkViewController : AQViewController
 
 @property(retain, nonatomic) UILabel* taobaoLabel;
 @property(retain, nonatomic) UILabel* localWifiLabel;
 @property(retain, nonatomic) UILabel* connectionLabel;
 
-@end
-
-@interface NSMViewController ()
-
-@property(strong) Reachability* taobaoReach;
+@property(strong) Reachability* aqnoteReach;
 @property(strong) Reachability* localWiFiReach;
 @property(strong) Reachability* connectionReach;
 
 @end
 
-@implementation NSMViewController
+
+@implementation NetworkViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -34,28 +33,31 @@
   UIFont* font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
 
   self.taobaoLabel = [[UILabel alloc] init];
-  [self.view addSubview:self.taobaoLabel];
   self.taobaoLabel.font = font;
   self.taobaoLabel.frame = CGRectMake(20, 80, 240, 60);
-  self.taobaoLabel.backgroundColor = [UIColor lightGrayColor];
-  self.taobaoLabel.textAlignment = NSTextAlignmentLeft;
+  self.taobaoLabel.backgroundColor = [UIColor blackColor];
   self.taobaoLabel.text = @"Not Info";
+  self.taobaoLabel.textColor = [UIColor whiteColor];
+  self.taobaoLabel.textAlignment = NSTextAlignmentLeft;
+  [self.view addSubview:self.taobaoLabel];
 
   self.localWifiLabel = [[UILabel alloc] init];
-  [self.view addSubview:self.localWifiLabel];
   self.localWifiLabel.font = font;
   self.localWifiLabel.frame = CGRectMake(20, 220, 240, 60);
-  self.localWifiLabel.backgroundColor = [UIColor lightGrayColor];
-  self.localWifiLabel.textAlignment = NSTextAlignmentLeft;
+  self.localWifiLabel.backgroundColor = [UIColor blackColor];
   self.localWifiLabel.text = @"Not Info";
+  self.localWifiLabel.textColor = [UIColor whiteColor];
+  self.localWifiLabel.textAlignment = NSTextAlignmentLeft;
+  [self.view addSubview:self.localWifiLabel];
 
   self.connectionLabel = [[UILabel alloc] init];
-  [self.view addSubview:self.connectionLabel];
   self.connectionLabel.font = font;
   self.connectionLabel.frame = CGRectMake(20, 360, 240, 60);
-  self.connectionLabel.backgroundColor = [UIColor lightGrayColor];
-  self.connectionLabel.textAlignment = NSTextAlignmentLeft;
+  self.connectionLabel.backgroundColor = [UIColor blackColor];
   self.connectionLabel.text = @"Not Info";
+  self.connectionLabel.textColor = [UIColor whiteColor];
+  self.connectionLabel.textAlignment = NSTextAlignmentLeft;
+  [self.view addSubview:self.connectionLabel];
 }
 
 - (void)monitorNetwork {
@@ -66,9 +68,9 @@
   //
   // create a Reachability object for m.taobao.com
 
-  self.taobaoReach = [Reachability reachabilityWithHostname:@"m.taobao.com"];
+  self.aqnoteReach = [Reachability reachabilityWithHostname:@"aqnote.com"];
 
-  self.taobaoReach.reachableBlock = ^(Reachability* reachability) {
+  self.aqnoteReach.reachableBlock = ^(Reachability* reachability) {
     NSString* temp =
         [NSString stringWithFormat:@"Taobao Reachable(%@)",
                                    reachability.currentReachabilityFlags];
@@ -83,7 +85,7 @@
     }];
   };
 
-  self.taobaoReach.unreachableBlock = ^(Reachability* reachability) {
+  self.aqnoteReach.unreachableBlock = ^(Reachability* reachability) {
     NSString* temp =
         [NSString stringWithFormat:@"Taobao Unreachable(%@)",
                                    reachability.currentReachabilityFlags];
@@ -98,7 +100,7 @@
     });
   };
 
-  [self.taobaoReach startNotifier];
+  [self.aqnoteReach startNotifier];
 
   //////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////

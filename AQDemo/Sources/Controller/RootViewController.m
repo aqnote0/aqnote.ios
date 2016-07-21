@@ -6,9 +6,18 @@
 //  Copyright (c) 2015 madding. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "RootViewController.h"
 
-@implementation MainViewController
+@interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property(nonatomic, strong) NSArray *titles;
+@property(nonatomic, strong) NSArray *classNames;
+@property(nonatomic, strong) UITableView *tableView;
+
+
+@end
+
+@implementation RootViewController
 
 - (id)init {
   if (self = [super init]) {
@@ -30,9 +39,9 @@
 
 #pragma mark - Initialization
 - (void)initTableInfo {
-  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控" ], nil];
+  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理" ], nil];
   self.classNames = [NSArray
-      arrayWithObjects:@[ @"DemoViewController", @"NSMViewController" ], nil];
+      arrayWithObjects:@[ @"DemoViewController", @"NetworkViewController", @"CookieViewController" ], nil];
 }
 
 - (void)initTableView {

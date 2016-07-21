@@ -251,6 +251,8 @@ NSInteger localizedCaseInsensitiveCompareSort(id string1, id string2, void *cont
             set_iteration_time = PSPDFPerformAndTrackTime(^{
                 for (NSString *obj in set) {
                     // nothing
+                  NSLog(@"%@", obj);
+
                 }
             });
 
@@ -277,6 +279,7 @@ NSInteger localizedCaseInsensitiveCompareSort(id string1, id string2, void *cont
             hashtable_iteration_time = PSPDFPerformAndTrackTime(^{
                 for (NSString *obj in hashTable) {
                     // nothing
+                  NSLog(@"%@", obj);
                 }
             });
         }

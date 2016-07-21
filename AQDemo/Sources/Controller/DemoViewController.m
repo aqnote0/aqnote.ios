@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
+
 #import "MBProgressHUD.h"
+#import "AQViewController.h"
 
 @interface DemoViewController
-    : UIViewController<UITableViewDataSource, UITableViewDelegate>
+    : AQViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *titles;
 @property(nonatomic, strong) NSArray *classNames;
@@ -104,49 +106,6 @@ titleForHeaderInSection:(NSInteger)section {
   [self.navigationController
       pushViewController:(UIViewController *)subViewController
                 animated:NO];
-}
-
-// 页面装载完成
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  NSLog(@"viewDidLoad");
-  //  [MBProgressHUD showTextOnly:self.view message:@"viewDidLoad"];
-  [self initTableView];
-}
-
-// 页面显示之前， [Disappeared|Disappearing]->me->Appearing
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  NSLog(@"viewWillAppear");
-  //  [MBProgressHUD showTextOnly:self.view message:@"viewWillAppear"];
-}
-
-// 页面显示之后， Appearing->me->Appeared
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-  NSLog(@"viewDidAppear");
-  //  [MBProgressHUD showTextOnly:self.view message:@"viewDidAppear"];
-}
-
-// 页面消亡之前， [Appearing|Appeared]->me->Disappering
-- (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  NSLog(@"viewWillDisappear");
-  //  [MBProgressHUD showTextOnly:self.view message:@"viewWillDisappear"];
-}
-
-// 页面消亡之后，Disappering->me->Disappeared
-- (void)viewDidDisappear:(BOOL)animated {
-  [super viewDidDisappear:animated];
-  NSLog(@"viewDidDisappear");
-  //  [MBProgressHUD showTextOnly:self.view message:@"viewDidDisappear"];
-}
-
-// 内存不足
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  NSLog(@"didReceiveMemoryWarning");
-  //  [MBProgressHUD showTextOnly:self.view message:@"didReceiveMemoryWarning"];
 }
 
 @end

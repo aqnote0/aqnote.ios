@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Marcus Westin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AQViewController.h"
 #import "MBProgressHUD.h"
 #import "WebViewJavascriptBridge.h"
 
-@interface WebViewController : UIViewController<UIWebViewDelegate>
+@interface WebViewController : AQViewController<UIWebViewDelegate>
 
 @property WebViewJavascriptBridge* bridge;
 

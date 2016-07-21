@@ -5,9 +5,10 @@
 //  Created by madding on 3/23/15.
 //  Copyright (c) 2015 madding. All rights reserved.
 //
-#import <UIKit/UIKit.h>
 
-@interface MutliThreadController : UIViewController
+#import "AQViewController.h"
+
+@interface MutliThreadController : AQViewController
 
 @property(retain, nonatomic) UITextView *display;
 @property(retain, nonatomic) UIButton *concurrencyBtn;

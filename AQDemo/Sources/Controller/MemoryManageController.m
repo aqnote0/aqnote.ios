@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 madding. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "AQViewController.h"
+
 #import <objc/message.h>
 #import "MBProgressHUD.h"
 
 @interface MemoryManageController
-    : UIViewController<UITableViewDataSource, UITableViewDelegate>
+    : AQViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *titles;
 @property(nonatomic, strong) UITableView *tableView;
