@@ -1,0 +1,114 @@
+;(function() {
+	if (window.AQHybrid) { return }
+	var messagingIframe
+	var sendMessageQueue = []
+	var receiveMessageQueue = []
+	var messageHandlers = {}
+	
+	var CUSTOM_PROTOCOL_SCHEME = 'hybrid'
+	var QUEUE_HAS_MESSAGE = '__AQ_QUEUE_MESSAGE__'
+	
+	var responseCallbacks = {}
+	var uniqueId = 1
+	
+	function _createQueueReadyIframe(doc) {  // 向页面添加iframe作为页面刷新用，本质是调用shouldStartLoadWithRequest
+		messagingIframe = doc.createElement('iframe')
+		messagingIframe.style.display = 'none'
+		messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + QUEUE_HAS_MESSAGE
+		doc.documentElement.appendChild(messagingIframe)
+	}
+
+	function init(messageHandler) {  // 初始化时重新获取下oc设置到js中receiveMessageQueue的内容并调用对应的代码
+		if (AQHybrid._messageHandler) { throw new Error('AQHybrid.init called twice') }
+		AQHybrid._messageHandler = messageHandler
+		var receivedMessages = receiveMessageQueue
+		receiveMessageQueue = null
+		for (var i=0; i<receivedMessages.length; i++) {
+			_dispatchMessageFromObjC(receivedMessages[i])
+		}
+	}
+
+	function send(data, responseCallback) {
+		_doSend({ data:data }, responseCallback)
+	}
+	
+	function registerHandler(handlerName, handler) {
+		messageHandlers[handlerName] = handler
+	}
+	
+	function callHandler(handlerName, data, responseCallback) {
+		_doSend({ handlerName:handlerName, data:data }, responseCallback)
+	}
+	
+	function _doSend(message, responseCallback) {
+		if (responseCallback) {
+			var callbackId = 'cb_'+(uniqueId++)+'_'+new Date().getTime()
+			responseCallbacks[callbackId] = responseCallback
+			message['callbackId'] = callbackId
+		}
+		sendMessageQueue.push(message)
+		messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + QUEUE_HAS_MESSAGE
+	}
+
+	function _fetchQueue() {
+		var messageQueueString = JSON.stringify(sendMessageQueue)
+		sendMessageQueue = []
+		return messageQueueString
+	}
+
+	function _dispatchMessageFromObjC(messageJSON) {
+        var message = JSON.parse(messageJSON)
+        var messageHandler
+        var responseCallback
+  
+        if (message.responseId) {                 // OC返回处理结果，直接调用js的responseCallback处理
+            responseCallback = responseCallbacks[message.responseId]
+            if (!responseCallback) { return; }
+            responseCallback(message.responseData)
+            delete responseCallbacks[message.responseId]
+        } else {
+            if (message.callbackId) {        // oc返回callback，代表js要再次回调oc
+                var callbackResponseId = message.callbackId
+                responseCallback = function(responseData) {
+                    _doSend({ responseId:callbackResponseId, responseData:responseData })
+                }
+            }
+  
+            var handler = AQHybrid._messageHandler
+            if (message.handlerName) {
+                handler = messageHandlers[message.handlerName]
+            }
+  
+            try {
+                handler(message.data, responseCallback)
+            } catch(exception) {
+                if (typeof console != 'undefined') {
+                    console.log("AQHybrid: WARNING: javascript handler threw.", message, exception)
+                }
+            }
+        }
+	}
+	
+	function _handleMessageFromObjC(messageJSON) {
+		if (receiveMessageQueue) {                      // 若有多条消息，追加
+			receiveMessageQueue.push(messageJSON)
+		} else {                                        // 之前无消息，调用处理消息代码
+			_dispatchMessageFromObjC(messageJSON)
+		}
+	}
+
+	window.AQHybrid = {                   // 创建window的对象AQHybrid
+		init: init,
+		send: send,                                      // 发送消息，会触发页面刷新，即OC：shouldStartLoadWithRequest
+		registerHandler: registerHandler,                // 注册handler方法
+		callHandler: callHandler,                        // 调用handler，会触发页面刷新，即OC：shouldStartLoadWithRequest
+		_fetchQueue: _fetchQueue,                        // 提供给OC调用的方法，获取js中数据
+		_handleMessageFromObjC: _handleMessageFromObjC   // 提供给OC调用的方法，返回OC中的数据
+	}
+
+	var doc = document
+	_createQueueReadyIframe(doc)                         // 页面追加iframe
+	var readyEvent = doc.createEvent('Events')           // 创建dom时间
+	readyEvent.initEvent('AQHybridReady') // 初始化事件
+	doc.dispatchEvent(readyEvent)
+})();
