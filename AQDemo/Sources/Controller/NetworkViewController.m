@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"网络状态监控";
   [self renderUI];
   [self monitorNetwork];
 }

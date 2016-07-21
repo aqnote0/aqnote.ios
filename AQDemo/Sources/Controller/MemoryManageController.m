@@ -22,16 +22,16 @@
 @implementation MemoryManageController
 
 - (id)init {
-  if (self = [super init]) {
-    self.title = @"线程分析代码";
+  self = [super init];
+  if (self) {
     [self initTableInfo];
   }
-
   return self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"线程分析代码";
   [self initTableView];
 }
 

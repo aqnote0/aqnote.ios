@@ -24,13 +24,18 @@
 
 @implementation DemoViewController
 
-- (id)init {
-  if (self = [super init]) {
-    self.title = @"UI使用例子";
-    [self initTableInfo];
+- (instancetype)init {
+  self = [super init];
+  if(self) {
+     [self initTableInfo];
   }
-
   return self;
+}
+
+- (void) viewDidLoad {
+  [super viewDidLoad];
+  self.title = @"UI使用例子";
+  [self initTableView];
 }
 
 #pragma mark - Initialization
@@ -104,7 +109,7 @@ titleForHeaderInSection:(NSInteger)section {
 
   subViewController.title = self.titles[indexPath.section][indexPath.row];
   [self.navigationController
-      pushViewController:(UIViewController *)subViewController
+      pushViewController:subViewController
                 animated:NO];
 }
 

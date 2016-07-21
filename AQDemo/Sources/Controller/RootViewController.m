@@ -19,17 +19,17 @@
 
 @implementation RootViewController
 
-- (id)init {
-  if (self = [super init]) {
-    self.title = @"ios场景模拟";
+- (instancetype) init {
+  self = [super init];
+  if(self) {
     [self initTableInfo];
   }
-
   return self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"ios场景模拟";
   [self initTableView];
 }
 

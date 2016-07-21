@@ -32,20 +32,19 @@
   
   dispatch_sync(queue, ^{
     BOOL mainThread = [NSThread isMainThread];
-    NSAssert(mainThread, @"+[ALBBUserAgentManager currentUserAgent] should be invoked in main thread.");
+    NSAssert(mainThread, @"%@ should be invoked in main thread.", NSStringFromSelector(_cmd));
     [lock unlock];
   });
 }
 
 - (void)testMainThread {
   dispatch_queue_t queue = dispatch_queue_create("com.aqnote.queue.task", DISPATCH_QUEUE_SERIAL);
-  
   NSLock *lock = [[NSLock alloc] init];
   [lock lock];
   
   dispatch_sync(queue, ^{
-    BOOL mainThread = dispatch_get_current_queue();
-    NSAssert([NSThread isMainThread], @"+[ALBBUserAgentManager currentUserAgent] should be invoked in main thread.");
+    BOOL mainThread = [NSThread isMainThread];
+    NSAssert(mainThread, @"%@ should be invoked in main thread.", NSStringFromSelector(_cmd));
     [lock unlock];
   });
 }
@@ -58,7 +57,7 @@
   
   dispatch_sync(queue, ^{
     BOOL mainThread = [NSThread isMainThread];
-    NSAssert([NSThread isMainThread], @"+[ALBBUserAgentManager currentUserAgent] should be invoked in main thread.");
+    NSAssert(mainThread, @"%@ should be invoked in main thread.", NSStringFromSelector(_cmd));
     [[[UIWebView alloc] init] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
     [lock unlock];
   });

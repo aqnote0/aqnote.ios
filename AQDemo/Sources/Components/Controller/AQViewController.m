@@ -8,11 +8,38 @@
 
 #import "AQViewController.h"
 
+#import "AQUtils.h"
+
+
 @implementation AQViewController
 
 // 页面装载完成
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+//  // Do any additional setup after loading the view.
+  self.view.backgroundColor = [UIColor whiteColor];
+  self.title = @"";
+//
+//  self.navigationItem.hidesBackButton = YES;
+//  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+//  
+//  UIButton *button = [[UIButton alloc ]init];
+//  [button setFrame:CGRectMake(0, 0, 64, 24)];
+//  [button setBackgroundColor:[UIColor clearColor]];
+////  [button setImageEdgeInsets:UIEdgeInsetsMake(0, -8, 0, 0)];
+////  [button setImage:nil forState:UIControlStateNormal];
+////  [button setImage:nil forState:UIControlStateHighlighted];
+////  [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+////  [button sizeToFit];
+////  button.isAccessibilityElement = YES;
+//  //  button.accessibilityLabel = @"back";
+//  [button setTitle:@"back" forState:UIControlStateNormal];
+//  [button addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
+//  
+//  
+//  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+  
   
   NSLog(@"[%@]viewDidLoad", NSStringFromClass([self class]));
   //  [MBProgressHUD showTextOnly:self.view message:@"viewDidLoad"];
@@ -51,6 +78,22 @@
   [super didReceiveMemoryWarning];
   NSLog(@"[%@] didReceiveMemoryWarning", NSStringFromClass([self class]));
   //  [MBProgressHUD showTextOnly:self.view message:@"didReceiveMemoryWarning"];
+}
+
+- (void)onBack {
+  if (self.push) {
+    if ([self.navController respondsToSelector:@selector(popViewControllerAnimated:)]) {
+      [self.navController performSelector:@selector(popViewControllerAnimated:) withObject:[NSNumber numberWithBool:YES]];
+    }
+  }
+  else if ([self.navigationController.viewControllers count] == 1) {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+      // TODO
+    }];
+  }
+  else {
+    [self.navigationController popViewControllerAnimated:YES];
+  }
 }
 
 @end

@@ -28,18 +28,11 @@
 
 @synthesize display, spinner, concurrencyBtn, asyncBtn, syncBtn;
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  [self renderButtons];
-}
-
 - (void)viewDidLoad {
   [super viewDidLoad];
   NSLog(@"load view...");
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
+  self.title = @"多线程模拟";
+  [self renderButtons];
 }
 
 - (void)renderButtons {

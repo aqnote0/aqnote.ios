@@ -1,5 +1,5 @@
 //
-//  AQViewController.h
+//  AQBlock.h
 //  AQDemo
 //
 //  Created by madding.lip on 7/21/16.
@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
-@interface AQViewController : UIViewController
+typedef void (^vBlock)();
+typedef void (^vbBlock)(BOOL);
+
+@interface AQBlock : NSObject
 
 @end

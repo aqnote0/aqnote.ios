@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Marcus Westin. All rights reserved.
 //
 
-#import "AQViewController.h"
+#import "AQWebViewController.h"
 #import "MBProgressHUD.h"
 #import "WebViewJavascriptBridge.h"
+
+#import <AQFoundation/AQBundle.h>
 
 @interface WebViewController : AQViewController<UIWebViewDelegate>
 
@@ -18,26 +20,29 @@
 
 @implementation WebViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  NSLog(@"viewWillAppear");
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.title = @"hybrid";
+  
   if (_bridge) {
     return;
   }
-
+  
   UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
   [self.view addSubview:webView];
-
+  
   [WebViewJavascriptBridge enableLogging];
-
+  
   _bridge = [WebViewJavascriptBridge
-      bridgeForWebView:webView
-       webViewDelegate:self
-               handler:^(id data, AQJBResponseCallback responseCallback) {
-                 NSLog(@"received from JS: %@", data);
-                 responseCallback(data);
-               }];
-
+             bridgeForWebView:webView
+             webViewDelegate:self
+             handler:^(id data, AQJBResponseCallback responseCallback) {
+               NSLog(@"received from JS: %@", data);
+               responseCallback(data);
+             }
+             resourceBundle:[NSBundle bundleWithIdentifier:@"AQDemo"]];
+  
+  
   [_bridge registerHandler:@"hudHandler"
                    handler:^(id data, AQJBResponseCallback responseCallback) {
                      NSLog(@"callHUD called: %@", data);
@@ -45,17 +50,9 @@
                                          message:[self _serializeMessage:data]];
                      responseCallback(data);
                    }];
-
+  
   [self renderButtons:webView];
   [self loadPage:webView];
-}
-
-- (void)webViewDidStartLoad:(UIWebView*)webView {
-  NSLog(@"webViewDidStartLoad");
-}
-
-- (void)webViewDidFinishLoad:(UIWebView*)webView {
-  NSLog(@"webViewDidFinishLoad");
 }
 
 - (void)renderButtons:(UIWebView*)webView {
