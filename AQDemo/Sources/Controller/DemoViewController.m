@@ -44,14 +44,16 @@
       arrayWithObjects:@[ @"多线程模拟",
                           @"内存管理",
                           @"联系人",
-                          @"WebView" ],
+                          @"Hybrid1",
+                          @"Hybrid2" ],
                        nil];
 
   self.classNames = [NSArray arrayWithObjects:@[
     @"MutliThreadController",
     @"MemoryManageController",
     @"ContactsListViewController",
-    @"WebViewController",
+    @"DemoWebViewController",
+    @"DemoWebViewController2"
   ],
                                               nil];
 }

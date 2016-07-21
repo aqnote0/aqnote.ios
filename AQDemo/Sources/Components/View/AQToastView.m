@@ -6,10 +6,8 @@
 //  Copyright © 2016 Peng Li. All rights reserved.
 //
 #import "AQToastView.h"
-
 #import <QuartzCore/QuartzCore.h>
 
-static const BOOL CSToastDisplayShadow = YES;
 
 @interface AQToastView ()
 

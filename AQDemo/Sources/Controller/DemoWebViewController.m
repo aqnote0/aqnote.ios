@@ -7,14 +7,10 @@
 //
 
 #import "AQWebViewController.h"
-#import "MBProgressHUD.h"
-#import "WebViewJavascriptBridge.h"
 
 #import <AQFoundation/AQBundle.h>
 
-@interface WebViewController : AQViewController<UIWebViewDelegate>
-
-@property WebViewJavascriptBridge* bridge;
+@interface WebViewController : AQWebViewController
 
 @end
 
@@ -24,38 +20,11 @@
   [super viewDidLoad];
   self.title = @"hybrid";
   
-  if (_bridge) {
-    return;
-  }
-  
-  UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-  [self.view addSubview:webView];
-  
-  [WebViewJavascriptBridge enableLogging];
-  
-  _bridge = [WebViewJavascriptBridge
-             bridgeForWebView:webView
-             webViewDelegate:self
-             handler:^(id data, AQJBResponseCallback responseCallback) {
-               NSLog(@"received from JS: %@", data);
-               responseCallback(data);
-             }
-             resourceBundle:[NSBundle bundleWithIdentifier:@"AQDemo"]];
-  
-  
-  [_bridge registerHandler:@"hudHandler"
-                   handler:^(id data, AQJBResponseCallback responseCallback) {
-                     NSLog(@"callHUD called: %@", data);
-                     [MBProgressHUD showTextOnly:self.view
-                                         message:[self _serializeMessage:data]];
-                     responseCallback(data);
-                   }];
-  
-  [self renderButtons:webView];
-  [self loadPage:webView];
+  [self renderButtons];
+  [self loadPage];
 }
 
-- (void)renderButtons:(UIWebView*)webView {
+- (void)renderButtons {
   UIFont* font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
 
   UIButton* messageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -63,7 +32,7 @@
   [messageButton addTarget:self
                     action:@selector(sendMessage:)
           forControlEvents:UIControlEventTouchUpInside];
-  [self.view insertSubview:messageButton aboveSubview:webView];
+  [self.view insertSubview:messageButton aboveSubview:self.webView];
   messageButton.frame = CGRectMake(10, 414, 100, 35);
   messageButton.titleLabel.font = font;
   messageButton.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
@@ -73,44 +42,36 @@
   [callbackButton addTarget:self
                      action:@selector(callHandler:)
            forControlEvents:UIControlEventTouchUpInside];
-  [self.view insertSubview:callbackButton aboveSubview:webView];
+  [self.view insertSubview:callbackButton aboveSubview:self.webView];
   callbackButton.frame = CGRectMake(110, 414, 100, 35);
   callbackButton.titleLabel.font = font;
 
   UIButton* reloadButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
   [reloadButton setTitle:@"Reload webview" forState:UIControlStateNormal];
-  [reloadButton addTarget:webView
+  [reloadButton addTarget:self.webView
                    action:@selector(reload)
          forControlEvents:UIControlEventTouchUpInside];
-  [self.view insertSubview:reloadButton aboveSubview:webView];
+  [self.view insertSubview:reloadButton aboveSubview:self.webView];
   reloadButton.frame = CGRectMake(210, 414, 100, 35);
   reloadButton.titleLabel.font = font;
 }
 
 - (void)sendMessage:(id)sender {
-  [_bridge send:@"OC Data"
-      responseCallback:^(id response) {
-        NSLog(@"sendMessage got response: %@", response);
-      }];
+  
 }
 
 - (void)callHandler:(id)sender {
-  id data = @{ @"greetingFromObjC" : @"Hi there, JS!" };
-  [_bridge callHandler:@"alertHandler"
-                  data:data
-      responseCallback:^(id response) {
-        NSLog(@"alertHandler responded: %@", response);
-      }];
+  
 }
 
-- (void)loadPage:(UIWebView*)webView {
+- (void)loadPage {
   NSString* htmlPath =
       [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
   NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath
                                                 encoding:NSUTF8StringEncoding
                                                    error:nil];
   NSURL* baseURL = [NSURL fileURLWithPath:htmlPath];
-  [webView loadHTMLString:appHtml baseURL:baseURL];
+  [self.webView loadHTMLString:appHtml baseURL:baseURL];
 }
 
 - (NSString*)_serializeMessage:(id)message {

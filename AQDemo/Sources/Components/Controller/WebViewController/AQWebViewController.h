@@ -7,9 +7,11 @@
 //
 #import "AQViewController.h"
 #import "AQH5Delegate.h"
+#import "AQWebView.h"
 
 @interface AQWebViewController : AQViewController<UIWebViewDelegate>
 
+@property(nonatomic, strong) AQWebView *webView;
 @property (nonatomic, copy) NSString *openUrl;
 @property (nonatomic, weak) id<AQH5Delegate> delegate;
 @property(nonatomic, copy)NSString* callBackUrl;

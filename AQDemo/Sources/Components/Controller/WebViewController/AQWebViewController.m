@@ -16,13 +16,11 @@
 #import "AQUtils.h"
 #import "AQHybridContext.h"
 #import "AQHybridHandler.h"
-#import "AQWebView.h"
+
 
 #define AQWebViewControllerURL @"AQWebViewControllerURL"
 
 @interface AQWebViewController ()
-
-@property(nonatomic, strong) AQWebView *webView;
 
 @property(nonatomic) BOOL isConnected;
 @property(atomic, strong) Reachability *reachability;
@@ -56,7 +54,7 @@
 
   if (![self isConnected]) {
     [AQThread foreground:^{
-      [AQUtils toast:@"你的网络不太不顺畅哦~"];
+      [AQUtils toast:@"connecting failed."];
     }];
   } else {
     [self startLoad];

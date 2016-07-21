@@ -28,10 +28,9 @@
 		9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B11D17DF360054D1AB /* MemoryManageController.m */; };
 		9A2980C71D17DF360054D1AB /* MutliThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B21D17DF360054D1AB /* MutliThreadController.m */; };
 		9A2980C81D17DF360054D1AB /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B31D17DF360054D1AB /* NetworkViewController.m */; };
-		9A2980C91D17DF360054D1AB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B41D17DF360054D1AB /* WebViewController.m */; };
+		9A2980C91D17DF360054D1AB /* DemoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B41D17DF360054D1AB /* DemoWebViewController.m */; };
 		9A2980D31D17DF420054D1AB /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D01D17DF420054D1AB /* webview.html */; };
 		9A2980DA1D17E1390054D1AB /* AQDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D91D17E1390054D1AB /* AQDemo.bundle */; };
-		9A2980DD1D17E2E20054D1AB /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980DC1D17E2E20054D1AB /* WebViewJavascriptBridge.m */; };
 		9A2980E11D17E30C0054D1AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980DF1D17E30C0054D1AB /* Main.storyboard */; };
 		9A2D868B1D365FB6002DF9CC /* UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D868A1D365FB6002DF9CC /* UIWebViewTests.m */; };
 		9A4808861D406EE8006B8393 /* StaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808851D406EE8006B8393 /* StaticTests.m */; };
@@ -51,7 +50,10 @@
 		9A48090D1D40DD58006B8393 /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48090C1D40DD58006B8393 /* AQWebView.m */; };
 		9A4809101D40DFD5006B8393 /* AQToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48090F1D40DFD5006B8393 /* AQToastView.m */; };
 		9A4809131D40E70E006B8393 /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809121D40E70E006B8393 /* AQViewController.m */; };
-		9A4809151D4121DA006B8393 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A4809141D4121DA006B8393 /* WebViewJavascriptBridge.js.txt */; };
+		9A4809151D4121DA006B8393 /* AQHybrid.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A4809141D4121DA006B8393 /* AQHybrid.js.txt */; };
+		9A48091B1D412AA7006B8393 /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809171D412AA7006B8393 /* AQWebViewController2.m */; };
+		9A48091C1D412AA7006B8393 /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48091A1D412AA7006B8393 /* AQHybrid.m */; };
+		9A48091E1D412AC8006B8393 /* DemoWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */; };
 		9AB787951D2B49A600833957 /* NSKeyedArchiverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB787941D2B49A600833957 /* NSKeyedArchiverTest.m */; };
 		9AE3A0DD1D38892900E06D87 /* NSHTTPCookieStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */; };
 /* End PBXBuildFile section */
@@ -105,11 +107,9 @@
 		9A2980B11D17DF360054D1AB /* MemoryManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManageController.m; sourceTree = "<group>"; };
 		9A2980B21D17DF360054D1AB /* MutliThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutliThreadController.m; sourceTree = "<group>"; };
 		9A2980B31D17DF360054D1AB /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
-		9A2980B41D17DF360054D1AB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9A2980B41D17DF360054D1AB /* DemoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController.m; sourceTree = "<group>"; };
 		9A2980D01D17DF420054D1AB /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
 		9A2980D91D17E1390054D1AB /* AQDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AQDemo.bundle; sourceTree = "<group>"; };
-		9A2980DB1D17E2E20054D1AB /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		9A2980DC1D17E2E20054D1AB /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		9A2980DF1D17E30C0054D1AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9A2D868A1D365FB6002DF9CC /* UIWebViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewTests.m; sourceTree = "<group>"; };
 		9A4808851D406EE8006B8393 /* StaticTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTests.m; sourceTree = "<group>"; };
@@ -144,7 +144,12 @@
 		9A48090F1D40DFD5006B8393 /* AQToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQToastView.m; sourceTree = "<group>"; };
 		9A4809111D40E70E006B8393 /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
 		9A4809121D40E70E006B8393 /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
-		9A4809141D4121DA006B8393 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		9A4809141D4121DA006B8393 /* AQHybrid.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AQHybrid.js.txt; sourceTree = "<group>"; };
+		9A4809171D412AA7006B8393 /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
+		9A4809191D412AA7006B8393 /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
+		9A48091A1D412AA7006B8393 /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
+		9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController2.m; sourceTree = "<group>"; };
+		9A48091F1D412B5D006B8393 /* AQWebViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController2.h; sourceTree = "<group>"; };
 		9AB787941D2B49A600833957 /* NSKeyedArchiverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArchiverTest.m; sourceTree = "<group>"; };
 		9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieStorageTests.m; sourceTree = "<group>"; };
 		BA9818A580B0476CCF22AF32 /* libPods-AQDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AQDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,7 +268,7 @@
 				9A2980D91D17E1390054D1AB /* AQDemo.bundle */,
 				9A2980DF1D17E30C0054D1AB /* Main.storyboard */,
 				9A2980D01D17DF420054D1AB /* webview.html */,
-				9A4809141D4121DA006B8393 /* WebViewJavascriptBridge.js.txt */,
+				9A4809141D4121DA006B8393 /* AQHybrid.js.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -312,14 +317,15 @@
 			isa = PBXGroup;
 			children = (
 				9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */,
+				9A48088C1D4091F2006B8393 /* CookieViewController.m */,
 				9A2980AE1D17DF360054D1AB /* DemoViewController.m */,
-				9A2980AF1D17DF360054D1AB /* RootViewController.h */,
-				9A2980B01D17DF360054D1AB /* RootViewController.m */,
+				9A2980B41D17DF360054D1AB /* DemoWebViewController.m */,
+				9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */,
 				9A2980B11D17DF360054D1AB /* MemoryManageController.m */,
 				9A2980B21D17DF360054D1AB /* MutliThreadController.m */,
 				9A2980B31D17DF360054D1AB /* NetworkViewController.m */,
-				9A2980B41D17DF360054D1AB /* WebViewController.m */,
-				9A48088C1D4091F2006B8393 /* CookieViewController.m */,
+				9A2980AF1D17DF360054D1AB /* RootViewController.h */,
+				9A2980B01D17DF360054D1AB /* RootViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,18 +340,8 @@
 		9A2980B61D17DF360054D1AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A2980B71D17DF360054D1AB /* WebView */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9A2980B71D17DF360054D1AB /* WebView */ = {
-			isa = PBXGroup;
-			children = (
-				9A2980DB1D17E2E20054D1AB /* WebViewJavascriptBridge.h */,
-				9A2980DC1D17E2E20054D1AB /* WebViewJavascriptBridge.m */,
-			);
-			path = WebView;
 			sourceTree = "<group>";
 		};
 		9A48089C1D40B45E006B8393 /* Category */ = {
@@ -360,9 +356,9 @@
 		9A4808A31D40D6B9006B8393 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9A48090A1D40DD58006B8393 /* View */,
-				9A4809021D40DAC3006B8393 /* CookieManager */,
 				9A4808E11D40DA9F006B8393 /* Controller */,
+				9A4809021D40DAC3006B8393 /* CookieManager */,
+				9A48090A1D40DD58006B8393 /* View */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -379,11 +375,12 @@
 		9A4808E11D40DA9F006B8393 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A4809111D40E70E006B8393 /* AQViewController.h */,
-				9A4809121D40E70E006B8393 /* AQViewController.m */,
 				9A4808E41D40DA9F006B8393 /* AQNavigationController.h */,
 				9A4808E51D40DA9F006B8393 /* AQNavigationController.m */,
+				9A4809111D40E70E006B8393 /* AQViewController.h */,
+				9A4809121D40E70E006B8393 /* AQViewController.m */,
 				9A4808E81D40DAA0006B8393 /* WebViewController */,
+				9A4809161D412AA7006B8393 /* WebViewController2 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +431,25 @@
 				9A48090C1D40DD58006B8393 /* AQWebView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9A4809161D412AA7006B8393 /* WebViewController2 */ = {
+			isa = PBXGroup;
+			children = (
+				9A48091F1D412B5D006B8393 /* AQWebViewController2.h */,
+				9A4809171D412AA7006B8393 /* AQWebViewController2.m */,
+				9A4809181D412AA7006B8393 /* Hybrid */,
+			);
+			path = WebViewController2;
+			sourceTree = "<group>";
+		};
+		9A4809181D412AA7006B8393 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				9A4809191D412AA7006B8393 /* AQHybrid.h */,
+				9A48091A1D412AA7006B8393 /* AQHybrid.m */,
+			);
+			path = Hybrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,7 +564,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4809151D4121DA006B8393 /* WebViewJavascriptBridge.js.txt in Resources */,
+				9A4809151D4121DA006B8393 /* AQHybrid.js.txt in Resources */,
 				9A2980E11D17E30C0054D1AB /* Main.storyboard in Resources */,
 				9A2980D31D17DF420054D1AB /* webview.html in Resources */,
 				9A2980881D17DDF70054D1AB /* AppIcon.xcassets in Resources */,
@@ -701,7 +717,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */,
-				9A2980C91D17DF360054D1AB /* WebViewController.m in Sources */,
+				9A2980C91D17DF360054D1AB /* DemoWebViewController.m in Sources */,
+				9A48091B1D412AA7006B8393 /* AQWebViewController2.m in Sources */,
+				9A48091C1D412AA7006B8393 /* AQHybrid.m in Sources */,
 				9A2980C71D17DF360054D1AB /* MutliThreadController.m in Sources */,
 				9A2980C51D17DF360054D1AB /* RootViewController.m in Sources */,
 				9A2980C31D17DF360054D1AB /* ContactsListViewController.m in Sources */,
@@ -713,6 +731,7 @@
 				9A4808A21D40D358006B8393 /* AQBlock.m in Sources */,
 				9A4808FB1D40DAA0006B8393 /* AQWebViewController.m in Sources */,
 				9A4809081D40DBF8006B8393 /* ALBBHyBridResult.m in Sources */,
+				9A48091E1D412AC8006B8393 /* DemoWebViewController2.m in Sources */,
 				9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */,
 				9A4809131D40E70E006B8393 /* AQViewController.m in Sources */,
 				9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */,
@@ -723,7 +742,6 @@
 				9A4809011D40DAA0006B8393 /* AQHybridService.m in Sources */,
 				9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */,
 				9A29809A1D17DDF70054D1AB /* main.m in Sources */,
-				9A2980DD1D17E2E20054D1AB /* WebViewJavascriptBridge.m in Sources */,
 				9A4809001D40DAA0006B8393 /* AQHybridRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

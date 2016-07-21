@@ -1,12 +1,12 @@
 ;(function() {
-	if (window.WebViewJavascriptBridge) { return }
+	if (window.AQHybrid) { return }
 	var messagingIframe
 	var sendMessageQueue = []
 	var receiveMessageQueue = []
 	var messageHandlers = {}
 	
-	var CUSTOM_PROTOCOL_SCHEME = 'ydjbscheme'
-	var QUEUE_HAS_MESSAGE = '__YDJB_QUEUE_MESSAGE__'
+	var CUSTOM_PROTOCOL_SCHEME = 'hybrid'
+	var QUEUE_HAS_MESSAGE = '__AQ_QUEUE_MESSAGE__'
 	
 	var responseCallbacks = {}
 	var uniqueId = 1
@@ -19,8 +19,8 @@
 	}
 
 	function init(messageHandler) {  // 初始化时重新获取下oc设置到js中receiveMessageQueue的内容并调用对应的代码
-		if (WebViewJavascriptBridge._messageHandler) { throw new Error('WebViewJavascriptBridge.init called twice') }
-		WebViewJavascriptBridge._messageHandler = messageHandler
+		if (AQHybrid._messageHandler) { throw new Error('AQHybrid.init called twice') }
+		AQHybrid._messageHandler = messageHandler
 		var receivedMessages = receiveMessageQueue
 		receiveMessageQueue = null
 		for (var i=0; i<receivedMessages.length; i++) {
@@ -74,7 +74,7 @@
                 }
             }
   
-            var handler = WebViewJavascriptBridge._messageHandler
+            var handler = AQHybrid._messageHandler
             if (message.handlerName) {
                 handler = messageHandlers[message.handlerName]
             }
@@ -83,7 +83,7 @@
                 handler(message.data, responseCallback)
             } catch(exception) {
                 if (typeof console != 'undefined') {
-                    console.log("WebViewJavascriptBridge: WARNING: javascript handler threw.", message, exception)
+                    console.log("AQHybrid: WARNING: javascript handler threw.", message, exception)
                 }
             }
         }
@@ -97,7 +97,7 @@
 		}
 	}
 
-	window.WebViewJavascriptBridge = {                   // 创建window的对象WebViewJavascriptBridge
+	window.AQHybrid = {                   // 创建window的对象AQHybrid
 		init: init,
 		send: send,                                      // 发送消息，会触发页面刷新，即OC：shouldStartLoadWithRequest
 		registerHandler: registerHandler,                // 注册handler方法
@@ -109,7 +109,6 @@
 	var doc = document
 	_createQueueReadyIframe(doc)                         // 页面追加iframe
 	var readyEvent = doc.createEvent('Events')           // 创建dom时间
-	readyEvent.initEvent('WebViewJavascriptBridgeReady') // 初始化事件
-//	readyEvent.bridge = WebViewJavascriptBridge          // delete
+	readyEvent.initEvent('AQHybridReady') // 初始化事件
 	doc.dispatchEvent(readyEvent)
 })();

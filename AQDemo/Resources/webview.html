@@ -7,23 +7,23 @@
 		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
 	</style>
 </head><body>
-	<h1>WebViewJSBridge Demo</h1>
+	<h1>AQHybrid Demo</h1>
 	<script>
 	window.onerror = function(err) {
 		log('window.onerror: ' + err)
 	}
 	
-	function connectWebViewJavascriptBridge(callback) {  // 由于不确定WebViewJavascriptBridge的初始化情况，因此采用判断加监听等待该对象初始化
-		if (window.WebViewJavascriptBridge) {
-			callback(WebViewJavascriptBridge)
+	function connectAQHybrid(callback) {  // 由于不确定AQHybrid的初始化情况，因此采用判断加监听等待该对象初始化
+		if (window.AQHybrid) {
+			callback(AQHybrid)
 		} else {
-			document.addEventListener('WebViewJavascriptBridgeReady', function() {   // 监听事件
-				callback(WebViewJavascriptBridge)
+			document.addEventListener('AQHybridReady', function() {   // 监听事件
+				callback(AQHybrid)
 			}, false)
 		}
 	}
 	
-	connectWebViewJavascriptBridge(function(bridge) {
+	connectAQHybrid(function(hybrid) {
 		var uniqueId = 1
 		function log(message, data) {
 			var log = document.getElementById('log')
@@ -37,12 +37,12 @@
             }
 		}
                                    
-		bridge.init(function(data, responseCallback) {
+		hybrid.init(function(data, responseCallback) {
 			log('JS got a message', data)
             responseCallback(data)
 		})
 
-		bridge.registerHandler('alertHandler', function(data, responseCallback) {
+		hybrid.registerHandler('alertHandler', function(data, responseCallback) {
             var dataJson = JSON.stringify(data)
             window.alert(dataJson)
 <!--			log('ObjC called alertHandler with', data)-->
@@ -50,11 +50,11 @@
 		})
 
 		var button = document.getElementById('buttons').appendChild(document.createElement('button'))
-		button.innerHTML = 'call CM OC'
+		button.innerHTML = 'call OC'
 		button.onclick = function(e) {
 			e.preventDefault()
 			var data = 'JS Data'
-			bridge.send(data, function(data) {
+			hybrid.send(data, function(data) {
 				log('JS got response', data)
 			})
 		}
@@ -62,10 +62,10 @@
 		document.body.appendChild(document.createElement('br'))
 
 		var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
-		callbackButton.innerHTML = 'call hudHandler'
+		callbackButton.innerHTML = 'call hub'
 		callbackButton.onclick = function(e) {
 			e.preventDefault()
-			bridge.callHandler('hudHandler', {'foo': 'bar'}, function(data) {
+			hybrid.callHandler('hudHandler', {'foo': 'bar'}, function(data) {
 <!--				log('JS got response', data)-->
 			})
 		}
