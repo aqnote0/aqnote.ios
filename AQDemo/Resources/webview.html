@@ -6,70 +6,84 @@
 		button { margin:0 3px 10px; font-size:12px; }
 		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
 	</style>
-</head><body>
-	<h1>AQHybrid Demo</h1>
-	<script>
-	window.onerror = function(err) {
-		log('window.onerror: ' + err)
-	}
-	
-	function connectAQHybrid(callback) {  // 由于不确定AQHybrid的初始化情况，因此采用判断加监听等待该对象初始化
-		if (window.AQHybrid) {
-			callback(AQHybrid)
-		} else {
-			document.addEventListener('AQHybridReady', function() {   // 监听事件
-				callback(AQHybrid)
-			}, false)
-		}
-	}
-	
-	connectAQHybrid(function(hybrid) {
-		var uniqueId = 1
-		function log(message, data) {
-			var log = document.getElementById('log')
-			var el = document.createElement('div')
-			el.className = 'logLine'
-			el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data)
-			if (log.children.length) {
-                log.insertBefore(el, log.children[0])
-            } else {
-                log.appendChild(el)
-            }
-		}
-                                   
-		hybrid.init(function(data, responseCallback) {
-			log('JS got a message', data)
-            responseCallback(data)
-		})
+  <script type="text/javascript">
+    // GLOBAL VARIABLE
+    var uniqueId = 1;
+    
+    // define
+    window.onerror = function(err) {
+      log('window.onerror: ' + err);
+    }
+  
+    // Function
+    function connectAQHybrid(callback) {  // 由于不确定AQHybrid的初始化情况，因此采用判断加监听等待该对象初始化
+      if (window.AQHybrid) {
+        callback(AQHybrid);
+      } else {
+        document.addEventListener('AQHybridReady', function() {   // 监听事件
+                                callback(AQHybrid);
+                                }, false);
+      }
+    }
+  
+    function log(message, data) {
+      var log = document.getElementById('log');
+      var el = document.createElement('div');
+      el.className = 'logLine';
+      el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data);
+      if (log.children.length) {
+        log.insertBefore(el, log.children[0]);
+      } else {
+        log.appendChild(el);
+      }
+    }
+  
+    function defaultHandler(data, responseCallback) {
+      log('JS got a message', data);
+      responseCallback(data);
+    }
+  
+    function alertHandler(data, responseCallback) {
+      var dataJson = JSON.stringify(data);
+      window.alert(dataJson);
+      log('ObjC called alertHandler with', data);
+      responseCallback(data);
+    };
+  
+    function callback(hybrid) {
+      hybrid.init(defaultHandler);
+      hybrid.registerHandler('alertHandler', alertHandler);
+    
+      var button = document.getElementById('buttons').appendChild(document.createElement('button'));
+      button.innerHTML = 'call OC';
+      button.onclick = function(e) {
+        e.preventDefault();
+        var data = 'JS Data';
+        hybrid.send(data, function(data) {
+                  log('JS got response', data);
+                  });
+      };
+      document.body.appendChild(document.createElement('br'));
+    
+      var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+      callbackButton.innerHTML = 'call HUD';
+      callbackButton.onclick = function(e) {
+        e.preventDefault();
+        hybrid.callHandler('hudHandler', {'KEY': 'JS Data'}, function(data) {
+                         log('JS got response', data);
+                         });
+      };
+    }
+  </script>
+</head>
 
-		hybrid.registerHandler('alertHandler', function(data, responseCallback) {
-            var dataJson = JSON.stringify(data)
-            window.alert(dataJson)
-<!--			log('ObjC called alertHandler with', data)-->
-			responseCallback(data)
-		})
+<body>
+  <script type="text/javascript">
+    connectAQHybrid(callback)
+    </script>
+  <h1>AQHybrid Demo</h1>
+	<div id='buttons'></div>
+  <div id='log' />
+</body>
 
-		var button = document.getElementById('buttons').appendChild(document.createElement('button'))
-		button.innerHTML = 'call OC'
-		button.onclick = function(e) {
-			e.preventDefault()
-			var data = 'JS Data'
-			hybrid.send(data, function(data) {
-				log('JS got response', data)
-			})
-		}
-
-		document.body.appendChild(document.createElement('br'))
-
-		var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
-		callbackButton.innerHTML = 'call hub'
-		callbackButton.onclick = function(e) {
-			e.preventDefault()
-			hybrid.callHandler('hudHandler', {'foo': 'bar'}, function(data) {
-<!--				log('JS got response', data)-->
-			})
-		}
-	})
-	</script>
-	<div id='buttons'></div> <div id='log'></div>
-</body></html>
+</html>
