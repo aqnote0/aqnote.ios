@@ -10,57 +10,54 @@
 
 #import <AQFoundation/AQBundle.h>
 
-@interface WebViewController : AQWebViewController
+@interface DemoWebViewController : AQWebViewController
 
 @end
 
-@implementation WebViewController
+@implementation DemoWebViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"hybrid";
+  self.title = @"Webview";
   
   [self renderButtons];
   [self loadPage];
 }
 
 - (void)renderButtons {
-  UIFont* font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
-
-  UIButton* messageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [messageButton setTitle:@"Call CM JS" forState:UIControlStateNormal];
+  UIButton* messageButton = [[UIButton alloc] init];
+  [messageButton setFrame:CGRectMake(10, 400, 200, 35)];
+  [messageButton setBackgroundColor:[UIColor blackColor]];
+  [messageButton setTitle:@"Native->H5 Default" forState:UIControlStateNormal];
   [messageButton addTarget:self
-                    action:@selector(sendMessage:)
+                    action:@selector(callDefault:)
           forControlEvents:UIControlEventTouchUpInside];
   [self.view insertSubview:messageButton aboveSubview:self.webView];
-  messageButton.frame = CGRectMake(10, 414, 100, 35);
-  messageButton.titleLabel.font = font;
-  messageButton.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
-
-  UIButton* callbackButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [callbackButton setTitle:@"Call alertHandler" forState:UIControlStateNormal];
+  
+  UIButton* callbackButton = [[UIButton alloc] init];
+  [callbackButton setFrame:CGRectMake(10, 450, 200, 35)];
+  [callbackButton setBackgroundColor:[UIColor blackColor]];
+  [callbackButton setTitle:@"Native->H5 Alert" forState:UIControlStateNormal];
   [callbackButton addTarget:self
-                     action:@selector(callHandler:)
+                     action:@selector(callAlert:)
            forControlEvents:UIControlEventTouchUpInside];
   [self.view insertSubview:callbackButton aboveSubview:self.webView];
-  callbackButton.frame = CGRectMake(110, 414, 100, 35);
-  callbackButton.titleLabel.font = font;
-
-  UIButton* reloadButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [reloadButton setTitle:@"Reload webview" forState:UIControlStateNormal];
+  
+  UIButton* reloadButton = [[UIButton alloc] init];
+  [reloadButton setFrame:CGRectMake(10, 500, 200, 35)];
+  [reloadButton setBackgroundColor:[UIColor blackColor]];
+  [reloadButton setTitle:@"Native->H5 Clean" forState:UIControlStateNormal];
   [reloadButton addTarget:self.webView
                    action:@selector(reload)
          forControlEvents:UIControlEventTouchUpInside];
   [self.view insertSubview:reloadButton aboveSubview:self.webView];
-  reloadButton.frame = CGRectMake(210, 414, 100, 35);
-  reloadButton.titleLabel.font = font;
 }
 
-- (void)sendMessage:(id)sender {
+- (void)callDefault:(id)sender {
   
 }
 
-- (void)callHandler:(id)sender {
+- (void)callAlert:(id)sender {
   
 }
 

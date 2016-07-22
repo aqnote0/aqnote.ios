@@ -1,8 +1,6 @@
 platform :ios, '6.0'
 
 source 'git@github.com:aqnote/specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
 
 post_install do |installer_representation|
     installer_representation.pods_project.targets.each do |target|
@@ -14,10 +12,6 @@ end
 
 target "AQDemo" do
   pod 'AQFoundation', '~> 1.0.0'
-  
-  ## accs
-#  pod 'TBAccsSDK', '1.4.0.2'
-#  pod 'UTDID', '1.1.1.3'
 end
 
 target "AQDemoTests" do

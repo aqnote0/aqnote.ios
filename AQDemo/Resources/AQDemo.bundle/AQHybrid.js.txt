@@ -1,0 +1,119 @@
+;
+(function() {
+  if (window.AQHybrid) { return; }
+  var aqhybridIframe;
+  var sendMessageQueue = [];
+  var receiveMessageQueue = [];
+  var messageHandlers = {};
+
+  var CUSTOM_PROTOCOL_SCHEME = 'hybrid';
+  var QUEUE_HAS_MESSAGE = '__AQ_QUEUE_MESSAGE__';
+
+  var responseCallbacks = {};
+  var uniqueId = 1;
+
+  // 向页面添加iframe作为页面刷新用，本质是调用shouldStartLoadWithRequest
+	function createIframe(doc) {
+    aqhybridIframe = doc.createElement('iframe');
+    aqhybridIframe.style.display = 'none';
+    aqhybridIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + QUEUE_HAS_MESSAGE;
+    doc.documentElement.appendChild(aqhybridIframe);
+	}
+
+  // 初始化时重新获取下oc设置到js中receiveMessageQueue的内容并调用对应的代码
+	function init(defaultHandler) {
+    if (AQHybrid._defaultHandler) {
+      throw new Error('AQHybrid.init called twice');
+    }
+    AQHybrid._defaultHandler = defaultHandler;
+    var receivedMessages = receiveMessageQueue;
+    receiveMessageQueue = null;
+		for (var i=0; i<receivedMessages.length; i++) {
+      _dispatchMessage(receivedMessages[i]);
+		}
+	}
+
+	function callDefaultHandler(data, responseCallback) {
+		_callHandler({ data:data }, responseCallback)
+	}
+	
+	function registerHandler(handlerName, handler) {
+		messageHandlers[handlerName] = handler
+	}
+	
+	function callHandler(handlerName, data, responseCallback) {
+		_callHandler({ handlerName:handlerName, data:data }, responseCallback)
+	}
+	
+	function _callHandler(message, responseCallback) {
+		if (responseCallback) {
+			var callbackId = 'aqhybridjs_'+(uniqueId++)+'_'+new Date().getTime()
+			responseCallbacks[callbackId] = responseCallback
+			message['callbackId'] = callbackId
+		}
+		sendMessageQueue.push(message)
+		aqhybridIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + QUEUE_HAS_MESSAGE
+	}
+
+	function fetchQueue() {
+		var messageQueueString = JSON.stringify(sendMessageQueue)
+		sendMessageQueue = []
+		return messageQueueString
+	}
+
+	function _dispatchMessage(messageJSON) {
+    var message = JSON.parse(messageJSON)
+    var defaultHandler
+    var responseCallback
+  
+    if (message.responseId) {                 // OC返回处理结果，直接调用js的responseCallback处理
+      responseCallback = responseCallbacks[message.responseId]
+      if (!responseCallback) { return; }
+      responseCallback(message.responseData)
+      delete responseCallbacks[message.responseId]
+    } else {
+      if (message.callbackId) {        // oc返回callback，代表js要再次回调oc
+        var callbackResponseId = message.callbackId
+        responseCallback = function(responseData) {
+          _callHandler({ responseId:callbackResponseId, responseData:responseData })
+        }
+      }
+  
+      var handler = AQHybrid._defaultHandler
+      if (message.handlerName) {
+        handler = messageHandlers[message.handlerName]
+      }
+  
+      try {
+        handler(message.data, responseCallback)
+      } catch(exception) {
+        if (typeof console != 'undefined') {
+          console.log("AQHybrid: WARNING: javascript handler threw.", message, exception)
+        }
+      }
+    }
+	}
+	
+	function handleMessage(messageJSON) {
+		if (receiveMessageQueue) {                      // 若有多条消息，追加
+			receiveMessageQueue.push(messageJSON)
+		} else {                                        // 之前无消息，调用处理消息代码
+			_dispatchMessage(messageJSON)
+		}
+	}
+
+	window.AQHybrid = {                               // 创建window的对象AQHybrid
+    init:               init,
+    registerHandler:    registerHandler,                // 注册handler方法
+		callDefaultHandler: callDefaultHandler,                           // 发送消息，会触发页面刷新，即OC：shouldStartLoadWithRequest
+		callHandler:        callHandler,                    // 调用handler，会触发页面刷新，即OC：shouldStartLoadWithRequest
+		fetchQueue:         fetchQueue,                     // 提供给OC调用的方法，获取js中数据
+		handleMessage:      handleMessage                   // 提供给OC调用的方法，返回OC中的数据
+  }
+
+	var doc = document
+	createIframe(doc)                                   // 页面追加iframe
+	var readyEvent = doc.createEvent('Events')          // 创建dom时间
+	readyEvent.initEvent('AQHybridReady')               // 初始化事件
+	doc.dispatchEvent(readyEvent)
+})();

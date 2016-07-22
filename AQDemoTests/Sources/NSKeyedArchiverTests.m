@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface NSKeyedArchiverTest : XCTestCase
+@interface NSKeyedArchiverTests : XCTestCase
 
 @end
 
-@implementation NSKeyedArchiverTest
+@implementation NSKeyedArchiverTests
 
 - (void)setUp {
     [super setUp];

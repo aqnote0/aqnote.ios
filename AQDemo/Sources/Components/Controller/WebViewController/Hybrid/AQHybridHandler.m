@@ -100,7 +100,7 @@ extern NSString *createScript(NSString *callback, NSString *requestId,
   self = [super init];
   if (self) {
     _backHybridQueue = dispatch_queue_create(
-        "com.alibaba.baichuan.queue.hybrid", DISPATCH_QUEUE_CONCURRENT);
+        "com.aqnote.queue.hybrid", DISPATCH_QUEUE_CONCURRENT);
   }
   return self;
 }

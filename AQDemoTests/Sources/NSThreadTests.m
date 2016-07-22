@@ -58,16 +58,8 @@
   dispatch_sync(queue, ^{
     BOOL mainThread = [NSThread isMainThread];
     NSAssert(mainThread, @"%@ should be invoked in main thread.", NSStringFromSelector(_cmd));
-    [[[UIWebView alloc] init] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
     [lock unlock];
   });
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end

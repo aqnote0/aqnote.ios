@@ -15,30 +15,22 @@
   [super viewDidLoad];
   self.title = @"hybrid";
 
-  if (self.bridge) {
+  if (self.hybrid) {
     return;
   }
 
   self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
   [self.view addSubview:self.webView];
 
-  [AQHybrid enableLogging];
+  [AQHybrid2 enableLogging];
 
-  self.bridge = [AQHybrid
-      bridgeForWebView:self.webView
-              delegate:self
-               handler:^(id data, AQJBResponseCallback responseCallback) {
-                 NSLog(@"received from JS: %@", data);
-                 responseCallback(data);
-               }];
-}
-
-- (NSString*)_serializeMessage:(id)message {
-  return [[NSString alloc]
-      initWithData:[NSJSONSerialization dataWithJSONObject:message
-                                                   options:0
-                                                     error:nil]
-          encoding:NSUTF8StringEncoding];
+  self.hybrid =
+      [AQHybrid2 initWithWebView:self.webView
+                       delegate:self
+                        handler:^(id data, AQHybridCallback callback) {
+                          NSLog(@"%@ received: %@", NSStringFromSelector(_cmd), data);
+                          callback(data);
+                        }];
 }
 
 @end

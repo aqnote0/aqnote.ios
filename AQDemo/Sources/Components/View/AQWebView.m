@@ -10,28 +10,32 @@
 
 @interface AQWebView ()
 
-@property (nonatomic, copy) NSArray *scriptPrefixWhiteList;
+@property(nonatomic, copy) NSArray *scriptPrefixWhiteList;
 
 @end
 
 @implementation AQWebView
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.scriptPrefixWhiteList = @[@"document.title",
-                                   @"navigator.userAgent"];
-    }
-    return self;
+  self = [super initWithFrame:frame];
+  if (self) {
+    self.scriptPrefixWhiteList = @[
+      @"document.title",
+      @"navigator.userAgent",
+      @"window.AQBridge.onFailure",
+      @"window.AQBridge.onSuccess"
+    ];
+  }
+  return self;
 }
 
 - (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script {
-    for (NSString *prefix in _scriptPrefixWhiteList) {
-        if ([script hasPrefix:prefix]) {
-            return [super stringByEvaluatingJavaScriptFromString:script];
-        }
+  for (NSString *prefix in _scriptPrefixWhiteList) {
+    if ([script hasPrefix:prefix]) {
+      return [super stringByEvaluatingJavaScriptFromString:script];
     }
-    NSAssert(NO, @"script:%@ 不在白名单里!", script);
-    return nil;
+  }
+  NSAssert(NO, @"script:%@ no in white list", script);
+  return nil;
 }
 
 @end

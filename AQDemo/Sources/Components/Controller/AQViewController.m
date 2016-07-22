@@ -41,7 +41,7 @@
 //  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
   
   
-  NSLog(@"[%@]viewDidLoad", NSStringFromClass([self class]));
+  NSLog(@"[%@] viewDidLoad", NSStringFromClass([self class]));
   //  [MBProgressHUD showTextOnly:self.view message:@"viewDidLoad"];
 }
 
