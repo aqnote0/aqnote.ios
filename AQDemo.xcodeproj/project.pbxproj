@@ -56,6 +56,7 @@
 		9A596CD51D4223EF00117C0F /* UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD41D4223EF00117C0F /* UIWebViewTests.m */; };
 		9A596CD81D422B9700117C0F /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD71D422B9700117C0F /* AQHybrid.m */; };
 		9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */; };
+		9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F971D45C35400FC2664 /* SingletonTests.m */; };
 		9AE3A0DD1D38892900E06D87 /* NSHTTPCookieStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		9A596CD61D422B9700117C0F /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
 		9A596CD71D422B9700117C0F /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
 		9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArchiverTests.m; sourceTree = "<group>"; };
+		9AD93F971D45C35400FC2664 /* SingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTests.m; sourceTree = "<group>"; };
 		9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieStorageTests.m; sourceTree = "<group>"; };
 		BA9818A580B0476CCF22AF32 /* libPods-AQDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AQDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D5529434CB482BDDD7D550 /* Pods-AQDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoTests/Pods-AQDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */,
 				9A4808851D406EE8006B8393 /* StaticTests.m */,
 				9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */,
+				9AD93F971D45C35400FC2664 /* SingletonTests.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				9A4808861D406EE8006B8393 /* StaticTests.m in Sources */,
 				9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */,
 				9A2D868B1D365FB6002DF9CC /* NSThreadTests.m in Sources */,
+				9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
