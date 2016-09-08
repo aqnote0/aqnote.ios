@@ -10,13 +10,12 @@
 #import "AQViewController.h"
 #import "AQUtils.h"
 
-@interface AQUIViewController : AQViewController
+@interface PresentDismissViewController : AQViewController
 
 @property(nonatomic, assign) NSNumber *setup;
 
 
 @property(nonatomic, retain) UILabel *label;
-@property(nonatomic, retain) UIButton *hiddenStatusBarButton;
 @property(nonatomic, retain) UIButton *presentButton;
 @property(nonatomic, retain) UIButton *rootPresentButton;
 @property(nonatomic, retain) UIButton *dismissButton;
@@ -26,26 +25,17 @@
 @end
 
 
-@implementation AQUIViewController
+@implementation PresentDismissViewController
 
 
 - (void)viewDidLoad {
+  [super viewDidLoad];
   CGFloat topHeight = [self getTopHeight] + 8;
   
   self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, topHeight, 128, 32)];
   self.label.backgroundColor = [UIColor whiteColor];
   self.label.text = [NSString stringWithFormat:@"%@", self.setup];
   [self.view addSubview:self.label];
-  
-  topHeight += 64;
-  self.hiddenStatusBarButton = [UIButton buttonWithType:UIButtonTypeSystem];
-  [self.hiddenStatusBarButton setFrame:CGRectMake(20, topHeight, 128, 32)];
-  [self.hiddenStatusBarButton setBackgroundColor:[UIColor blackColor]];
-  [self.hiddenStatusBarButton setTitle:@"hidden statusbar" forState:UIControlStateNormal];
-  [self.hiddenStatusBarButton addTarget:self
-                                action:@selector(action_hidden_status_bar)
-                      forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:self.hiddenStatusBarButton];
   
   topHeight += 64;
   self.presentButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -98,19 +88,15 @@
   [self.view addSubview:self.dismissToPresentButton];
 }
 
-- (void)action_hidden_status_bar {
-  [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-}
-
 static int i = 0;
 - (void)action_present_controller {
-  AQUIViewController *toPresentViewController = [[AQUIViewController alloc] init];
+  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   [self presentViewController:toPresentViewController animated:YES completion:nil];
 }
 
 - (void)action_root_present_controller {
-  AQUIViewController *toPresentViewController = [[AQUIViewController alloc] init];
+  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   UIWindow *window = [AQUtils getUIWindow];
   UIViewController *topViewController = [window rootViewController];
@@ -123,7 +109,7 @@ static int i = 0;
 }
 
 - (void)action_root_dismiss_controller {
-  AQUIViewController *toPresentViewController = [[AQUIViewController alloc] init];
+  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   UIWindow *window = [AQUtils getUIWindow];
   UIViewController *topViewController = [window rootViewController];

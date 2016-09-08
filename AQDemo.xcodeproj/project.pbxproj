@@ -56,9 +56,10 @@
 		9A596CD31D42236600117C0F /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCF1D42236600117C0F /* TestObject.m */; };
 		9A596CD51D4223EF00117C0F /* UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD41D4223EF00117C0F /* UIWebViewTests.m */; };
 		9A596CD81D422B9700117C0F /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD71D422B9700117C0F /* AQHybrid.m */; };
+		9A9CCB1F1D81686C009FFBE9 /* MyUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */; };
 		9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */; };
 		9AC0DC3F1D6D4ABE001649BB /* JumpTaobaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */; };
-		9AC0DC421D6D85E5001649BB /* AQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC411D6D85E5001649BB /* AQUIViewController.m */; };
+		9AC0DC421D6D85E5001649BB /* PresentDismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */; };
 		9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F971D45C35400FC2664 /* SingletonTests.m */; };
 		9AD93F9B1D475B1900FC2664 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */; };
 		9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9D1D475B2700FC2664 /* ToastViewController.m */; };
@@ -158,9 +159,10 @@
 		9A596CD41D4223EF00117C0F /* UIWebViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewTests.m; sourceTree = "<group>"; };
 		9A596CD61D422B9700117C0F /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
 		9A596CD71D422B9700117C0F /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
+		9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUIViewController.m; sourceTree = "<group>"; };
 		9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArchiverTests.m; sourceTree = "<group>"; };
 		9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpTaobaoViewController.m; sourceTree = "<group>"; };
-		9AC0DC411D6D85E5001649BB /* AQUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUIViewController.m; sourceTree = "<group>"; };
+		9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentDismissViewController.m; sourceTree = "<group>"; };
 		9AD93F971D45C35400FC2664 /* SingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTests.m; sourceTree = "<group>"; };
 		9AD93F991D475B1900FC2664 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -340,7 +342,8 @@
 				9A2980AF1D17DF360054D1AB /* RootViewController.h */,
 				9A2980B01D17DF360054D1AB /* RootViewController.m */,
 				9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */,
-				9AC0DC411D6D85E5001649BB /* AQUIViewController.m */,
+				9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */,
+				9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				9A48091E1D412AC8006B8393 /* DemoWebViewController2.m in Sources */,
 				9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */,
 				9A4809131D40E70E006B8393 /* AQViewController.m in Sources */,
+				9A9CCB1F1D81686C009FFBE9 /* MyUIViewController.m in Sources */,
 				9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */,
 				9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */,
 				9A2980C81D17DF360054D1AB /* NetworkViewController.m in Sources */,
@@ -773,7 +777,7 @@
 				9A4809011D40DAA0006B8393 /* AQHybridService.m in Sources */,
 				9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */,
 				9A29809A1D17DDF70054D1AB /* main.m in Sources */,
-				9AC0DC421D6D85E5001649BB /* AQUIViewController.m in Sources */,
+				9AC0DC421D6D85E5001649BB /* PresentDismissViewController.m in Sources */,
 				9A4809001D40DAA0006B8393 /* AQHybridRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

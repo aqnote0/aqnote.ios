@@ -13,10 +13,14 @@
 
 @implementation AQViewController
 
+- (void)loadView {
+  [super loadView];
+  NSLog(@"[%@] viewDidLoad", NSStringFromClass([self class]));
+}
+
 // 页面装载完成
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
   
 //  // Do any additional setup after loading the view.
   self.view.backgroundColor = [UIColor whiteColor];
@@ -51,6 +55,16 @@
   [super viewDidDisappear:animated];
   NSLog(@"[%@] viewDidDisappear", NSStringFromClass([self class]));
   //  [MBProgressHUD showTextOnly:self.view message:@"viewDidDisappear"];
+}
+
+// 页面移出内存，内存不足时操作
+- (void)viewDidUnload {
+  [super viewDidUnload];
+  NSLog(@"[%@] viewDidUnload", NSStringFromClass([self class]));
+}
+
+- (void)dealloc {
+  NSLog(@"[%@] dealloc", NSStringFromClass([self class]));
 }
 
 // 内存不足
