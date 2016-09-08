@@ -36,24 +36,30 @@
 }
 
 - (void)renderButtons {
+  
+  CGFloat topHeight = [self getTopHeight] + 8;
+  CGFloat betweenHeight = 64;
+  
+  
   UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
 
   display = [UITextView new];
   [self.view addSubview:display];
   display.font = font;
-  display.frame = CGRectMake(20, 80, 240, 120);
+  display.frame = CGRectMake(20, topHeight, 240, 120);
   display.backgroundColor = [UIColor lightGrayColor];
   display.textAlignment = NSTextAlignmentLeft;
   display.text = @"内容";
   display.editable = NO;
 
+  topHeight = topHeight + betweenHeight*2;
   concurrencyBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
   [concurrencyBtn setTitle:@"并行" forState:UIControlStateNormal];
   [concurrencyBtn addTarget:self
                      action:@selector(doConcurrency:)
            forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:concurrencyBtn];
-  concurrencyBtn.frame = CGRectMake(20, 268, 45, 45);
+  concurrencyBtn.frame = CGRectMake(20, topHeight, 32, 32);
   concurrencyBtn.titleLabel.font = font;
   concurrencyBtn.backgroundColor = [UIColor orangeColor];
 
@@ -63,7 +69,7 @@
                 action:@selector(doAsync:)
       forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:asyncBtn];
-  asyncBtn.frame = CGRectMake(120, 268, 45, 45);
+  asyncBtn.frame = CGRectMake(120, topHeight, 32, 32);
   asyncBtn.titleLabel.font = font;
   asyncBtn.backgroundColor = [UIColor orangeColor];
 
@@ -73,7 +79,7 @@
                 action:@selector(doAsync:)
       forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:syncBtn];
-  syncBtn.frame = CGRectMake(220, 268, 45, 45);
+  syncBtn.frame = CGRectMake(220, topHeight, 32, 32);
   syncBtn.titleLabel.font = font;
   syncBtn.backgroundColor = [UIColor orangeColor];
 }

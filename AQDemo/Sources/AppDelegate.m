@@ -23,10 +23,16 @@
   self.window.backgroundColor = [UIColor whiteColor];
 
   RootViewController *rootViewController = [[RootViewController alloc] init];
+  
+  // method1: push
   UINavigationController *navController = [[UINavigationController alloc]
       initWithRootViewController:rootViewController];
-
   self.window.rootViewController = navController;
+  
+//  // method2: present
+//  self.window.rootViewController = rootViewController;
+  
+  self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
 
   return YES;
@@ -63,6 +69,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
   // Called when the application is about to terminate. Save data if
   // appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options {
+  return true;
 }
 
 @end

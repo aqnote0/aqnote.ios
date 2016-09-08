@@ -11,8 +11,7 @@
 #import <objc/message.h>
 #import "MBProgressHUD.h"
 
-@interface MemoryManageController
-    : AQViewController<UITableViewDataSource, UITableViewDelegate>
+@interface MemoryManageController : AQViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *titles;
 @property(nonatomic, strong) UITableView *tableView;
@@ -74,8 +73,7 @@
   return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   NSString *testCell = cell.textLabel.text;
 

@@ -15,7 +15,7 @@
 #import <AQFoundation/AQBundle.h>
 #import <AQFoundation/MBProgressHUD.h>
 
-#import "AQToastView.h"
+#import "UIView+Toast.h"
 
 #define kActionKeyName2 @"action"
 #define kActionKeyName @"_ap_action"
@@ -81,11 +81,11 @@
 }
 
 + (void)toast:(NSString *)text {
-  [AQToastView presentToastWithInView:[AQUtils getCurrentView] text:text duration:3];
+  [[AQUtils getCurrentView] makeToast:text duration:3 position:[CSToastManager defaultPosition]];
 }
 
 + (void)toast:(UIView *)view text:(NSString *)text {
-  [AQToastView presentToastWithInView:view text:text duration:3];
+  [view makeToast:text duration:3 position:[CSToastManager defaultPosition]];
 }
 
 //获取当前屏幕显示的view
@@ -109,6 +109,40 @@
     return YES;
   }
   return NO;
+}
+
++ (UIWindow*)getUIWindow {
+  UIWindow* window = nil;
+  id<UIApplicationDelegate> windowDelegate = [UIApplication sharedApplication].delegate;
+  if ([windowDelegate respondsToSelector:@selector(window)]) {
+    window = [[UIApplication sharedApplication].delegate window];
+  }
+  
+  if (!window) {
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+      NSArray *windows = [[UIApplication sharedApplication] windows];
+      for(UIWindow * tmpWin in windows)
+      {
+        if (tmpWin.windowLevel == UIWindowLevelNormal)
+        {
+          window = tmpWin;
+          break;
+        }
+      }
+    }
+  }
+  return window;
+}
+
++ (UIViewController *)getTopViewController {
+  UIWindow *window = [[self class] getUIWindow];
+  UIViewController *topViewController = [window rootViewController];
+  while (topViewController.presentedViewController) {
+    topViewController = topViewController.presentedViewController;
+  }
+  return topViewController;
 }
 
 

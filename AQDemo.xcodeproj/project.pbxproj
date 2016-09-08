@@ -10,6 +10,8 @@
 		686D47DA71B688B736746B57 /* libPods-AQDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEA99FCEF86F3C8D5C4700 /* libPods-AQDemoTests.a */; };
 		90ED808775395B28BD77DD79 /* libPods-AQDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BCA56D98D189ED436C645 /* libPods-AQDemoUITests.a */; };
 		975047D5A77E709F45AF261D /* libPods-AQDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9818A580B0476CCF22AF32 /* libPods-AQDemo.a */; };
+		9A13494D1D4F69C200A29EC3 /* OCKeyWordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13494C1D4F69C200A29EC3 /* OCKeyWordTests.m */; };
+		9A13494F1D502AC400A29EC3 /* OCKeyword2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13494E1D502AC400A29EC3 /* OCKeyword2Tests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A2980571D17DD8E0054D1AB /* AQDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980561D17DD8E0054D1AB /* AQDemoUITests.m */; };
 		9A2980881D17DDF70054D1AB /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980651D17DDF70054D1AB /* AppIcon.xcassets */; };
 		9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980691D17DDF70054D1AB /* AppDelegate.m */; };
@@ -44,7 +46,6 @@
 		9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809041D40DAC3006B8393 /* AQCookieManager.m */; };
 		9A4809081D40DBF8006B8393 /* ALBBHyBridResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809071D40DBF8006B8393 /* ALBBHyBridResult.m */; };
 		9A48090D1D40DD58006B8393 /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48090C1D40DD58006B8393 /* AQWebView.m */; };
-		9A4809101D40DFD5006B8393 /* AQToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48090F1D40DFD5006B8393 /* AQToastView.m */; };
 		9A4809131D40E70E006B8393 /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809121D40E70E006B8393 /* AQViewController.m */; };
 		9A48091B1D412AA7006B8393 /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809171D412AA7006B8393 /* AQWebViewController2.m */; };
 		9A48091C1D412AA7006B8393 /* AQHybrid2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48091A1D412AA7006B8393 /* AQHybrid2.m */; };
@@ -56,7 +57,11 @@
 		9A596CD51D4223EF00117C0F /* UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD41D4223EF00117C0F /* UIWebViewTests.m */; };
 		9A596CD81D422B9700117C0F /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD71D422B9700117C0F /* AQHybrid.m */; };
 		9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */; };
+		9AC0DC3F1D6D4ABE001649BB /* JumpTaobaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */; };
+		9AC0DC421D6D85E5001649BB /* AQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC411D6D85E5001649BB /* AQUIViewController.m */; };
 		9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F971D45C35400FC2664 /* SingletonTests.m */; };
+		9AD93F9B1D475B1900FC2664 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */; };
+		9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9D1D475B2700FC2664 /* ToastViewController.m */; };
 		9AE3A0DD1D38892900E06D87 /* NSHTTPCookieStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +86,8 @@
 		0BB40D633674C182372A160D /* Pods-AQDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemo/Pods-AQDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		1CBB2905CD3E98446F86C3E7 /* Pods-AQDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoTests/Pods-AQDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		516701F10574EB8525579CAB /* Pods-AQDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoUITests/Pods-AQDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A13494C1D4F69C200A29EC3 /* OCKeyWordTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCKeyWordTests.m; sourceTree = "<group>"; };
+		9A13494E1D502AC400A29EC3 /* OCKeyword2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCKeyword2Tests.m; sourceTree = "<group>"; };
 		9A29802E1D17DD8E0054D1AB /* AQDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2980421D17DD8E0054D1AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2980471D17DD8E0054D1AB /* AQDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AQDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,8 +142,6 @@
 		9A4809071D40DBF8006B8393 /* ALBBHyBridResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBBHyBridResult.m; sourceTree = "<group>"; };
 		9A48090B1D40DD58006B8393 /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
 		9A48090C1D40DD58006B8393 /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
-		9A48090E1D40DFD5006B8393 /* AQToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQToastView.h; sourceTree = "<group>"; };
-		9A48090F1D40DFD5006B8393 /* AQToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQToastView.m; sourceTree = "<group>"; };
 		9A4809111D40E70E006B8393 /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
 		9A4809121D40E70E006B8393 /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
 		9A4809171D412AA7006B8393 /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
@@ -154,7 +159,12 @@
 		9A596CD61D422B9700117C0F /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
 		9A596CD71D422B9700117C0F /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
 		9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArchiverTests.m; sourceTree = "<group>"; };
+		9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpTaobaoViewController.m; sourceTree = "<group>"; };
+		9AC0DC411D6D85E5001649BB /* AQUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUIViewController.m; sourceTree = "<group>"; };
 		9AD93F971D45C35400FC2664 /* SingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTests.m; sourceTree = "<group>"; };
+		9AD93F991D475B1900FC2664 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		9AD93F9D1D475B2700FC2664 /* ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
 		9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieStorageTests.m; sourceTree = "<group>"; };
 		BA9818A580B0476CCF22AF32 /* libPods-AQDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AQDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D5529434CB482BDDD7D550 /* Pods-AQDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQDemoTests/Pods-AQDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +319,8 @@
 				9A4808851D406EE8006B8393 /* StaticTests.m */,
 				9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */,
 				9AD93F971D45C35400FC2664 /* SingletonTests.m */,
+				9A13494C1D4F69C200A29EC3 /* OCKeyWordTests.m */,
+				9A13494E1D502AC400A29EC3 /* OCKeyword2Tests.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -316,6 +328,7 @@
 		9A2980AB1D17DF360054D1AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9AD93F9D1D475B2700FC2664 /* ToastViewController.m */,
 				9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */,
 				9A48088C1D4091F2006B8393 /* CookieViewController.m */,
 				9A2980AE1D17DF360054D1AB /* DemoViewController.m */,
@@ -326,6 +339,8 @@
 				9A2980B31D17DF360054D1AB /* NetworkViewController.m */,
 				9A2980AF1D17DF360054D1AB /* RootViewController.h */,
 				9A2980B01D17DF360054D1AB /* RootViewController.m */,
+				9AC0DC3E1D6D4ABE001649BB /* JumpTaobaoViewController.m */,
+				9AC0DC411D6D85E5001649BB /* AQUIViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -426,8 +441,8 @@
 		9A48090A1D40DD58006B8393 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A48090E1D40DFD5006B8393 /* AQToastView.h */,
-				9A48090F1D40DFD5006B8393 /* AQToastView.m */,
+				9AD93F991D475B1900FC2664 /* UIView+Toast.h */,
+				9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */,
 				9A48090B1D40DD58006B8393 /* AQWebView.h */,
 				9A48090C1D40DD58006B8393 /* AQWebView.m */,
 			);
@@ -541,7 +556,7 @@
 				TargetAttributes = {
 					9A29802D1D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = U67X2L3L84;
+						DevelopmentTeam = WE5AVK72GR;
 					};
 					9A2980461D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -738,7 +753,6 @@
 				9A2980C31D17DF360054D1AB /* ContactsListViewController.m in Sources */,
 				9A4808FF1D40DAA0006B8393 /* AQHybridHandler.m in Sources */,
 				9A4808FE1D40DAA0006B8393 /* AQHybridContext.m in Sources */,
-				9A4809101D40DFD5006B8393 /* AQToastView.m in Sources */,
 				9A4808F91D40DAA0006B8393 /* AQNavigationController.m in Sources */,
 				9A48090D1D40DD58006B8393 /* AQWebView.m in Sources */,
 				9A4808A21D40D358006B8393 /* AQBlock.m in Sources */,
@@ -749,13 +763,17 @@
 				9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */,
 				9A4809131D40E70E006B8393 /* AQViewController.m in Sources */,
 				9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */,
+				9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */,
 				9A2980C81D17DF360054D1AB /* NetworkViewController.m in Sources */,
 				9A48088D1D4091F2006B8393 /* CookieViewController.m in Sources */,
 				9A48089F1D40B45E006B8393 /* AQString+AQDemo.m in Sources */,
+				9AC0DC3F1D6D4ABE001649BB /* JumpTaobaoViewController.m in Sources */,
 				9A4808CD1D40D9E2006B8393 /* AQUtils.m in Sources */,
+				9AD93F9B1D475B1900FC2664 /* UIView+Toast.m in Sources */,
 				9A4809011D40DAA0006B8393 /* AQHybridService.m in Sources */,
 				9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */,
 				9A29809A1D17DDF70054D1AB /* main.m in Sources */,
+				9AC0DC421D6D85E5001649BB /* AQUIViewController.m in Sources */,
 				9A4809001D40DAA0006B8393 /* AQHybridRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,9 +786,11 @@
 				9A596CD01D42236600117C0F /* Benchmark.m in Sources */,
 				9A2980A81D17DE520054D1AB /* NSArrayPerfTests.m in Sources */,
 				9A2980A61D17DE520054D1AB /* GCDTests.m in Sources */,
+				9A13494D1D4F69C200A29EC3 /* OCKeyWordTests.m in Sources */,
 				9A596CD21D42236600117C0F /* Signal.c in Sources */,
 				9A2980A51D17DE520054D1AB /* EncodeTests.m in Sources */,
 				9A596CD11D42236600117C0F /* LockTests.m in Sources */,
+				9A13494F1D502AC400A29EC3 /* OCKeyword2Tests.m in Sources */,
 				9A2980A71D17DE520054D1AB /* LLDBDebugTests.m in Sources */,
 				9AE3A0DD1D38892900E06D87 /* NSHTTPCookieStorageTests.m in Sources */,
 				9A596CD31D42236600117C0F /* TestObject.m in Sources */,
@@ -897,9 +917,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.ADDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -915,9 +935,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.ADDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

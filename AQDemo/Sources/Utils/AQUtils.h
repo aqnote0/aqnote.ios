@@ -22,4 +22,8 @@
 
 + (BOOL)iOS7OrLater;
 
++ (UIWindow*)getUIWindow;
+
++ (UIViewController *)getTopViewController;
+
 @end

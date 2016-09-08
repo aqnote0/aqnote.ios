@@ -80,8 +80,7 @@
 }
 
 - (void)loadPage {
-  NSString* htmlPath =
-      [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
+  NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
   NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath
                                                 encoding:NSUTF8StringEncoding
                                                    error:nil];
@@ -90,11 +89,10 @@
 }
 
 - (NSString*)_serializeMessage:(id)message {
-  return [[NSString alloc]
-      initWithData:[NSJSONSerialization dataWithJSONObject:message
-                                                   options:0
-                                                     error:nil]
-          encoding:NSUTF8StringEncoding];
+  return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:message
+                                                                        options:0
+                                                                          error:nil]
+                               encoding:NSUTF8StringEncoding];
 }
 
 @end

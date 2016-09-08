@@ -8,6 +8,7 @@
 
 #import "AQString+AQDemo.h"
 #import "AQViewController.h"
+#import <UIKit/UIKit.h>
 
 #define COOKIE_DOMAIN_AQNOTE @"http://aqnote.com"
 #define COOKIE_NAME_SID @"sid"
@@ -30,19 +31,24 @@
 }
 
 - (void)renderUI {
+  
+  CGFloat topHeight = [self getTopHeight] + 8;
+  CGFloat betweenHeight = 64;
+  
   self.countdownLabel = [[UILabel alloc] init];
   UIFont *font = [UIFont fontWithName:@"Helvetica Neue" size:12.0];
   //  [UIFont boldSystemFontOfSize:12.0];
   self.countdownLabel.font = font;
-  self.countdownLabel.frame = CGRectMake(20, 80, 260, 60);
+  self.countdownLabel.frame = CGRectMake(8, topHeight, 208, 64);
   self.countdownLabel.backgroundColor = [UIColor blackColor];
   self.countdownLabel.text = @"No Info";
   self.countdownLabel.textColor = [UIColor whiteColor];
   self.countdownLabel.textAlignment = NSTextAlignmentLeft;
   [self.view addSubview:self.countdownLabel];
 
+  topHeight = topHeight + betweenHeight + 8;
   self.killButton = [[UIButton alloc] init];
-  [self.killButton setFrame:CGRectMake(20, 180, 60, 40)];
+  [self.killButton setFrame:CGRectMake(8, topHeight, 64, 32)];
   [self.killButton setBackgroundColor:[UIColor blackColor]];
   [self.killButton setTitle:@"kill" forState:UIControlStateNormal];
   [self.killButton addTarget:self
@@ -51,7 +57,7 @@
   [self.view addSubview:self.killButton];
 
   self.abortButton = [UIButton buttonWithType:UIButtonTypeSystem];
-  [self.abortButton setFrame:CGRectMake(120, 180, 60, 40)];
+  [self.abortButton setFrame:CGRectMake(80, topHeight, 64, 32)];
   [self.abortButton setBackgroundColor:[UIColor blackColor]];
   [self.abortButton setTitle:@"abort" forState:UIControlStateNormal];
   [self.abortButton addTarget:self
@@ -60,7 +66,7 @@
   [self.view addSubview:self.abortButton];
 
   self.exitButton = [UIButton buttonWithType:UIButtonTypeSystem];
-  [self.exitButton setFrame:CGRectMake(220, 180, 60, 40)];
+  [self.exitButton setFrame:CGRectMake(152, topHeight, 64, 32)];
   [self.exitButton setBackgroundColor:[UIColor blackColor]];
   [self.exitButton setTitle:@"exit" forState:UIControlStateNormal];
   [self.exitButton addTarget:self

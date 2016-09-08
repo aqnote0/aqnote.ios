@@ -39,9 +39,9 @@
 
 #pragma mark - Initialization
 - (void)initTableInfo {
-  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理" ], nil];
+  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理", @"跳转淘宝", @"UI操作"], nil];
   self.classNames = [NSArray
-      arrayWithObjects:@[ @"DemoViewController", @"NetworkViewController", @"CookieViewController" ], nil];
+      arrayWithObjects:@[ @"DemoViewController", @"NetworkViewController", @"CookieViewController", @"JumpTaobaoViewController", @"AQUIViewController"], nil];
 }
 
 - (void)initTableView {
@@ -73,8 +73,7 @@ titleForHeaderInSection:(NSInteger)section {
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *mainCellIdentifier = @"MainCellIdentifier";
-  UITableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:mainCellIdentifier];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:mainCellIdentifier];
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                   reuseIdentifier:mainCellIdentifier];
@@ -90,16 +89,10 @@ titleForHeaderInSection:(NSInteger)section {
 - (void)tableView:(UITableView *)tableView
     didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
   NSString *className = self.classNames[indexPath.section][indexPath.row];
-
-  UIViewController *subViewController =
-      [[NSClassFromString(className) alloc] init];
-
-  subViewController.title = self.titles[indexPath.section][indexPath.row];
-  [self.navigationController
-      pushViewController:(UIViewController *)subViewController
-                animated:NO];
+  UIViewController *nextViewController = [[NSClassFromString(className) alloc] init];
+  nextViewController.title = self.titles[indexPath.section][indexPath.row];
+  [self nextViewController:nextViewController];
 }
 
 @end

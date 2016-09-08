@@ -196,5 +196,31 @@
   XCTAssert(true, @"failure");
 }
 
+- (void)test09_ {
+  NSCondition *condition = [[NSCondition alloc] init];
+  
+  dispatch_queue_t queue = dispatch_queue_create("com.aqnote.com.queue.concurrent1", DISPATCH_QUEUE_CONCURRENT);
+  
+  dispatch_async(queue, ^(){
+    NSLog(@"dispatch-1");
+  });
+  dispatch_async(queue, ^(){
+    NSLog(@"dispatch-2");
+  });
+  NSLog(@"main1");
+  dispatch_barrier_async(queue, ^(){
+    NSLog(@"dispatch-barrier");
+  });
+  NSLog(@"main2");
+  dispatch_async(queue, ^(){
+    NSLog(@"dispatch-3");
+  });
+  dispatch_async(queue, ^(){
+    NSLog(@"dispatch-4");
+  });
+  
+  [condition waitUntilDate:[NSDate dateWithTimeIntervalSinceNow:5]];
+}
+
 
 @end

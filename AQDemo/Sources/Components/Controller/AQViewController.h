@@ -11,12 +11,10 @@
 
 @interface AQViewController : UIViewController
 
-/** 是否push */
-@property (nonatomic, assign) BOOL push;
-
-/** 当时通过push进来的时候，即push为真的时候，此属性会有值 */
-@property (nonatomic, weak) UINavigationController *navController;
-
 - (void)onBack;
+
+- (CGFloat)getTopHeight;
+
+- (void)nextViewController:(UIViewController *)nextViewController;
 
 @end

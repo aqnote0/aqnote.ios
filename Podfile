@@ -1,6 +1,7 @@
 platform :ios, '6.0'
 
-source 'git@github.com:aqnote/specs.git'
+#source 'git@github.com:aqnote/specs.git'
+source 'https://github.com/aqnote/specs.git'
 
 post_install do |installer_representation|
     installer_representation.pods_project.targets.each do |target|

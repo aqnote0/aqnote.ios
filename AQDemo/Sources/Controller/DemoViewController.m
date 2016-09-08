@@ -13,8 +13,7 @@
 #import "MBProgressHUD.h"
 #import "AQViewController.h"
 
-@interface DemoViewController
-    : AQViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DemoViewController : AQViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *titles;
 @property(nonatomic, strong) NSArray *classNames;
@@ -45,7 +44,8 @@
                           @"内存管理",
                           @"联系人",
                           @"Hybrid1",
-                          @"Hybrid2" ],
+                          @"Hybrid2",
+                          @"Toast"],
                        nil];
 
   self.classNames = [NSArray arrayWithObjects:@[
@@ -53,7 +53,8 @@
     @"MemoryManageController",
     @"ContactsListViewController",
     @"DemoWebViewController",
-    @"DemoWebViewController2"
+    @"DemoWebViewController2",
+    @"ToastViewController"
   ],
                                               nil];
 }
@@ -61,8 +62,7 @@
 - (void)initTableView {
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
                                                 style:UITableViewStylePlain];
-  //  self.tableView.autoresizingMask =
-  //      UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+  self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.view addSubview:self.tableView];
@@ -86,8 +86,7 @@ titleForHeaderInSection:(NSInteger)section {
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *mainCellIdentifier = @"MainCellIdentifier";
-  UITableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:mainCellIdentifier];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:mainCellIdentifier];
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                   reuseIdentifier:mainCellIdentifier];
@@ -100,19 +99,13 @@ titleForHeaderInSection:(NSInteger)section {
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView
-    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
   NSString *className = self.classNames[indexPath.section][indexPath.row];
-
-  UIViewController *subViewController =
-      [[NSClassFromString(className) alloc] init];
-
-  subViewController.title = self.titles[indexPath.section][indexPath.row];
-  [self.navigationController
-      pushViewController:subViewController
-                animated:NO];
+  UIViewController *nextViewController = [[NSClassFromString(className) alloc] init];
+  nextViewController.title = self.titles[indexPath.section][indexPath.row];
+  [self nextViewController:nextViewController];
 }
 
 @end
