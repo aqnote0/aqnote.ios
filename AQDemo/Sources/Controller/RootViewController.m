@@ -39,12 +39,12 @@
 
 #pragma mark - Initialization
 - (void)initTableInfo {
-  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理", @"跳转淘宝", @"present or dismiss", @"UI操作"], nil];
+  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理", @"跳转", @"present or dismiss", @"UI操作"], nil];
   self.classNames = [NSArray
       arrayWithObjects:@[ @"DemoViewController",
                           @"NetworkViewController",
                           @"CookieViewController",
-                          @"JumpTaobaoViewController",
+                          @"JumpViewController",
                           @"PresentDismissViewController",
                           @"MyUIViewController"], nil];
 }

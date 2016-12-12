@@ -351,10 +351,10 @@
  */
 - (void)testFontNames {
   NSArray *familyNames = [UIFont familyNames];
-  [familyNames enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
+  [familyNames enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     NSLog(@"* %@",obj);
     NSArray *fontNames = [UIFont fontNamesForFamilyName:obj];
-    [fontNames enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
+    [fontNames enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
       NSLog(@"--- %@",obj);
     }];
   }];

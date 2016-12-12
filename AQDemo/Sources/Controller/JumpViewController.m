@@ -11,18 +11,18 @@
 
 #import "AQViewController.h"
 
-@interface JumpTaobaoViewController : AQViewController
+@interface JumpViewController : AQViewController
 
 @property(nonatomic, retain) UIButton *jumpTaobaoHomeButton;
 @property(nonatomic, retain) UIButton *jumpTaobaoHomeButton1;
 
 @end
 
-@implementation JumpTaobaoViewController
+@implementation JumpViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"JumpTaobao";
+  self.title = @"应用跳转";
   [self renderUI];
 }
 
@@ -30,18 +30,18 @@
   CGFloat topHeight = [self getTopHeight] + 8;
   
   self.jumpTaobaoHomeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-  [self.jumpTaobaoHomeButton setFrame:CGRectMake(140, topHeight, 128, 32)];
+  [self.jumpTaobaoHomeButton setFrame:CGRectMake(20, topHeight, 128, 32)];
   [self.jumpTaobaoHomeButton setBackgroundColor:[UIColor blackColor]];
-  [self.jumpTaobaoHomeButton setTitle:@"jump tb home" forState:UIControlStateNormal];
+  [self.jumpTaobaoHomeButton setTitle:@"to tb home" forState:UIControlStateNormal];
   [self.jumpTaobaoHomeButton addTarget:self
                       action:@selector(aciont_jump_taobao_home)
             forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:self.jumpTaobaoHomeButton];
   
   self.jumpTaobaoHomeButton1 = [UIButton buttonWithType:UIButtonTypeSystem];
-  [self.jumpTaobaoHomeButton1 setFrame:CGRectMake(280, topHeight, 128, 32)];
+  [self.jumpTaobaoHomeButton1 setFrame:CGRectMake(160, topHeight, 128, 32)];
   [self.jumpTaobaoHomeButton1 setBackgroundColor:[UIColor blackColor]];
-  [self.jumpTaobaoHomeButton1 setTitle:@"jump tb home" forState:UIControlStateNormal];
+  [self.jumpTaobaoHomeButton1 setTitle:@"to tb home" forState:UIControlStateNormal];
   [self.jumpTaobaoHomeButton1 addTarget:self
                                 action:@selector(aciont_jump_taobao_home2)
                       forControlEvents:UIControlEventTouchUpInside];

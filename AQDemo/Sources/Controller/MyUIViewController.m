@@ -39,6 +39,9 @@
   [self.hiddenStatusBarButton setTitle:@"display statusbar" forState:UIControlStateNormal];
 }
 
+- (void)action_change_navigation_bar {
+}
+
 - (BOOL)prefersStatusBarHidden {
   return self.shouldHideStatusBar;
 }
