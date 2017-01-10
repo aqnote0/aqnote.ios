@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -491,12 +491,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A29805B1D17DD8E0054D1AB /* Build configuration list for PBXNativeTarget "AQDemo" */;
 			buildPhases = (
-				DAA9AE048023194EB3EA021B /* Check Pods Manifest.lock */,
+				DAA9AE048023194EB3EA021B /* [CP] Check Pods Manifest.lock */,
 				9A29802A1D17DD8E0054D1AB /* Sources */,
 				9A29802B1D17DD8E0054D1AB /* Frameworks */,
 				9A29802C1D17DD8E0054D1AB /* Resources */,
-				AE5B534881D431654D9D776D /* Embed Pods Frameworks */,
-				A3C3C6CDD77DC632095E3AAE /* Copy Pods Resources */,
+				AE5B534881D431654D9D776D /* [CP] Embed Pods Frameworks */,
+				A3C3C6CDD77DC632095E3AAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -511,12 +511,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A29805E1D17DD8E0054D1AB /* Build configuration list for PBXNativeTarget "AQDemoTests" */;
 			buildPhases = (
-				C5FB57B3419E5DA36B0F62F3 /* Check Pods Manifest.lock */,
+				C5FB57B3419E5DA36B0F62F3 /* [CP] Check Pods Manifest.lock */,
 				9A2980431D17DD8E0054D1AB /* Sources */,
 				9A2980441D17DD8E0054D1AB /* Frameworks */,
 				9A2980451D17DD8E0054D1AB /* Resources */,
-				EA1B3AFD7EF9A6CECEC8E0F3 /* Embed Pods Frameworks */,
-				0123C4EC4123BE104A233FA7 /* Copy Pods Resources */,
+				EA1B3AFD7EF9A6CECEC8E0F3 /* [CP] Embed Pods Frameworks */,
+				0123C4EC4123BE104A233FA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -532,11 +532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A2980611D17DD8E0054D1AB /* Build configuration list for PBXNativeTarget "AQDemoUITests" */;
 			buildPhases = (
-				7D6B0591234940A700745884 /* Check Pods Manifest.lock */,
+				7D6B0591234940A700745884 /* [CP] Check Pods Manifest.lock */,
 				9A29804E1D17DD8E0054D1AB /* Sources */,
 				9A29804F1D17DD8E0054D1AB /* Frameworks */,
 				9A2980501D17DD8E0054D1AB /* Resources */,
-				41FB292D34FBB43BE6FDFFBD /* Copy Pods Resources */,
+				41FB292D34FBB43BE6FDFFBD /* [CP] Copy Pods Resources */,
+				4366042EBD61BA11FA6D6A9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -554,12 +555,11 @@
 		9A2980261D17DD8E0054D1AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Peng Li";
 				TargetAttributes = {
 					9A29802D1D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WE5AVK72GR;
 					};
 					9A2980461D17DD8E0054D1AB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -572,7 +572,7 @@
 				};
 			};
 			buildConfigurationList = 9A2980291D17DD8E0054D1AB /* Build configuration list for PBXProject "AQDemo" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -620,14 +620,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0123C4EC4123BE104A233FA7 /* Copy Pods Resources */ = {
+		0123C4EC4123BE104A233FA7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,14 +635,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQDemoTests/Pods-AQDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		41FB292D34FBB43BE6FDFFBD /* Copy Pods Resources */ = {
+		41FB292D34FBB43BE6FDFFBD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,29 +650,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQDemoUITests/Pods-AQDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D6B0591234940A700745884 /* Check Pods Manifest.lock */ = {
+		4366042EBD61BA11FA6D6A9B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQDemoUITests/Pods-AQDemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3C3C6CDD77DC632095E3AAE /* Copy Pods Resources */ = {
+		7D6B0591234940A700745884 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C3C6CDD77DC632095E3AAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,14 +695,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQDemo/Pods-AQDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE5B534881D431654D9D776D /* Embed Pods Frameworks */ = {
+		AE5B534881D431654D9D776D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,44 +710,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQDemo/Pods-AQDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5FB57B3419E5DA36B0F62F3 /* Check Pods Manifest.lock */ = {
+		C5FB57B3419E5DA36B0F62F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DAA9AE048023194EB3EA021B /* Check Pods Manifest.lock */ = {
+		DAA9AE048023194EB3EA021B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EA1B3AFD7EF9A6CECEC8E0F3 /* Embed Pods Frameworks */ = {
+		EA1B3AFD7EF9A6CECEC8E0F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -839,13 +854,16 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -883,13 +901,16 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -919,11 +940,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3VY737ACEV;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.ADDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -937,11 +959,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3VY737ACEV;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AQDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.ADDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
