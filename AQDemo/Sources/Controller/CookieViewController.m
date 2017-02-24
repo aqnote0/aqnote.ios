@@ -9,9 +9,10 @@
 #import "AQString+AQDemo.h"
 #import "AQViewController.h"
 #import <UIKit/UIKit.h>
+#import "AQCookieManager.h"
 
-#define COOKIE_DOMAIN_AQNOTE @"http://aqnote.com"
-#define COOKIE_NAME_SID @"sid"
+#define COOKIE_AQNOTE_COM @".aqnote.com"
+#define COOKIE_SID @"sid"
 
 @interface CookieViewController : AQViewController
 
@@ -19,6 +20,8 @@
 @property(nonatomic, retain) UIButton *killButton;
 @property(nonatomic, retain) UIButton *exitButton;
 @property(nonatomic, retain) UIButton *abortButton;
+@property(nonatomic, retain) UIButton *replaceHttpOnlyButton;
+@property(nonatomic, retain) UIButton *replaceSessionOnlyButton;
 
 @end
 
@@ -73,6 +76,26 @@
                       action:@selector(aciont_exit)
             forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:self.exitButton];
+  
+  
+  topHeight = topHeight + betweenHeight + 8;
+  self.replaceHttpOnlyButton = [UIButton buttonWithType:UIButtonTypeSystem];
+  [self.replaceHttpOnlyButton setFrame:CGRectMake(8, topHeight, 64, 32)];
+  [self.replaceHttpOnlyButton setBackgroundColor:[UIColor blackColor]];
+  [self.replaceHttpOnlyButton setTitle:@"replace httpOnly" forState:UIControlStateNormal];
+  [self.replaceHttpOnlyButton addTarget:self
+                      action:@selector(aciont_replace_httpOnly)
+            forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:self.replaceHttpOnlyButton];
+  
+  self.replaceSessionOnlyButton = [UIButton buttonWithType:UIButtonTypeSystem];
+  [self.replaceSessionOnlyButton setFrame:CGRectMake(150, topHeight, 64, 32)];
+  [self.replaceSessionOnlyButton setBackgroundColor:[UIColor blackColor]];
+  [self.replaceSessionOnlyButton setTitle:@"replace SessioOnly" forState:UIControlStateNormal];
+  [self.replaceSessionOnlyButton addTarget:self
+                                 action:@selector(aciont_replace_sessionOnly)
+                       forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:self.replaceSessionOnlyButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -83,10 +106,7 @@
 }
 
 - (void)checkForMissingCookie {
-  //  BOOL hasSavedCookies =  [[[NSHTTPCookieStorage sharedHTTPCookieStorage]
-  //                          cookies] count] > 0;
-  NSHTTPCookie *cookie =
-      [self getCookie:COOKIE_DOMAIN_AQNOTE cookieName:COOKIE_NAME_SID];
+  NSHTTPCookie *cookie = [self getCookie:COOKIE_AQNOTE_COM cookieName:COOKIE_SID];
 
   NSString *title, *message;
   if (cookie == nil) {
@@ -102,17 +122,14 @@
          "Did you let the app be killed without putting it in the background?";
   }
 
-  UIAlertController *alertController =
-      [UIAlertController alertControllerWithTitle:title
-                                          message:message
-                                   preferredStyle:UIAlertControllerStyleAlert];
-  UIAlertAction *okAction =
-      [UIAlertAction actionWithTitle:@"OK"
-                               style:UIAlertActionStyleDefault
-                             handler:nil];
-  [alertController addAction:okAction];
-
-  [self presentViewController:alertController animated:YES completion:nil];
+//  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+//                                                                           message:message
+//                                                                    preferredStyle:UIAlertControllerStyleAlert];
+//  UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+//                                                     style:UIAlertActionStyleDefault
+//                                                   handler:nil];
+//  [alertController addAction:okAction];
+//  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)writeCookie {
@@ -120,18 +137,15 @@
     [self cleanCookieStorage];
 
     // Add a cookie to the cookie storage
-    NSHTTPCookieStorage *cookieStorage =
-        [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
-    NSDictionary *cookieDic = [NSDictionary
-        dictionaryWithObjectsAndKeys:COOKIE_NAME_SID, NSHTTPCookieName,
-                                     @"111111111111", NSHTTPCookieValue,
-                                     COOKIE_DOMAIN_AQNOTE,
-                                     NSHTTPCookieOriginURL, @"/",
-                                     NSHTTPCookiePath,
-                                     [NSDate
-                                         dateWithTimeIntervalSinceNow:60 * 60],
-                                     NSHTTPCookieExpires, nil];
+    NSDictionary *cookieDic = @{NSHTTPCookieName : COOKIE_SID,
+                                NSHTTPCookieValue : @"sid",
+                                NSHTTPCookieDomain : COOKIE_AQNOTE_COM,
+                                NSHTTPCookiePath : @"/",
+                                NSHTTPCookieSecure : [NSNumber numberWithBool:false],
+                                NSHTTPCookieExpires : [NSDate dateWithTimeIntervalSinceNow:60 * 60]
+                                };
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieDic];
     [cookieStorage setCookie:cookie];
     NSAssert([[cookieStorage cookies] count] > 0,
@@ -151,6 +165,39 @@
 
 - (void)action_abort {
   abort();
+}
+
+static int i=0;
+- (void)aciont_replace_httpOnly {
+  [self replaceCookie:@"cookie2"];
+}
+
+- (void)aciont_replace_sessionOnly {
+  [self replaceCookie:@"_tb_token_"];
+}
+
+- (void)replaceCookie:(NSString *)cookieName {
+  NSHTTPCookie *dbCookie1 = [self getCookie:@".taobao.com" cookieName:cookieName];
+  
+  NSString *cookieValue = [NSString stringWithFormat:@"%d", i++];
+  NSDictionary *cookieDic = @{NSHTTPCookieName : cookieName,
+                              NSHTTPCookieValue: cookieValue,
+                              NSHTTPCookieDomain : @".taobao.com",
+                              NSHTTPCookiePath: @"/",
+                              NSHTTPCookieExpires : [NSDate dateWithTimeIntervalSinceNow:60 * 60]
+                              };
+  NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieDic];
+  NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+  [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+  [cookieStorage setCookie:cookie];
+  
+  NSHTTPCookie *dbCookie2 = [self getCookie:@".taobao.com" cookieName:cookieName];
+  
+  NSString *dbCookieValue =  dbCookie2.value;
+  [[self countdownLabel] setText:dbCookieValue];
+  
+  NSLog(@"\n %@\n %@\n %@\n", dbCookie1, cookie, dbCookie2);
+  NSLog(@"-----------------------------------------\n");
 }
 
 - (void)writeCookieFlag {
@@ -183,5 +230,6 @@
   }
   return nil;
 }
+
 
 @end

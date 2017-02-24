@@ -22,7 +22,9 @@
       @"document.title",
       @"navigator.userAgent",
       @"window.AQBridge.onFailure",
-      @"window.AQBridge.onSuccess"
+      @"window.AQBridge.onSuccess",
+      @"window.AQHybrid",
+      @"typeof"
     ];
   }
   return self;

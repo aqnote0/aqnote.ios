@@ -62,12 +62,15 @@
 }
 
 - (void)loadPage {
-  NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
-  NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath
-                                                encoding:NSUTF8StringEncoding
-                                                   error:nil];
-  NSURL* baseURL = [NSURL fileURLWithPath:htmlPath];
-  [self.webView loadHTMLString:appHtml baseURL:baseURL];
+//  NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
+//  NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath
+//                                                encoding:NSUTF8StringEncoding
+//                                                   error:nil];
+//  NSURL* baseURL = [NSURL fileURLWithPath:htmlPath];
+//  [self.webView loadHTMLString:appHtml baseURL:baseURL];
+  NSURL *url = [NSURL URLWithString:@"https://login.m.taobao.com/login.htm"];
+  NSURLRequest *request = [NSURLRequest requestWithURL:url];
+  [self.webView loadRequest:request];
 }
 
 - (NSString*)_serializeMessage:(id)message {
