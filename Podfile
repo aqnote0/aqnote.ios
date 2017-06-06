@@ -11,15 +11,15 @@ source 'https://github.com/aqnotecom/specs.git'
 #    end
 #end
 
-target "AQDemo" do
+target "aqnote" do
   pod 'AQFoundation', '~> 1.1.0'
 end
 
-target "AQDemoTests" do
+target "aqnoteTests" do
   pod 'AQFoundation', '~> 1.1.0'
 end
 
 
-target "AQDemoUITests" do
+target "aqnoteUITests" do
   pod 'AQFoundation', '~> 1.1.0'
 end

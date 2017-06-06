@@ -6,7 +6,7 @@
 //  Copyright © 2016 Peng Li. All rights reserved.
 //
 
-#import "AQString+AQDemo.h"
+#import "NSString+aqnote.h"
 #import "AQViewController.h"
 #import <UIKit/UIKit.h>
 #import "AQCookieManager.h"
