@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^vBlock)();
+typedef void (^vBlock)(void);
 typedef void (^vbBlock)(BOOL);
 
 @interface AQBlock : NSObject

@@ -7,7 +7,7 @@
 //
 #import <UIKit/UIKit.h>
 
-typedef void(^AQNavigationControllerCompletitionHandler)();
+typedef void(^AQNavigationControllerCompletitionHandler)(void);
 @interface AQNavigationController : UINavigationController
 
 @end

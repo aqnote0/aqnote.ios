@@ -49,11 +49,16 @@
 }
 
 - (void)aciont_jump_taobao_home {
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"taobao://m.taobao.com?"]];
+//  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"taobao://m.taobao.com?"]];
+  NSURL *url = [NSURL URLWithString:@"taobao://m.taobao.com?"];
+  [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+  }];
 }
 
 - (void)aciont_jump_taobao_home2 {
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"taobao://?"]];
+  NSURL *url = [NSURL URLWithString:@"taobao://?"];
+  [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+  }];
 }
 
 @end

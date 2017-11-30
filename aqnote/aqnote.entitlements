@@ -6,13 +6,19 @@
 	<string>NSFileProtectionComplete</string>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
+	<key>com.apple.developer.homekit</key>
+	<true/>
+	<key>com.apple.external-accessory.wireless-configuration</key>
+	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.aqnote</string>
+		<string>group.com.aqnote.aqnote</string>
 	</array>
+	<key>inter-app-audio</key>
+	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.aqnote.main</string>
+		<string>$(AppIdentifierPrefix)com.aqnote.aqnote</string>
 	</array>
 </dict>
 </plist>
