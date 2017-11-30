@@ -1,7 +1,7 @@
 platform :ios, '6.0'
 
 #source 'git@github.com:aqnote/specs.git'
-source 'https://github.com/aqnotecom/specs.git'
+source 'https://github.com/aqnotecom/com.aqnote.ios.specs.git'
 
 #post_install do |installer_representation|
 #    installer_representation.pods_project.targets.each do |target|
@@ -12,14 +12,14 @@ source 'https://github.com/aqnotecom/specs.git'
 #end
 
 target "aqnote" do
-  pod 'AQFoundation', '~> 1.1.0'
+  pod 'AQFoundation', '~> 1.2.0'
 end
 
 target "aqnoteTests" do
-  pod 'AQFoundation', '~> 1.1.0'
+  pod 'AQFoundation', '~> 1.2.0'
 end
 
 
 target "aqnoteUITests" do
-  pod 'AQFoundation', '~> 1.1.0'
+  pod 'AQFoundation', '~> 1.2.0'
 end
