@@ -20,7 +20,7 @@
   NSString *_atomicString;
   
   NSString *_strongString;
-  NSString *_weakString;
+  __weak NSString *_weakString;
 }
 
 // assign: 指定setter赋值方式为直接赋值方式_f = f; default

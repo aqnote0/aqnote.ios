@@ -1,70 +1,63 @@
 //
-//  LifecycleViewController.m
+//  ViewController.m
 //  iosdev
 //
-//  Created by madding on 7/1/15.
+//  Created by madding on 6/8/15.
 //  Copyright (c) 2015 madding. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <objc/runtime.h>
+#import "RootViewController.h"
 
-#import "MBProgressHUD.h"
-#import "AQViewController.h"
-
-@interface DemoViewController : AQViewController<UITableViewDataSource, UITableViewDelegate>
+@interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *titles;
 @property(nonatomic, strong) NSArray *classNames;
 @property(nonatomic, strong) UITableView *tableView;
 
+
 @end
 
-@implementation DemoViewController
+@implementation RootViewController
 
-- (instancetype)init {
+- (instancetype) init {
   self = [super init];
   if(self) {
-     [self initTableInfo];
+    [self initTableInfo];
   }
   return self;
 }
 
-- (void) viewDidLoad {
+- (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"UI使用例子";
+  self.title = @"ios场景模拟";
   [self initTableView];
+}
+
+- (void)didReceiveMemoryWarning {
+  [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Initialization
 - (void)initTableInfo {
-  self.titles = [NSArray
-      arrayWithObjects:@[ @"多线程模拟",
-                          @"内存管理",
-                          @"联系人",
-                          @"Hybrid1",
-                          @"Hybrid2",
-                          @"Toast"],
-                       nil];
-
-  self.classNames = [NSArray arrayWithObjects:@[
-    @"MutliThreadController",
-    @"MemoryManageController",
-    @"ContactsListViewController",
-    @"DemoWebViewController",
-    @"DemoWebViewController2",
-    @"ToastViewController"
-  ],
-                                              nil];
+  self.titles = [NSArray arrayWithObjects:@[ @"UI例子", @"网络状态监控", @"Cookie管理", @"跳转", @"present or dismiss", @"UI操作", @"获取设备mac地址"], nil];
+  self.classNames = [NSArray
+      arrayWithObjects:@[ @"DemoViewController",
+                          @"NetworkViewController",
+                          @"CookieViewController",
+                          @"JumpViewController",
+                          @"PresentDismissViewController",
+                          @"MyUIViewController",
+                          @"MacAddressViewController"], nil];
 }
 
 - (void)initTableView {
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
-                                                style:UITableViewStylePlain];
-  self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+                                                style:UITableViewStyleGrouped];
+  self.tableView.autoresizingMask =
+      UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
+
   [self.view addSubview:self.tableView];
 }
 
@@ -99,9 +92,9 @@ titleForHeaderInSection:(NSInteger)section {
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
   NSString *className = self.classNames[indexPath.section][indexPath.row];
   UIViewController *nextViewController = [[NSClassFromString(className) alloc] init];
   nextViewController.title = self.titles[indexPath.section][indexPath.row];

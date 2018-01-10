@@ -86,6 +86,7 @@
                          action:@selector(action_dismiss_topresent_controller)
                forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:self.dismissToPresentButton];
+  
 }
 
 static int i = 0;

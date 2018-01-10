@@ -8,21 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		081D25541EE697B3000DAED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081D25531EE697B3000DAED1 /* HealthKit.framework */; };
-		08959FE31F32F6370010FE1B /* AQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FCA1F32F6370010FE1B /* AQNavigationController.m */; };
-		08959FE41F32F6370010FE1B /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FCC1F32F6370010FE1B /* AQViewController.m */; };
-		08959FE51F32F6370010FE1B /* AQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FCF1F32F6370010FE1B /* AQWebViewController.m */; };
-		08959FE61F32F6370010FE1B /* ALBBHyBridResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FD11F32F6370010FE1B /* ALBBHyBridResult.m */; };
-		08959FE71F32F6370010FE1B /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FD31F32F6370010FE1B /* AQHybrid.m */; };
-		08959FE81F32F6370010FE1B /* AQHybridContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FD51F32F6370010FE1B /* AQHybridContext.m */; };
-		08959FE91F32F6370010FE1B /* AQHybridHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FD71F32F6370010FE1B /* AQHybridHandler.m */; };
-		08959FEA1F32F6370010FE1B /* AQHybridRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FD91F32F6370010FE1B /* AQHybridRegister.m */; };
-		08959FEB1F32F6370010FE1B /* AQHybridService.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FDC1F32F6370010FE1B /* AQHybridService.m */; };
-		08959FEC1F32F6370010FE1B /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FDF1F32F6370010FE1B /* AQWebViewController2.m */; };
-		08959FED1F32F6370010FE1B /* AQHybrid2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FE21F32F6370010FE1B /* AQHybrid2.m */; };
 		08959FF01F32F6910010FE1B /* AQKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FEF1F32F6910010FE1B /* AQKeychain.m */; };
 		08AE6C451F6623720073A333 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C441F6623720073A333 /* AudioToolbox.framework */; };
 		08AE6C471F66237D0073A333 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C461F66237D0073A333 /* HomeKit.framework */; };
 		08AE6C491F6623B40073A333 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C481F6623B40073A333 /* ExternalAccessory.framework */; };
+		08B299502005E3730051B7AC /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299482005E3730051B7AC /* NICInfo.m */; };
+		08B299512005E3730051B7AC /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2994F2005E3730051B7AC /* NICInfoSummary.m */; };
+		08B299842005E4EB0051B7AC /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299542005E4EB0051B7AC /* ToastViewController.m */; };
+		08B299852005E4EB0051B7AC /* AQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299572005E4EB0051B7AC /* AQWebViewController.m */; };
+		08B299862005E4EB0051B7AC /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995B2005E4EB0051B7AC /* AQHybrid.m */; };
+		08B299872005E4EB0051B7AC /* AQHybridHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */; };
+		08B299882005E4EB0051B7AC /* ALBBHyBridResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */; };
+		08B299892005E4EB0051B7AC /* AQHybridRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299602005E4EB0051B7AC /* AQHybridRegister.m */; };
+		08B2998A2005E4EB0051B7AC /* AQHybridService.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299622005E4EB0051B7AC /* AQHybridService.m */; };
+		08B2998B2005E4EB0051B7AC /* AQHybridContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299632005E4EB0051B7AC /* AQHybridContext.m */; };
+		08B2998C2005E4EB0051B7AC /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299682005E4EB0051B7AC /* AQWebViewController2.m */; };
+		08B2998D2005E4EB0051B7AC /* AQHybrid2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996A2005E4EB0051B7AC /* AQHybrid2.m */; };
+		08B2998E2005E4EB0051B7AC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996C2005E4EB0051B7AC /* RootViewController.m */; };
+		08B2998F2005E4EB0051B7AC /* MacAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */; };
+		08B299902005E4EB0051B7AC /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996E2005E4EB0051B7AC /* AQViewController.m */; };
+		08B299912005E4EB0051B7AC /* PresentDismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */; };
+		08B299922005E4EB0051B7AC /* MemoryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299702005E4EB0051B7AC /* MemoryManageController.m */; };
+		08B299932005E4EB0051B7AC /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299712005E4EB0051B7AC /* ContactsListViewController.m */; };
+		08B299942005E4EB0051B7AC /* AQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299732005E4EB0051B7AC /* AQNavigationController.m */; };
+		08B299952005E4EB0051B7AC /* DemoWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299752005E4EB0051B7AC /* DemoWebViewController2.m */; };
+		08B299962005E4EB0051B7AC /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299762005E4EB0051B7AC /* NetworkViewController.m */; };
+		08B299972005E4EB0051B7AC /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299782005E4EB0051B7AC /* DemoViewController.m */; };
+		08B299982005E4EB0051B7AC /* CookieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299792005E4EB0051B7AC /* CookieViewController.m */; };
+		08B299992005E4EB0051B7AC /* MutliThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997B2005E4EB0051B7AC /* MutliThreadController.m */; };
+		08B2999A2005E4EB0051B7AC /* JumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997C2005E4EB0051B7AC /* JumpViewController.m */; };
+		08B2999B2005E4EB0051B7AC /* DemoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997D2005E4EB0051B7AC /* DemoWebViewController.m */; };
+		08B2999C2005E4EB0051B7AC /* MyUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997E2005E4EB0051B7AC /* MyUIViewController.m */; };
+		08B2999D2005E4EB0051B7AC /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299822005E4EB0051B7AC /* AQWebView.m */; };
+		08B2999E2005E4EB0051B7AC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299832005E4EB0051B7AC /* UIView+Toast.m */; };
+		08B299A62005E4F10051B7AC /* AQCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A12005E4F10051B7AC /* AQCookieManager.m */; };
+		08B299A72005E4F10051B7AC /* AQBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A42005E4F10051B7AC /* AQBlock.m */; };
+		08B299AA2005E56C0051B7AC /* NSString+aqnote.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A92005E56C0051B7AC /* NSString+aqnote.m */; };
+		08F3AE721FD1223D0056A43F /* BoolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F3AE711FD1223D0056A43F /* BoolTest.m */; };
 		686D47DA71B688B736746B57 /* libPods-aqnoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEA99FCEF86F3C8D5C4700 /* libPods-aqnoteTests.a */; };
 		90ED808775395B28BD77DD79 /* libPods-aqnoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BCA56D98D189ED436C645 /* libPods-aqnoteUITests.a */; };
 		975047D5A77E709F45AF261D /* libPods-aqnote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9818A580B0476CCF22AF32 /* libPods-aqnote.a */; };
@@ -36,38 +58,20 @@
 		9A2980A61D17DE520054D1AB /* GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809E1D17DE520054D1AB /* GCDTests.m */; };
 		9A2980A71D17DE520054D1AB /* LLDBDebugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809F1D17DE520054D1AB /* LLDBDebugTests.m */; };
 		9A2980A81D17DE520054D1AB /* NSArrayPerfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980A01D17DE520054D1AB /* NSArrayPerfTests.m */; };
-		9A2980C31D17DF360054D1AB /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */; };
-		9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980AE1D17DF360054D1AB /* DemoViewController.m */; };
-		9A2980C51D17DF360054D1AB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B01D17DF360054D1AB /* RootViewController.m */; };
-		9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B11D17DF360054D1AB /* MemoryManageController.m */; };
-		9A2980C71D17DF360054D1AB /* MutliThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B21D17DF360054D1AB /* MutliThreadController.m */; };
-		9A2980C81D17DF360054D1AB /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B31D17DF360054D1AB /* NetworkViewController.m */; };
-		9A2980C91D17DF360054D1AB /* DemoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980B41D17DF360054D1AB /* DemoWebViewController.m */; };
 		9A2980D31D17DF420054D1AB /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D01D17DF420054D1AB /* webview.html */; };
 		9A2980DA1D17E1390054D1AB /* aqnote.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980D91D17E1390054D1AB /* aqnote.bundle */; };
 		9A2980E11D17E30C0054D1AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980DF1D17E30C0054D1AB /* Main.storyboard */; };
 		9A2D868B1D365FB6002DF9CC /* NSThreadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */; };
 		9A4808861D406EE8006B8393 /* StaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808851D406EE8006B8393 /* StaticTests.m */; };
-		9A48088D1D4091F2006B8393 /* CookieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48088C1D4091F2006B8393 /* CookieViewController.m */; };
 		9A4808941D40A669006B8393 /* FontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808931D40A669006B8393 /* FontTests.m */; };
-		9A48089F1D40B45E006B8393 /* NSString+aqnote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48089E1D40B45E006B8393 /* NSString+aqnote.m */; };
-		9A4808A21D40D358006B8393 /* AQBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808A11D40D358006B8393 /* AQBlock.m */; };
 		9A4808CD1D40D9E2006B8393 /* AQUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808CC1D40D9E2006B8393 /* AQUtils.m */; };
-		9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4809041D40DAC3006B8393 /* AQCookieManager.m */; };
-		9A48090D1D40DD58006B8393 /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48090C1D40DD58006B8393 /* AQWebView.m */; };
-		9A48091E1D412AC8006B8393 /* DemoWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */; };
 		9A596CD01D42236600117C0F /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCB1D42236600117C0F /* Benchmark.m */; };
 		9A596CD11D42236600117C0F /* LockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCC1D42236600117C0F /* LockTests.m */; };
 		9A596CD21D42236600117C0F /* Signal.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCD1D42236600117C0F /* Signal.c */; };
 		9A596CD31D42236600117C0F /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCF1D42236600117C0F /* TestObject.m */; };
 		9A596CD51D4223EF00117C0F /* UIWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CD41D4223EF00117C0F /* UIWebViewTests.m */; };
-		9A9CCB1F1D81686C009FFBE9 /* MyUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */; };
 		9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */; };
-		9AC0DC3F1D6D4ABE001649BB /* JumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC3E1D6D4ABE001649BB /* JumpViewController.m */; };
-		9AC0DC421D6D85E5001649BB /* PresentDismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */; };
 		9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F971D45C35400FC2664 /* SingletonTests.m */; };
-		9AD93F9B1D475B1900FC2664 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */; };
-		9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD93F9D1D475B2700FC2664 /* ToastViewController.m */; };
 		9AE3A0DD1D38892900E06D87 /* NSHTTPCookieStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */; };
 /* End PBXBuildFile section */
 
@@ -91,33 +95,67 @@
 /* Begin PBXFileReference section */
 		081D25521EE69758000DAED1 /* aqnote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aqnote.entitlements; sourceTree = "<group>"; };
 		081D25531EE697B3000DAED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		08959FC91F32F6370010FE1B /* AQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQNavigationController.h; sourceTree = "<group>"; };
-		08959FCA1F32F6370010FE1B /* AQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQNavigationController.m; sourceTree = "<group>"; };
-		08959FCB1F32F6370010FE1B /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
-		08959FCC1F32F6370010FE1B /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
-		08959FCE1F32F6370010FE1B /* AQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController.h; sourceTree = "<group>"; };
-		08959FCF1F32F6370010FE1B /* AQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController.m; sourceTree = "<group>"; };
-		08959FD11F32F6370010FE1B /* ALBBHyBridResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBBHyBridResult.m; sourceTree = "<group>"; };
-		08959FD21F32F6370010FE1B /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
-		08959FD31F32F6370010FE1B /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
-		08959FD41F32F6370010FE1B /* AQHybridContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridContext.h; sourceTree = "<group>"; };
-		08959FD51F32F6370010FE1B /* AQHybridContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridContext.m; sourceTree = "<group>"; };
-		08959FD61F32F6370010FE1B /* AQHybridHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridHandler.h; sourceTree = "<group>"; };
-		08959FD71F32F6370010FE1B /* AQHybridHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridHandler.m; sourceTree = "<group>"; };
-		08959FD81F32F6370010FE1B /* AQHybridRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridRegister.h; sourceTree = "<group>"; };
-		08959FD91F32F6370010FE1B /* AQHybridRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridRegister.m; sourceTree = "<group>"; };
-		08959FDA1F32F6370010FE1B /* AQHyBridResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHyBridResult.h; sourceTree = "<group>"; };
-		08959FDB1F32F6370010FE1B /* AQHybridService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridService.h; sourceTree = "<group>"; };
-		08959FDC1F32F6370010FE1B /* AQHybridService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridService.m; sourceTree = "<group>"; };
-		08959FDE1F32F6370010FE1B /* AQWebViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController2.h; sourceTree = "<group>"; };
-		08959FDF1F32F6370010FE1B /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
-		08959FE11F32F6370010FE1B /* AQHybrid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid2.h; sourceTree = "<group>"; };
-		08959FE21F32F6370010FE1B /* AQHybrid2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid2.m; sourceTree = "<group>"; };
 		08959FEE1F32F6910010FE1B /* AQKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQKeychain.h; sourceTree = "<group>"; };
 		08959FEF1F32F6910010FE1B /* AQKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQKeychain.m; sourceTree = "<group>"; };
 		08AE6C441F6623720073A333 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		08AE6C461F66237D0073A333 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		08AE6C481F6623B40073A333 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		08B299482005E3730051B7AC /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
+		08B299492005E3730051B7AC /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
+		08B2994A2005E3730051B7AC /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		08B2994B2005E3730051B7AC /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		08B2994C2005E3730051B7AC /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfo.h; sourceTree = "<group>"; };
+		08B2994D2005E3730051B7AC /* if_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_dl.h; sourceTree = "<group>"; };
+		08B2994E2005E3730051B7AC /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		08B2994F2005E3730051B7AC /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
+		08B299542005E4EB0051B7AC /* ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
+		08B299572005E4EB0051B7AC /* AQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController.m; sourceTree = "<group>"; };
+		08B299582005E4EB0051B7AC /* AQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController.h; sourceTree = "<group>"; };
+		08B2995A2005E4EB0051B7AC /* AQHyBridResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHyBridResult.h; sourceTree = "<group>"; };
+		08B2995B2005E4EB0051B7AC /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
+		08B2995C2005E4EB0051B7AC /* AQHybridService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridService.h; sourceTree = "<group>"; };
+		08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridHandler.m; sourceTree = "<group>"; };
+		08B2995E2005E4EB0051B7AC /* AQHybridContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridContext.h; sourceTree = "<group>"; };
+		08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBBHyBridResult.m; sourceTree = "<group>"; };
+		08B299602005E4EB0051B7AC /* AQHybridRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridRegister.m; sourceTree = "<group>"; };
+		08B299612005E4EB0051B7AC /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
+		08B299622005E4EB0051B7AC /* AQHybridService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridService.m; sourceTree = "<group>"; };
+		08B299632005E4EB0051B7AC /* AQHybridContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridContext.m; sourceTree = "<group>"; };
+		08B299642005E4EB0051B7AC /* AQHybridHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridHandler.h; sourceTree = "<group>"; };
+		08B299652005E4EB0051B7AC /* AQHybridRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridRegister.h; sourceTree = "<group>"; };
+		08B299672005E4EB0051B7AC /* AQWebViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController2.h; sourceTree = "<group>"; };
+		08B299682005E4EB0051B7AC /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
+		08B2996A2005E4EB0051B7AC /* AQHybrid2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid2.m; sourceTree = "<group>"; };
+		08B2996B2005E4EB0051B7AC /* AQHybrid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid2.h; sourceTree = "<group>"; };
+		08B2996C2005E4EB0051B7AC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacAddressViewController.m; sourceTree = "<group>"; };
+		08B2996E2005E4EB0051B7AC /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
+		08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentDismissViewController.m; sourceTree = "<group>"; };
+		08B299702005E4EB0051B7AC /* MemoryManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManageController.m; sourceTree = "<group>"; };
+		08B299712005E4EB0051B7AC /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListViewController.m; sourceTree = "<group>"; };
+		08B299732005E4EB0051B7AC /* AQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQNavigationController.m; sourceTree = "<group>"; };
+		08B299742005E4EB0051B7AC /* AQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQNavigationController.h; sourceTree = "<group>"; };
+		08B299752005E4EB0051B7AC /* DemoWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController2.m; sourceTree = "<group>"; };
+		08B299762005E4EB0051B7AC /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
+		08B299772005E4EB0051B7AC /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
+		08B299782005E4EB0051B7AC /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		08B299792005E4EB0051B7AC /* CookieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookieViewController.m; sourceTree = "<group>"; };
+		08B2997A2005E4EB0051B7AC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		08B2997B2005E4EB0051B7AC /* MutliThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutliThreadController.m; sourceTree = "<group>"; };
+		08B2997C2005E4EB0051B7AC /* JumpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpViewController.m; sourceTree = "<group>"; };
+		08B2997D2005E4EB0051B7AC /* DemoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController.m; sourceTree = "<group>"; };
+		08B2997E2005E4EB0051B7AC /* MyUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUIViewController.m; sourceTree = "<group>"; };
+		08B299802005E4EB0051B7AC /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
+		08B299812005E4EB0051B7AC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		08B299822005E4EB0051B7AC /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
+		08B299832005E4EB0051B7AC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		08B299A12005E4F10051B7AC /* AQCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCookieManager.m; sourceTree = "<group>"; };
+		08B299A22005E4F10051B7AC /* AQCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCookieManager.h; sourceTree = "<group>"; };
+		08B299A42005E4F10051B7AC /* AQBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQBlock.m; sourceTree = "<group>"; };
+		08B299A52005E4F10051B7AC /* AQBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQBlock.h; sourceTree = "<group>"; };
+		08B299A82005E56C0051B7AC /* NSString+aqnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+aqnote.h"; sourceTree = "<group>"; };
+		08B299A92005E56C0051B7AC /* NSString+aqnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+aqnote.m"; sourceTree = "<group>"; };
+		08F3AE711FD1223D0056A43F /* BoolTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoolTest.m; sourceTree = "<group>"; };
 		0BB40D633674C182372A160D /* Pods-aqnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aqnote/Pods-aqnote.debug.xcconfig"; sourceTree = "<group>"; };
 		1CBB2905CD3E98446F86C3E7 /* Pods-aqnoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aqnoteTests/Pods-aqnoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		516701F10574EB8525579CAB /* Pods-aqnoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aqnoteUITests/Pods-aqnoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,32 +176,14 @@
 		9A29809E1D17DE520054D1AB /* GCDTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTests.m; sourceTree = "<group>"; };
 		9A29809F1D17DE520054D1AB /* LLDBDebugTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDBDebugTests.m; sourceTree = "<group>"; };
 		9A2980A01D17DE520054D1AB /* NSArrayPerfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayPerfTests.m; sourceTree = "<group>"; };
-		9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListViewController.m; sourceTree = "<group>"; };
-		9A2980AE1D17DF360054D1AB /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		9A2980AF1D17DF360054D1AB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		9A2980B01D17DF360054D1AB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		9A2980B11D17DF360054D1AB /* MemoryManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManageController.m; sourceTree = "<group>"; };
-		9A2980B21D17DF360054D1AB /* MutliThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutliThreadController.m; sourceTree = "<group>"; };
-		9A2980B31D17DF360054D1AB /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
-		9A2980B41D17DF360054D1AB /* DemoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController.m; sourceTree = "<group>"; };
 		9A2980D01D17DF420054D1AB /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
 		9A2980D91D17E1390054D1AB /* aqnote.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = aqnote.bundle; sourceTree = "<group>"; };
 		9A2980DF1D17E30C0054D1AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadTests.m; sourceTree = "<group>"; };
 		9A4808851D406EE8006B8393 /* StaticTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTests.m; sourceTree = "<group>"; };
-		9A48088C1D4091F2006B8393 /* CookieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookieViewController.m; sourceTree = "<group>"; };
 		9A4808931D40A669006B8393 /* FontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontTests.m; sourceTree = "<group>"; };
-		9A48089D1D40B45E006B8393 /* NSString+aqnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+aqnote.h"; sourceTree = "<group>"; };
-		9A48089E1D40B45E006B8393 /* NSString+aqnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+aqnote.m"; sourceTree = "<group>"; };
-		9A4808A01D40D358006B8393 /* AQBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQBlock.h; sourceTree = "<group>"; };
-		9A4808A11D40D358006B8393 /* AQBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQBlock.m; sourceTree = "<group>"; };
 		9A4808CB1D40D9E2006B8393 /* AQUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQUtils.h; sourceTree = "<group>"; };
 		9A4808CC1D40D9E2006B8393 /* AQUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUtils.m; sourceTree = "<group>"; };
-		9A4809031D40DAC3006B8393 /* AQCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCookieManager.h; sourceTree = "<group>"; };
-		9A4809041D40DAC3006B8393 /* AQCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCookieManager.m; sourceTree = "<group>"; };
-		9A48090B1D40DD58006B8393 /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
-		9A48090C1D40DD58006B8393 /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
-		9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebViewController2.m; sourceTree = "<group>"; };
 		9A596CCA1D42236600117C0F /* Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Benchmark.h; sourceTree = "<group>"; };
 		9A596CCB1D42236600117C0F /* Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Benchmark.m; sourceTree = "<group>"; };
 		9A596CCC1D42236600117C0F /* LockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockTests.m; sourceTree = "<group>"; };
@@ -171,14 +191,8 @@
 		9A596CCE1D42236600117C0F /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		9A596CCF1D42236600117C0F /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		9A596CD41D4223EF00117C0F /* UIWebViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewTests.m; sourceTree = "<group>"; };
-		9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUIViewController.m; sourceTree = "<group>"; };
 		9AB787941D2B49A600833957 /* NSKeyedArchiverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArchiverTests.m; sourceTree = "<group>"; };
-		9AC0DC3E1D6D4ABE001649BB /* JumpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpViewController.m; sourceTree = "<group>"; };
-		9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentDismissViewController.m; sourceTree = "<group>"; };
 		9AD93F971D45C35400FC2664 /* SingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTests.m; sourceTree = "<group>"; };
-		9AD93F991D475B1900FC2664 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		9AD93F9D1D475B2700FC2664 /* ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
 		9AE3A0DC1D38892900E06D87 /* NSHTTPCookieStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieStorageTests.m; sourceTree = "<group>"; };
 		BA9818A580B0476CCF22AF32 /* libPods-aqnote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aqnote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D5529434CB482BDDD7D550 /* Pods-aqnoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aqnoteTests/Pods-aqnoteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,65 +247,166 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		08959FC81F32F6370010FE1B /* WebViewController */ = {
+		08B299462005E3730051B7AC /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				08959FC91F32F6370010FE1B /* AQNavigationController.h */,
-				08959FCA1F32F6370010FE1B /* AQNavigationController.m */,
-				08959FCB1F32F6370010FE1B /* AQViewController.h */,
-				08959FCC1F32F6370010FE1B /* AQViewController.m */,
-				08959FCD1F32F6370010FE1B /* WebViewController */,
-				08959FDD1F32F6370010FE1B /* WebViewController2 */,
+				08B299472005E3730051B7AC /* MacAddress */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		08B299472005E3730051B7AC /* MacAddress */ = {
+			isa = PBXGroup;
+			children = (
+				08B299482005E3730051B7AC /* NICInfo.m */,
+				08B299492005E3730051B7AC /* NICInfoSummary.h */,
+				08B2994A2005E3730051B7AC /* route.h */,
+				08B2994B2005E3730051B7AC /* if_ether.h */,
+				08B2994C2005E3730051B7AC /* NICInfo.h */,
+				08B2994D2005E3730051B7AC /* if_dl.h */,
+				08B2994E2005E3730051B7AC /* if_arp.h */,
+				08B2994F2005E3730051B7AC /* NICInfoSummary.m */,
+			);
+			path = MacAddress;
+			sourceTree = "<group>";
+		};
+		08B299522005E4EB0051B7AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				08B299532005E4EB0051B7AC /* Controller */,
+				08B2997F2005E4EB0051B7AC /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		08B299532005E4EB0051B7AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08B299722005E4EB0051B7AC /* Navigation */,
+				08B299772005E4EB0051B7AC /* AQViewController.h */,
+				08B2996E2005E4EB0051B7AC /* AQViewController.m */,
+				08B299712005E4EB0051B7AC /* ContactsListViewController.m */,
+				08B299792005E4EB0051B7AC /* CookieViewController.m */,
+				08B299782005E4EB0051B7AC /* DemoViewController.m */,
+				08B2997D2005E4EB0051B7AC /* DemoWebViewController.m */,
+				08B299752005E4EB0051B7AC /* DemoWebViewController2.m */,
+				08B2997C2005E4EB0051B7AC /* JumpViewController.m */,
+				08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */,
+				08B299702005E4EB0051B7AC /* MemoryManageController.m */,
+				08B2997B2005E4EB0051B7AC /* MutliThreadController.m */,
+				08B2997E2005E4EB0051B7AC /* MyUIViewController.m */,
+				08B299762005E4EB0051B7AC /* NetworkViewController.m */,
+				08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */,
+				08B2997A2005E4EB0051B7AC /* RootViewController.h */,
+				08B2996C2005E4EB0051B7AC /* RootViewController.m */,
+				08B299542005E4EB0051B7AC /* ToastViewController.m */,
+				08B299552005E4EB0051B7AC /* WebViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		08B299552005E4EB0051B7AC /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08B299562005E4EB0051B7AC /* V1 */,
+				08B299662005E4EB0051B7AC /* V2 */,
 			);
 			path = WebViewController;
 			sourceTree = "<group>";
 		};
-		08959FCD1F32F6370010FE1B /* WebViewController */ = {
+		08B299562005E4EB0051B7AC /* V1 */ = {
 			isa = PBXGroup;
 			children = (
-				08959FCE1F32F6370010FE1B /* AQWebViewController.h */,
-				08959FCF1F32F6370010FE1B /* AQWebViewController.m */,
-				08959FD01F32F6370010FE1B /* Hybrid */,
+				08B299572005E4EB0051B7AC /* AQWebViewController.m */,
+				08B299582005E4EB0051B7AC /* AQWebViewController.h */,
+				08B299592005E4EB0051B7AC /* Hybrid */,
 			);
-			path = WebViewController;
+			path = V1;
 			sourceTree = "<group>";
 		};
-		08959FD01F32F6370010FE1B /* Hybrid */ = {
+		08B299592005E4EB0051B7AC /* Hybrid */ = {
 			isa = PBXGroup;
 			children = (
-				08959FD11F32F6370010FE1B /* ALBBHyBridResult.m */,
-				08959FD21F32F6370010FE1B /* AQHybrid.h */,
-				08959FD31F32F6370010FE1B /* AQHybrid.m */,
-				08959FD41F32F6370010FE1B /* AQHybridContext.h */,
-				08959FD51F32F6370010FE1B /* AQHybridContext.m */,
-				08959FD61F32F6370010FE1B /* AQHybridHandler.h */,
-				08959FD71F32F6370010FE1B /* AQHybridHandler.m */,
-				08959FD81F32F6370010FE1B /* AQHybridRegister.h */,
-				08959FD91F32F6370010FE1B /* AQHybridRegister.m */,
-				08959FDA1F32F6370010FE1B /* AQHyBridResult.h */,
-				08959FDB1F32F6370010FE1B /* AQHybridService.h */,
-				08959FDC1F32F6370010FE1B /* AQHybridService.m */,
+				08B2995A2005E4EB0051B7AC /* AQHyBridResult.h */,
+				08B2995B2005E4EB0051B7AC /* AQHybrid.m */,
+				08B2995C2005E4EB0051B7AC /* AQHybridService.h */,
+				08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */,
+				08B2995E2005E4EB0051B7AC /* AQHybridContext.h */,
+				08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */,
+				08B299602005E4EB0051B7AC /* AQHybridRegister.m */,
+				08B299612005E4EB0051B7AC /* AQHybrid.h */,
+				08B299622005E4EB0051B7AC /* AQHybridService.m */,
+				08B299632005E4EB0051B7AC /* AQHybridContext.m */,
+				08B299642005E4EB0051B7AC /* AQHybridHandler.h */,
+				08B299652005E4EB0051B7AC /* AQHybridRegister.h */,
 			);
 			path = Hybrid;
 			sourceTree = "<group>";
 		};
-		08959FDD1F32F6370010FE1B /* WebViewController2 */ = {
+		08B299662005E4EB0051B7AC /* V2 */ = {
 			isa = PBXGroup;
 			children = (
-				08959FDE1F32F6370010FE1B /* AQWebViewController2.h */,
-				08959FDF1F32F6370010FE1B /* AQWebViewController2.m */,
-				08959FE01F32F6370010FE1B /* Hybrid */,
+				08B299672005E4EB0051B7AC /* AQWebViewController2.h */,
+				08B299682005E4EB0051B7AC /* AQWebViewController2.m */,
+				08B299692005E4EB0051B7AC /* Hybrid */,
 			);
-			path = WebViewController2;
+			path = V2;
 			sourceTree = "<group>";
 		};
-		08959FE01F32F6370010FE1B /* Hybrid */ = {
+		08B299692005E4EB0051B7AC /* Hybrid */ = {
 			isa = PBXGroup;
 			children = (
-				08959FE11F32F6370010FE1B /* AQHybrid2.h */,
-				08959FE21F32F6370010FE1B /* AQHybrid2.m */,
+				08B2996A2005E4EB0051B7AC /* AQHybrid2.m */,
+				08B2996B2005E4EB0051B7AC /* AQHybrid2.h */,
 			);
 			path = Hybrid;
+			sourceTree = "<group>";
+		};
+		08B299722005E4EB0051B7AC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				08B299742005E4EB0051B7AC /* AQNavigationController.h */,
+				08B299732005E4EB0051B7AC /* AQNavigationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		08B2997F2005E4EB0051B7AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B299802005E4EB0051B7AC /* AQWebView.h */,
+				08B299822005E4EB0051B7AC /* AQWebView.m */,
+				08B299812005E4EB0051B7AC /* UIView+Toast.h */,
+				08B299832005E4EB0051B7AC /* UIView+Toast.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B2999F2005E4F10051B7AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08B299A02005E4F10051B7AC /* Cookie */,
+				08B299A32005E4F10051B7AC /* Callback */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		08B299A02005E4F10051B7AC /* Cookie */ = {
+			isa = PBXGroup;
+			children = (
+				08B299A22005E4F10051B7AC /* AQCookieManager.h */,
+				08B299A12005E4F10051B7AC /* AQCookieManager.m */,
+			);
+			path = Cookie;
+			sourceTree = "<group>";
+		};
+		08B299A32005E4F10051B7AC /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				08B299A52005E4F10051B7AC /* AQBlock.h */,
+				08B299A42005E4F10051B7AC /* AQBlock.m */,
+			);
+			path = Callback;
 			sourceTree = "<group>";
 		};
 		984D5E8A9E37ED0C2C856308 /* Frameworks */ = {
@@ -376,15 +491,12 @@
 			children = (
 				9A2980681D17DDF70054D1AB /* AppDelegate.h */,
 				9A2980691D17DDF70054D1AB /* AppDelegate.m */,
-				9A4808A01D40D358006B8393 /* AQBlock.h */,
-				9A4808A11D40D358006B8393 /* AQBlock.m */,
-				9A48089C1D40B45E006B8393 /* Category */,
-				9A4808A31D40D6B9006B8393 /* Components */,
-				9A2980AB1D17DF360054D1AB /* Controller */,
 				9A2980851D17DDF70054D1AB /* main.m */,
+				08B2999F2005E4F10051B7AC /* Components */,
+				08B299462005E3730051B7AC /* Device */,
 				9A2980B51D17DF360054D1AB /* Model */,
+				08B299522005E4EB0051B7AC /* UI */,
 				9A4808CA1D40D9E2006B8393 /* Utils */,
-				9A2980B61D17DF360054D1AB /* View */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -405,29 +517,9 @@
 				9AD93F971D45C35400FC2664 /* SingletonTests.m */,
 				9A13494C1D4F69C200A29EC3 /* OCKeyWordTests.m */,
 				9A13494E1D502AC400A29EC3 /* OCKeyword2Tests.m */,
+				08F3AE711FD1223D0056A43F /* BoolTest.m */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		9A2980AB1D17DF360054D1AB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9AD93F9D1D475B2700FC2664 /* ToastViewController.m */,
-				9A2980AD1D17DF360054D1AB /* ContactsListViewController.m */,
-				9A48088C1D4091F2006B8393 /* CookieViewController.m */,
-				9A2980AE1D17DF360054D1AB /* DemoViewController.m */,
-				9A2980B41D17DF360054D1AB /* DemoWebViewController.m */,
-				9A48091D1D412AC8006B8393 /* DemoWebViewController2.m */,
-				9A2980B11D17DF360054D1AB /* MemoryManageController.m */,
-				9A2980B21D17DF360054D1AB /* MutliThreadController.m */,
-				9A2980B31D17DF360054D1AB /* NetworkViewController.m */,
-				9A2980AF1D17DF360054D1AB /* RootViewController.h */,
-				9A2980B01D17DF360054D1AB /* RootViewController.m */,
-				9AC0DC3E1D6D4ABE001649BB /* JumpViewController.m */,
-				9AC0DC411D6D85E5001649BB /* PresentDismissViewController.m */,
-				9A9CCB1E1D81686C009FFBE9 /* MyUIViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		9A2980B51D17DF360054D1AB /* Model */ = {
@@ -437,61 +529,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9A2980B61D17DF360054D1AB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9A48089C1D40B45E006B8393 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				9A48089D1D40B45E006B8393 /* NSString+aqnote.h */,
-				9A48089E1D40B45E006B8393 /* NSString+aqnote.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		9A4808A31D40D6B9006B8393 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				08959FC81F32F6370010FE1B /* WebViewController */,
-				9A4809021D40DAC3006B8393 /* CookieManager */,
-				9A48090A1D40DD58006B8393 /* View */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		9A4808CA1D40D9E2006B8393 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				08B299A82005E56C0051B7AC /* NSString+aqnote.h */,
+				08B299A92005E56C0051B7AC /* NSString+aqnote.m */,
 				08959FEE1F32F6910010FE1B /* AQKeychain.h */,
 				08959FEF1F32F6910010FE1B /* AQKeychain.m */,
 				9A4808CB1D40D9E2006B8393 /* AQUtils.h */,
 				9A4808CC1D40D9E2006B8393 /* AQUtils.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		9A4809021D40DAC3006B8393 /* CookieManager */ = {
-			isa = PBXGroup;
-			children = (
-				9A4809031D40DAC3006B8393 /* AQCookieManager.h */,
-				9A4809041D40DAC3006B8393 /* AQCookieManager.m */,
-			);
-			path = CookieManager;
-			sourceTree = "<group>";
-		};
-		9A48090A1D40DD58006B8393 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9AD93F991D475B1900FC2664 /* UIView+Toast.h */,
-				9AD93F9A1D475B1900FC2664 /* UIView+Toast.m */,
-				9A48090B1D40DD58006B8393 /* AQWebView.h */,
-				9A48090C1D40DD58006B8393 /* AQWebView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9A596CC91D42236600117C0F /* misc */ = {
@@ -821,39 +869,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08959FE81F32F6370010FE1B /* AQHybridContext.m in Sources */,
+				08B2999A2005E4EB0051B7AC /* JumpViewController.m in Sources */,
 				9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */,
-				9A2980C91D17DF360054D1AB /* DemoWebViewController.m in Sources */,
-				9A2980C71D17DF360054D1AB /* MutliThreadController.m in Sources */,
-				08959FE71F32F6370010FE1B /* AQHybrid.m in Sources */,
-				9A2980C51D17DF360054D1AB /* RootViewController.m in Sources */,
-				9A2980C31D17DF360054D1AB /* ContactsListViewController.m in Sources */,
-				9A48090D1D40DD58006B8393 /* AQWebView.m in Sources */,
-				9A4808A21D40D358006B8393 /* AQBlock.m in Sources */,
-				9A48091E1D412AC8006B8393 /* DemoWebViewController2.m in Sources */,
-				08959FEA1F32F6370010FE1B /* AQHybridRegister.m in Sources */,
+				08B299512005E3730051B7AC /* NICInfoSummary.m in Sources */,
+				08B2998C2005E4EB0051B7AC /* AQWebViewController2.m in Sources */,
+				08B299962005E4EB0051B7AC /* NetworkViewController.m in Sources */,
+				08B299872005E4EB0051B7AC /* AQHybridHandler.m in Sources */,
+				08B2999B2005E4EB0051B7AC /* DemoWebViewController.m in Sources */,
+				08B2998B2005E4EB0051B7AC /* AQHybridContext.m in Sources */,
+				08B2999E2005E4EB0051B7AC /* UIView+Toast.m in Sources */,
+				08B299A72005E4F10051B7AC /* AQBlock.m in Sources */,
+				08B299972005E4EB0051B7AC /* DemoViewController.m in Sources */,
+				08B299AA2005E56C0051B7AC /* NSString+aqnote.m in Sources */,
+				08B2998F2005E4EB0051B7AC /* MacAddressViewController.m in Sources */,
+				08B2998A2005E4EB0051B7AC /* AQHybridService.m in Sources */,
+				08B299912005E4EB0051B7AC /* PresentDismissViewController.m in Sources */,
+				08B299882005E4EB0051B7AC /* ALBBHyBridResult.m in Sources */,
+				08B299942005E4EB0051B7AC /* AQNavigationController.m in Sources */,
+				08B299842005E4EB0051B7AC /* ToastViewController.m in Sources */,
 				08959FF01F32F6910010FE1B /* AQKeychain.m in Sources */,
-				9A2980C41D17DF360054D1AB /* DemoViewController.m in Sources */,
-				08959FED1F32F6370010FE1B /* AQHybrid2.m in Sources */,
-				08959FE61F32F6370010FE1B /* ALBBHyBridResult.m in Sources */,
-				9A9CCB1F1D81686C009FFBE9 /* MyUIViewController.m in Sources */,
-				9A4809051D40DAC3006B8393 /* AQCookieManager.m in Sources */,
-				08959FE91F32F6370010FE1B /* AQHybridHandler.m in Sources */,
-				9AD93F9E1D475B2700FC2664 /* ToastViewController.m in Sources */,
-				08959FE41F32F6370010FE1B /* AQViewController.m in Sources */,
-				9A2980C81D17DF360054D1AB /* NetworkViewController.m in Sources */,
-				9A48088D1D4091F2006B8393 /* CookieViewController.m in Sources */,
-				9A48089F1D40B45E006B8393 /* NSString+aqnote.m in Sources */,
-				9AC0DC3F1D6D4ABE001649BB /* JumpViewController.m in Sources */,
+				08B299982005E4EB0051B7AC /* CookieViewController.m in Sources */,
+				08B299A62005E4F10051B7AC /* AQCookieManager.m in Sources */,
+				08B2999C2005E4EB0051B7AC /* MyUIViewController.m in Sources */,
+				08B299992005E4EB0051B7AC /* MutliThreadController.m in Sources */,
 				9A4808CD1D40D9E2006B8393 /* AQUtils.m in Sources */,
-				9AD93F9B1D475B1900FC2664 /* UIView+Toast.m in Sources */,
-				9A2980C61D17DF360054D1AB /* MemoryManageController.m in Sources */,
+				08B2998D2005E4EB0051B7AC /* AQHybrid2.m in Sources */,
+				08B299952005E4EB0051B7AC /* DemoWebViewController2.m in Sources */,
 				9A29809A1D17DDF70054D1AB /* main.m in Sources */,
-				9AC0DC421D6D85E5001649BB /* PresentDismissViewController.m in Sources */,
-				08959FEC1F32F6370010FE1B /* AQWebViewController2.m in Sources */,
-				08959FE31F32F6370010FE1B /* AQNavigationController.m in Sources */,
-				08959FE51F32F6370010FE1B /* AQWebViewController.m in Sources */,
-				08959FEB1F32F6370010FE1B /* AQHybridService.m in Sources */,
+				08B299922005E4EB0051B7AC /* MemoryManageController.m in Sources */,
+				08B299902005E4EB0051B7AC /* AQViewController.m in Sources */,
+				08B299862005E4EB0051B7AC /* AQHybrid.m in Sources */,
+				08B299932005E4EB0051B7AC /* ContactsListViewController.m in Sources */,
+				08B2999D2005E4EB0051B7AC /* AQWebView.m in Sources */,
+				08B2998E2005E4EB0051B7AC /* RootViewController.m in Sources */,
+				08B299502005E3730051B7AC /* NICInfo.m in Sources */,
+				08B299852005E4EB0051B7AC /* AQWebViewController.m in Sources */,
+				08B299892005E4EB0051B7AC /* AQHybridRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +927,7 @@
 				9A4808861D406EE8006B8393 /* StaticTests.m in Sources */,
 				9AB787951D2B49A600833957 /* NSKeyedArchiverTests.m in Sources */,
 				9A2D868B1D365FB6002DF9CC /* NSThreadTests.m in Sources */,
+				08F3AE721FD1223D0056A43F /* BoolTest.m in Sources */,
 				9AD93F981D45C35400FC2664 /* SingletonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1020,10 +1072,13 @@
 				INFOPLIST_FILE = aqnote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.aqnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Debug;
 		};
@@ -1042,10 +1097,13 @@
 				INFOPLIST_FILE = aqnote/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aqnote.aqnote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
 		};
