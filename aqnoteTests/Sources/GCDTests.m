@@ -88,12 +88,23 @@
  */
 - (void)test03_DeadLock {
   NSLog(@"1");
-  dispatch_sync(dispatch_get_main_queue(), ^{  // sync1
-    dispatch_sync(dispatch_get_main_queue(), ^{  // sync2
-      NSLog(@"2");
-    });
-  });
+  typedef void (^Sync)(void);
+  Sync sync2 = ^{
+    NSLog(@"2");
+  };
+  Sync sync1 = ^{
+    dispatch_sync(dispatch_get_main_queue(), sync2);
+  };
+  
+  dispatch_sync(dispatch_get_main_queue(), sync1);
   NSLog(@"3");
+                  
+//  dispatch_sync(dispatch_get_main_queue(), ^{  // sync1
+//    dispatch_sync(dispatch_get_main_queue(), ^{  // sync2
+//      NSLog(@"2");
+//    });
+//  });
+//  NSLog(@"3");
 }
 
 /**
