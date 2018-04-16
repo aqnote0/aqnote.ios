@@ -281,7 +281,7 @@ static bool logging = false;
           isEqualToString:@"true"]) {
     NSString *javascript = [AQBundle bundleFileContent:@"AQHybrid2.js"
                                               fileType:@"txt"
-                                            bundleName:@"AQDemo"];
+                                            bundleName:@"aqnote"];
     ;
     [webView stringByEvaluatingJavaScriptFromString:javascript];
   }

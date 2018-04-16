@@ -40,18 +40,18 @@
 #pragma mark - Initialization
 - (void)initTableInfo {
   self.titles = [NSArray
-      arrayWithObjects:@[@"多线程模拟",
-                         @"内存管理",
-                         @"联系人",
-                         @"Hybrid1",
-                         @"Hybrid2",
+      arrayWithObjects:@[@"Thread",
+                         @"Memory",
+                         @"Contact",
+                         @"WebView",
+                         @"Hybrid",
                          @"Toast"], nil];
 
   self.classNames = [NSArray arrayWithObjects:@[@"MutliThreadController",
                                                 @"MemoryManageController",
                                                 @"ContactsListViewController",
-                                                @"DemoWebViewController",
-                                                @"DemoWebViewController2",
+                                                @"StandrdWebViewController",
+                                                @"HybridWebViewController",
                                                 @"ToastViewController"], nil];
 }
 

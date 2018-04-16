@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     NSString *homePath = [NSBundle mainBundle].bundlePath;
     homePath = [homePath stringByReplacingOccurrencesOfString:@" " withString:@"\\ "];
     
-    NSURL *filePath = [AQBundle bundleFileURL:@"id" fileType:@"jpg" bundleName:@"AQDemo"];
+    NSURL *filePath = [AQBundle bundleFileURL:@"id" fileType:@"jpg" bundleName:@"aqnote"];
     
     NSError *error = nil;
     NSString *path = [filePath path];

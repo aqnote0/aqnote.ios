@@ -8,7 +8,7 @@
 
 #import "NSString+aqnote.h"
 
-@implementation AQString (AQDemo)
+@implementation AQString (aqnote)
 
 + (BOOL) endWith:(NSString *)first end:(NSString *)end {
   if(end == nil) return NO;

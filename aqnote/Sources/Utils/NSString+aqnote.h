@@ -8,7 +8,7 @@
 
 #import <AQFoundation/AQString.h>
 
-@interface AQString (AQDemo)
+@interface AQString (aqnote)
 
 + (BOOL) endWith:(NSString *)first end:(NSString *)end;
 

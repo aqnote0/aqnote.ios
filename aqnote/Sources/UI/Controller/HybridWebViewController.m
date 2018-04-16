@@ -6,20 +6,34 @@
 //  Copyright (c) 2014 Marcus Westin. All rights reserved.
 //
 
-#import "AQWebViewController.h"
+#import "AQHybrid2.h"
+#import "AQWebViewController2.h"
+#import "MBProgressHUD.h"
 
 #import <AQFoundation/AQBundle.h>
 
-@interface DemoWebViewController : AQWebViewController
+#define COOKIE_AQNOTE_COM @".aqnote.com:8080"
+#define COOKIE_SID @"sid"
+
+@interface DemoWebViewController2 : AQWebViewController2
 
 @end
 
-@implementation DemoWebViewController
+@implementation DemoWebViewController2
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"Webview";
-  
+  self.title = @"hybrid";
+
+  [self.hybrid registerHandler:@"hudHandler"
+                       handler:^(id data, AQHybridCallback callback) {
+                         NSLog(@"callHUD called: %@", data);
+                         [MBProgressHUD
+                             showTextOnly:self.view
+                                  message:[self _serializeMessage:data]];
+                         callback(data);
+                       }];
+
   [self renderButtons];
   [self loadPage];
 }
@@ -33,7 +47,7 @@
                     action:@selector(callDefault:)
           forControlEvents:UIControlEventTouchUpInside];
   [self.view insertSubview:messageButton aboveSubview:self.webView];
-  
+
   UIButton* callbackButton = [[UIButton alloc] init];
   [callbackButton setFrame:CGRectMake(10, 450, 200, 35)];
   [callbackButton setBackgroundColor:[UIColor blackColor]];
@@ -42,7 +56,7 @@
                      action:@selector(callAlert:)
            forControlEvents:UIControlEventTouchUpInside];
   [self.view insertSubview:callbackButton aboveSubview:self.webView];
-  
+
   UIButton* reloadButton = [[UIButton alloc] init];
   [reloadButton setFrame:CGRectMake(10, 500, 200, 35)];
   [reloadButton setBackgroundColor:[UIColor blackColor]];
@@ -54,30 +68,31 @@
 }
 
 - (void)callDefault:(id)sender {
-  
+  [self.hybrid callDefaultHandler:@"OC Data"
+                         callback:^(id response) {
+                           NSLog(@"%@ callback: %@", NSStringFromSelector(_cmd), response);
+                         }];
 }
 
 - (void)callAlert:(id)sender {
-  
+  [self.hybrid callHandler:@"alertHandler"
+                      data:@"OC Data"
+                  callback:^(id response) {
+                    NSLog(@"%@ callback: %@", NSStringFromSelector(_cmd), response);
+                  }];
 }
 
 - (void)loadPage {
-//  NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"webview" ofType:@"html"];
-//  NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath
-//                                                encoding:NSUTF8StringEncoding
-//                                                   error:nil];
-//  NSURL* baseURL = [NSURL fileURLWithPath:htmlPath];
-//  [self.webView loadHTMLString:appHtml baseURL:baseURL];
-  NSURL *url = [NSURL URLWithString:@"https://login.m.taobao.com/login.htm"];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url];
-  [self.webView loadRequest:request];
+    NSURL *url = [AQBundle bundleFileURL:@"webview" fileType:@"html" bundleName:@"aqnote"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
 }
 
 - (NSString*)_serializeMessage:(id)message {
-  return [[NSString alloc]  initWithData:[NSJSONSerialization dataWithJSONObject:message
-                                                                         options:0
-                                                                           error:nil]
-                                encoding:NSUTF8StringEncoding];
+  return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:message
+                                                                        options:0
+                                                                          error:nil]
+                               encoding:NSUTF8StringEncoding];
 }
 
 @end

@@ -60,7 +60,7 @@
       [result setObject:value forKey:NSHTTPCookiePort];
     } else if ([uppercaseKey isEqualToString:@"SECURE"] ||
                [uppercaseKey isEqualToString:@"ISSECURE"]) {
-      [result setObject:value forKey:NSHTTPCookieSecure];
+      [result setObject:@"" forKey:NSHTTPCookieSecure];
     } else if ([uppercaseKey isEqualToString:@"COMMENT"]) {
       [result setObject:value forKey:NSHTTPCookieComment];
     } else if ([uppercaseKey isEqualToString:@"COMMENTURL"]) {
@@ -78,6 +78,8 @@
       [result setObject:value forKey:NSHTTPCookieName];
     } else if ([uppercaseKey isEqualToString:@"VALUE"]) {
       [result setObject:value forKey:NSHTTPCookieValue];
+    } else if([uppercaseKey isEqualToString:@"HTTPONLY"]) {
+        [result setObject:value forKey:@"HTTPOnly"];
     } else {
       [result setObject:key forKey:NSHTTPCookieName];
       [result setObject:value forKey:NSHTTPCookieValue];

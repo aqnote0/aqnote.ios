@@ -19,13 +19,13 @@
   self = [super initWithFrame:frame];
   if (self) {
     self.scriptPrefixWhiteList = @[
-      @"document.title",
-      @"navigator.userAgent",
-      @"window.AQBridge.onFailure",
-      @"window.AQBridge.onSuccess",
-      @"window.AQHybrid",
-      @"typeof"
-    ];
+                                   @"typeof",
+                                   @"document.cookie",
+                                   @"document.title",
+                                   @"navigator.userAgent",
+                                   @"window.AQHybrid.onFailure",
+                                   @"window.AQHybrid.onSuccess",
+                                   @"window.AQHybrid"];
   }
   return self;
 }

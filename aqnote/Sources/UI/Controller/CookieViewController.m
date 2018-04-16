@@ -143,7 +143,7 @@
                                 NSHTTPCookieValue : @"sid",
                                 NSHTTPCookieDomain : COOKIE_AQNOTE_COM,
                                 NSHTTPCookiePath : @"/",
-                                NSHTTPCookieSecure : [NSNumber numberWithBool:false],
+                                NSHTTPCookieSecure : @"",
                                 NSHTTPCookieExpires : [NSDate dateWithTimeIntervalSinceNow:60 * 60]
                                 };
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieDic];
