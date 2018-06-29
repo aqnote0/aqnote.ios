@@ -57,11 +57,13 @@
   //  [MBProgressHUD showTextOnly:self.view message:@"viewDidDisappear"];
 }
 
+/*
 // 页面移出内存，内存不足时操作
 - (void)viewDidUnload {
   [super viewDidUnload];
   NSLog(@"[%@] viewDidUnload", NSStringFromClass([self class]));
 }
+ */
 
 - (void)dealloc {
   NSLog(@"[%@] dealloc", NSStringFromClass([self class]));

@@ -23,6 +23,14 @@
 #import "MIHInternal.h"
 #import <openssl/evp.h>
 
+@interface MIHDESKey ()
+
+@property(strong, readwrite) NSData *key;
+@property(strong, readwrite) NSData *iv;
+@property(assign, readwrite) MIHDESMode mode;
+
+@end
+
 @implementation MIHDESKey
 {
     EVP_CIPHER_CTX encryptCtx;
@@ -44,9 +52,9 @@
 {
     self = [super init];
     if (self) {
-        _key = [coder decodeObjectForKey:@"_key"];
-        _iv = [coder decodeObjectForKey:@"_iv"];
-        _mode = [coder decodeIntegerForKey:@"_mode"];
+        self.key = [coder decodeObjectForKey:@"_key"];
+        self.iv = [coder decodeObjectForKey:@"_iv"];
+        self.mode = [coder decodeIntegerForKey:@"_mode"];
     }
     
     return self;
@@ -56,9 +64,9 @@
 {
     self = [super init];
     if (self) {
-        _key = key;
-        _iv = iv;
-        _mode = mode;
+        self.key = key;
+        self.iv = iv;
+        self.mode = mode;
     }
     
     return self;
@@ -90,13 +98,13 @@
          {
              if ([component hasPrefix:@"key="]) {
                  NSString *hexEncodedKey = [component substringFromIndex:4];
-                 _key = hexEncodedKey.MIH_dataFromHexadecimal;
+                 self.key = hexEncodedKey.MIH_dataFromHexadecimal;
              } else if ([component hasPrefix:@"iv="]) {
                  NSString *hexEncodedIv = [component substringFromIndex:3];
-                 _iv = hexEncodedIv.MIH_dataFromHexadecimal;
+                 self.iv = hexEncodedIv.MIH_dataFromHexadecimal;
              } else if ([component hasPrefix:@"mode="]) {
                  NSString *modeName = [component substringFromIndex:3];
-                 _mode = [MIHDESKey modeFromModeName:modeName];
+                 self.mode = [MIHDESKey modeFromModeName:modeName];
              }
          }];
     }

@@ -43,45 +43,45 @@
   
   UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
 
-  display = [UITextView new];
-  [self.view addSubview:display];
-  display.font = font;
-  display.frame = CGRectMake(20, topHeight, 240, 120);
-  display.backgroundColor = [UIColor lightGrayColor];
-  display.textAlignment = NSTextAlignmentLeft;
-  display.text = @"内容";
-  display.editable = NO;
+  self.display = [UITextView new];
+  [self.view addSubview:self.display];
+  self.display.font = font;
+  self.display.frame = CGRectMake(20, topHeight, 240, 120);
+  self.display.backgroundColor = [UIColor lightGrayColor];
+  self.display.textAlignment = NSTextAlignmentLeft;
+  self.display.text = @"内容";
+  self.display.editable = NO;
 
   topHeight = topHeight + betweenHeight*2;
-  concurrencyBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [concurrencyBtn setTitle:@"并行" forState:UIControlStateNormal];
-  [concurrencyBtn addTarget:self
+  self.concurrencyBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  [self.concurrencyBtn setTitle:@"并行" forState:UIControlStateNormal];
+  [self.concurrencyBtn addTarget:self
                      action:@selector(doConcurrency:)
            forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:concurrencyBtn];
-  concurrencyBtn.frame = CGRectMake(20, topHeight, 32, 32);
-  concurrencyBtn.titleLabel.font = font;
-  concurrencyBtn.backgroundColor = [UIColor orangeColor];
+  [self.view addSubview:self.concurrencyBtn];
+  self.concurrencyBtn.frame = CGRectMake(20, topHeight, 32, 32);
+  self.concurrencyBtn.titleLabel.font = font;
+  self.concurrencyBtn.backgroundColor = [UIColor orangeColor];
 
-  asyncBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [asyncBtn setTitle:@"异步" forState:UIControlStateNormal];
-  [asyncBtn addTarget:self
+  self.asyncBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  [self.asyncBtn setTitle:@"异步" forState:UIControlStateNormal];
+  [self.asyncBtn addTarget:self
                 action:@selector(doAsync:)
       forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:asyncBtn];
-  asyncBtn.frame = CGRectMake(120, topHeight, 32, 32);
-  asyncBtn.titleLabel.font = font;
-  asyncBtn.backgroundColor = [UIColor orangeColor];
+  [self.view addSubview:self.asyncBtn];
+  self.asyncBtn.frame = CGRectMake(120, topHeight, 32, 32);
+  self.asyncBtn.titleLabel.font = font;
+  self.asyncBtn.backgroundColor = [UIColor orangeColor];
 
-  syncBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [syncBtn setTitle:@"同步" forState:UIControlStateNormal];
-  [syncBtn addTarget:self
+  self.syncBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  [self.syncBtn setTitle:@"同步" forState:UIControlStateNormal];
+  [self.syncBtn addTarget:self
                 action:@selector(doAsync:)
       forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:syncBtn];
-  syncBtn.frame = CGRectMake(220, topHeight, 32, 32);
-  syncBtn.titleLabel.font = font;
-  syncBtn.backgroundColor = [UIColor orangeColor];
+  [self.view addSubview:self.syncBtn];
+  self.syncBtn.frame = CGRectMake(220, topHeight, 32, 32);
+  self.syncBtn.titleLabel.font = font;
+  self.syncBtn.backgroundColor = [UIColor orangeColor];
 }
 
 - (NSString *)fetchSomethingFromServer {
@@ -135,10 +135,10 @@
       // dispatch_get_main_queue主线程
       dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"finish.");
-        concurrencyBtn.enabled = YES;
-        concurrencyBtn.alpha = 1.0;
-        [spinner stopAnimating];
-        display.text = result;
+        self.concurrencyBtn.enabled = YES;
+        self.concurrencyBtn.alpha = 1.0;
+        [self.spinner stopAnimating];
+        self.display.text = result;
       });
 
     });
@@ -161,10 +161,10 @@
                          [[NSDate date] timeIntervalSinceDate:startTime]];
     dispatch_async(dispatch_get_main_queue(), ^{
       NSLog(@"finish.");
-      asyncBtn.enabled = YES;
-      asyncBtn.alpha = 1.0;
-      [spinner stopAnimating];
-      display.text = result;
+      self.asyncBtn.enabled = YES;
+      self.asyncBtn.alpha = 1.0;
+      [self.spinner stopAnimating];
+      self.display.text = result;
     });
   });
 }
@@ -181,7 +181,7 @@
                        [[NSDate date] timeIntervalSinceDate:startTime]];
   dispatch_async(dispatch_get_main_queue(), ^{
     NSLog(@"finish.");
-    display.text = result;
+    self.display.text = result;
   });
 }
 

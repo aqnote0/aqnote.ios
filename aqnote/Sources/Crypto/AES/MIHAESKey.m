@@ -24,6 +24,13 @@
 #include <openssl/evp.h>
 #include <openssl/aes.h>
 
+@interface MIHAESKey ()
+
+@property(strong, readwrite) NSData *key;
+@property(strong, readwrite) NSData *iv;
+
+@end
+
 @implementation MIHAESKey
 {
     EVP_CIPHER_CTX encryptCtx;
@@ -88,10 +95,10 @@
          {
              if ([component hasPrefix:@"key="]) {
                  NSString *hexEncodedKey = [component substringFromIndex:4];
-                 _key = hexEncodedKey.MIH_dataFromHexadecimal;
+                 self.key = hexEncodedKey.MIH_dataFromHexadecimal;
              } else if ([component hasPrefix:@"iv="]) {
                  NSString *hexEncodedIv = [component substringFromIndex:3];
-                 _iv = hexEncodedIv.MIH_dataFromHexadecimal;
+                 self.iv = hexEncodedIv.MIH_dataFromHexadecimal;
              }
          }];
     }

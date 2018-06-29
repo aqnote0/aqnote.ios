@@ -57,9 +57,8 @@ static NSString * ZOToastDemoCellId     = @"ZOToastDemoCellId";
 }
 
 #pragma mark - Rotation
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
 }
 
 #pragma mark - Events
