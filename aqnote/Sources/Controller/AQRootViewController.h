@@ -8,6 +8,6 @@
 
 #import "AQViewController.h"
 
-@interface RootViewController : AQViewController
+@interface AQRootViewController : AQViewController
 
 @end

@@ -51,7 +51,7 @@
 
 static NSString *cellId = @"Cell";
 
-@interface MacAddressViewController : AQViewController<UITableViewDataSource,UITableViewDelegate>
+@interface NDeviceMacAddressViewController : AQViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) UILabel *wifiSsiddLabel;
 @property (strong, nonatomic) UILabel *wifiBssidLabel;
@@ -60,7 +60,7 @@ static NSString *cellId = @"Cell";
 
 @end
 
-@implementation MacAddressViewController
+@implementation NDeviceMacAddressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

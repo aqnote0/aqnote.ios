@@ -50,6 +50,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSContactsUsageDescription</key>
+	<string>请求访问通讯录</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

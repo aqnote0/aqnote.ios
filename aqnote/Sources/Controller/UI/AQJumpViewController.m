@@ -11,14 +11,14 @@
 
 #import "AQViewController.h"
 
-@interface JumpViewController : AQViewController
+@interface AQJumpViewController : AQViewController
 
 @property(nonatomic, retain) UIButton *jumpTaobaoHomeButton;
 @property(nonatomic, retain) UIButton *jumpTaobaoHomeButton1;
 
 @end
 
-@implementation JumpViewController
+@implementation AQJumpViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

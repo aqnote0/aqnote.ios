@@ -8,7 +8,7 @@
 
 #import <AQFoundation/AQString.h>
 #import "AppDelegate.h"
-#import "rootViewController.h"
+#import "AQRootViewController.h"
 //#import <TBAccsSDK/TBAccsManager.h>
 
 @interface AppDelegate ()
@@ -22,7 +22,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
 
-  RootViewController *rootViewController = [[RootViewController alloc] init];
+  AQRootViewController *rootViewController = [[AQRootViewController alloc] init];
   
   // method1: push
   UINavigationController *navController = [[UINavigationController alloc]

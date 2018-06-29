@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AQViewController.h"
 
-@interface MyUIViewController : AQViewController
+@interface AQButtonViewController : AQViewController
 
 @property(nonatomic, assign) BOOL shouldHideStatusBar;
 @property(nonatomic, retain) UIButton *hiddenStatusBarButton;
@@ -17,7 +17,7 @@
 @end
 
 
-@implementation MyUIViewController
+@implementation AQButtonViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

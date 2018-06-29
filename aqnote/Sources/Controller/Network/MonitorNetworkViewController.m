@@ -4,7 +4,7 @@
 #import <AQFoundation/Reachability.h>
 
 
-@interface NetworkViewController : AQViewController
+@interface MonitorNetworkViewController : AQViewController
 
 @property(retain, nonatomic) UILabel* taobaoLabel;
 @property(retain, nonatomic) UILabel* localWifiLabel;
@@ -17,7 +17,7 @@
 @end
 
 
-@implementation NetworkViewController
+@implementation MonitorNetworkViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

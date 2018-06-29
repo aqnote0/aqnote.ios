@@ -10,7 +10,7 @@
 #import "AQViewController.h"
 #import "AQUtils.h"
 
-@interface PresentDismissViewController : AQViewController
+@interface AQPresentDismissViewController : AQViewController
 
 @property(nonatomic, assign) NSNumber *setup;
 
@@ -25,7 +25,7 @@
 @end
 
 
-@implementation PresentDismissViewController
+@implementation AQPresentDismissViewController
 
 
 - (void)viewDidLoad {
@@ -91,13 +91,13 @@
 
 static int i = 0;
 - (void)action_present_controller {
-  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
+  AQPresentDismissViewController *toPresentViewController = [[AQPresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   [self presentViewController:toPresentViewController animated:YES completion:nil];
 }
 
 - (void)action_root_present_controller {
-  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
+  AQPresentDismissViewController *toPresentViewController = [[AQPresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   UIWindow *window = [AQUtils getUIWindow];
   UIViewController *topViewController = [window rootViewController];
@@ -110,7 +110,7 @@ static int i = 0;
 }
 
 - (void)action_root_dismiss_controller {
-  PresentDismissViewController *toPresentViewController = [[PresentDismissViewController alloc] init];
+  AQPresentDismissViewController *toPresentViewController = [[AQPresentDismissViewController alloc] init];
   [toPresentViewController setSetup:[NSNumber numberWithInt:i++]];
   UIWindow *window = [AQUtils getUIWindow];
   UIViewController *topViewController = [window rootViewController];

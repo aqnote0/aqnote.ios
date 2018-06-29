@@ -8,69 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		081D25541EE697B3000DAED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081D25531EE697B3000DAED1 /* HealthKit.framework */; };
+		083E7C3C20E5D1640082EDE0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083E7C3820E5D0100082EDE0 /* AddressBook.framework */; };
+		083E7CE820E5E3AC0082EDE0 /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C5420E5E3AC0082EDE0 /* AQWebView.m */; };
+		083E7CE920E5E3AC0082EDE0 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C5620E5E3AC0082EDE0 /* UIView+Toast.m */; };
+		083E7CEA20E5E3AC0082EDE0 /* MIHMessageDigest5.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C5920E5E3AC0082EDE0 /* MIHMessageDigest5.m */; };
+		083E7CEB20E5E3AC0082EDE0 /* MIHDESKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C5E20E5E3AC0082EDE0 /* MIHDESKey+Internal.m */; };
+		083E7CEC20E5E3AC0082EDE0 /* MIHDESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C5F20E5E3AC0082EDE0 /* MIHDESKey.m */; };
+		083E7CED20E5E3AC0082EDE0 /* MIHDESKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C6020E5E3AC0082EDE0 /* MIHDESKeyFactory.m */; };
+		083E7CEE20E5E3AC0082EDE0 /* MIHKeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C6720E5E3AC0082EDE0 /* MIHKeyPair.m */; };
+		083E7CEF20E5E3AC0082EDE0 /* MIHErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C6820E5E3AC0082EDE0 /* MIHErrors.m */; };
+		083E7CF020E5E3AC0082EDE0 /* MIHRSAPrivateKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7020E5E3AC0082EDE0 /* MIHRSAPrivateKey.m */; };
+		083E7CF120E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7120E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.m */; };
+		083E7CF220E5E3AC0082EDE0 /* MIHRSAPublicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7320E5E3AC0082EDE0 /* MIHRSAPublicKey.m */; };
+		083E7CF320E5E3AC0082EDE0 /* MIHRSAKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7520E5E3AC0082EDE0 /* MIHRSAKeyFactory.m */; };
+		083E7CF420E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7620E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.m */; };
+		083E7CF520E5E3AC0082EDE0 /* MIHBigInteger+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7B20E5E3AC0082EDE0 /* MIHBigInteger+Factory.m */; };
+		083E7CF620E5E3AC0082EDE0 /* MIHBigIntegerRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C7C20E5E3AC0082EDE0 /* MIHBigIntegerRange.m */; };
+		083E7CF720E5E3AC0082EDE0 /* MIHBigInteger+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8020E5E3AC0082EDE0 /* MIHBigInteger+Internal.m */; };
+		083E7CF820E5E3AC0082EDE0 /* MIHBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8120E5E3AC0082EDE0 /* MIHBigInteger.m */; };
+		083E7CF920E5E3AC0082EDE0 /* MIHCryptoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8320E5E3AC0082EDE0 /* MIHCryptoConfiguration.m */; };
+		083E7CFA20E5E3AC0082EDE0 /* NSString+MIHConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8720E5E3AC0082EDE0 /* NSString+MIHConversion.m */; };
+		083E7CFB20E5E3AC0082EDE0 /* MIHInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8920E5E3AC0082EDE0 /* MIHInternal.m */; };
+		083E7CFC20E5E3AC0082EDE0 /* NSData+MIHConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8A20E5E3AC0082EDE0 /* NSData+MIHConversion.m */; };
+		083E7CFD20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8D20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.m */; };
+		083E7CFE20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8E20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.m */; };
+		083E7CFF20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C8F20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.m */; };
+		083E7D0020E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C9020E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.m */; };
+		083E7D0120E5E3AC0082EDE0 /* MIHAESKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C9520E5E3AC0082EDE0 /* MIHAESKeyFactory.m */; };
+		083E7D0220E5E3AC0082EDE0 /* MIHAESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C9620E5E3AC0082EDE0 /* MIHAESKey.m */; };
+		083E7D0320E5E3AC0082EDE0 /* NSString+aqnote.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C9C20E5E3AC0082EDE0 /* NSString+aqnote.m */; };
+		083E7D0420E5E3AC0082EDE0 /* AQKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7C9F20E5E3AC0082EDE0 /* AQKeychain.m */; };
+		083E7D0520E5E3AC0082EDE0 /* AQUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CA020E5E3AC0082EDE0 /* AQUtils.m */; };
+		083E7D0620E5E3AC0082EDE0 /* AQJumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CA320E5E3AC0082EDE0 /* AQJumpViewController.m */; };
+		083E7D0720E5E3AC0082EDE0 /* AQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CA420E5E3AC0082EDE0 /* AQTableViewController.m */; };
+		083E7D0820E5E3AC0082EDE0 /* AQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CA720E5E3AC0082EDE0 /* AQWebViewController.m */; };
+		083E7D0920E5E3AC0082EDE0 /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CAB20E5E3AC0082EDE0 /* AQHybrid.m */; };
+		083E7D0A20E5E3AC0082EDE0 /* AQHybridHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CAD20E5E3AC0082EDE0 /* AQHybridHandler.m */; };
+		083E7D0B20E5E3AC0082EDE0 /* ALBBHyBridResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CAF20E5E3AC0082EDE0 /* ALBBHyBridResult.m */; };
+		083E7D0C20E5E3AC0082EDE0 /* AQHybridRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CB020E5E3AC0082EDE0 /* AQHybridRegister.m */; };
+		083E7D0D20E5E3AC0082EDE0 /* AQHybridService.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CB220E5E3AC0082EDE0 /* AQHybridService.m */; };
+		083E7D0E20E5E3AC0082EDE0 /* AQHybridContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CB320E5E3AC0082EDE0 /* AQHybridContext.m */; };
+		083E7D0F20E5E3AC0082EDE0 /* StandardWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CB620E5E3AC0082EDE0 /* StandardWebViewController.m */; };
+		083E7D1020E5E3AC0082EDE0 /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CB920E5E3AC0082EDE0 /* AQWebViewController2.m */; };
+		083E7D1120E5E3AC0082EDE0 /* AQHybrid2.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CBB20E5E3AC0082EDE0 /* AQHybrid2.m */; };
+		083E7D1220E5E3AC0082EDE0 /* HybridWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CBD20E5E3AC0082EDE0 /* HybridWebViewController.m */; };
+		083E7D1320E5E3AC0082EDE0 /* CookieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CBE20E5E3AC0082EDE0 /* CookieViewController.m */; };
+		083E7D1420E5E3AC0082EDE0 /* AQToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CBF20E5E3AC0082EDE0 /* AQToastViewController.m */; };
+		083E7D1520E5E3AC0082EDE0 /* AQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC020E5E3AC0082EDE0 /* AQUIViewController.m */; };
+		083E7D1620E5E3AC0082EDE0 /* AQPresentDismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC120E5E3AC0082EDE0 /* AQPresentDismissViewController.m */; };
+		083E7D1720E5E3AC0082EDE0 /* AQButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC220E5E3AC0082EDE0 /* AQButtonViewController.m */; };
+		083E7D1820E5E3AC0082EDE0 /* AQRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC320E5E3AC0082EDE0 /* AQRootViewController.m */; };
+		083E7D1920E5E3AC0082EDE0 /* MemoryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC520E5E3AC0082EDE0 /* MemoryManageController.m */; };
+		083E7D1A20E5E3AC0082EDE0 /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC620E5E3AC0082EDE0 /* AQViewController.m */; };
+		083E7D1B20E5E3AC0082EDE0 /* AQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CC920E5E3AC0082EDE0 /* AQNavigationController.m */; };
+		083E7D1D20E5E3AC0082EDE0 /* AddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CCF20E5E3AC0082EDE0 /* AddressListViewController.m */; };
+		083E7D1F20E5E3AC0082EDE0 /* MutliThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CD420E5E3AC0082EDE0 /* MutliThreadController.m */; };
+		083E7D2020E5E3AC0082EDE0 /* AQCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CD720E5E3AC0082EDE0 /* AQCookieManager.m */; };
+		083E7D2120E5E3AC0082EDE0 /* AQBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CDA20E5E3AC0082EDE0 /* AQBlock.m */; };
+		083E7D2220E5E3AC0082EDE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CDC20E5E3AC0082EDE0 /* main.m */; };
+		083E7D2320E5E3AC0082EDE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CDD20E5E3AC0082EDE0 /* AppDelegate.m */; };
+		083E7D2420E5E3AC0082EDE0 /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CE020E5E3AC0082EDE0 /* NICInfo.m */; };
+		083E7D2520E5E3AC0082EDE0 /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7CE720E5E3AC0082EDE0 /* NICInfoSummary.m */; };
+		083E7D2720E5E80E0082EDE0 /* AQNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7D2620E5E80E0082EDE0 /* AQNetworkViewController.m */; };
+		083E7D2A20E5E84B0082EDE0 /* MonitorNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7D2820E5E84B0082EDE0 /* MonitorNetworkViewController.m */; };
+		083E7D2B20E5E84B0082EDE0 /* NDeviceMacAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7D2920E5E84B0082EDE0 /* NDeviceMacAddressViewController.m */; };
+		083E7D2D20E5E9510082EDE0 /* AQThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083E7D2C20E5E9510082EDE0 /* AQThreadViewController.m */; };
 		08603005201ECAC40029355C /* GVAccessErrorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08603004201ECAC40029355C /* GVAccessErrorTest.m */; };
 		08603007201ECAF50029355C /* GVTestDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 08603006201ECAF50029355C /* GVTestDO.m */; };
 		0860300A201ECB5F0029355C /* GVTestInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 08603009201ECB5F0029355C /* GVTestInstance.m */; };
-		08959FF01F32F6910010FE1B /* AQKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 08959FEF1F32F6910010FE1B /* AQKeychain.m */; };
 		08AE6C451F6623720073A333 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C441F6623720073A333 /* AudioToolbox.framework */; };
 		08AE6C471F66237D0073A333 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C461F66237D0073A333 /* HomeKit.framework */; };
 		08AE6C491F6623B40073A333 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AE6C481F6623B40073A333 /* ExternalAccessory.framework */; };
-		08B299502005E3730051B7AC /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299482005E3730051B7AC /* NICInfo.m */; };
-		08B299512005E3730051B7AC /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2994F2005E3730051B7AC /* NICInfoSummary.m */; };
-		08B299842005E4EB0051B7AC /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299542005E4EB0051B7AC /* ToastViewController.m */; };
-		08B299852005E4EB0051B7AC /* AQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299572005E4EB0051B7AC /* AQWebViewController.m */; };
-		08B299862005E4EB0051B7AC /* AQHybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995B2005E4EB0051B7AC /* AQHybrid.m */; };
-		08B299872005E4EB0051B7AC /* AQHybridHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */; };
-		08B299882005E4EB0051B7AC /* ALBBHyBridResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */; };
-		08B299892005E4EB0051B7AC /* AQHybridRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299602005E4EB0051B7AC /* AQHybridRegister.m */; };
-		08B2998A2005E4EB0051B7AC /* AQHybridService.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299622005E4EB0051B7AC /* AQHybridService.m */; };
-		08B2998B2005E4EB0051B7AC /* AQHybridContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299632005E4EB0051B7AC /* AQHybridContext.m */; };
-		08B2998C2005E4EB0051B7AC /* AQWebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299682005E4EB0051B7AC /* AQWebViewController2.m */; };
-		08B2998D2005E4EB0051B7AC /* AQHybrid2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996A2005E4EB0051B7AC /* AQHybrid2.m */; };
-		08B2998E2005E4EB0051B7AC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996C2005E4EB0051B7AC /* RootViewController.m */; };
-		08B2998F2005E4EB0051B7AC /* MacAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */; };
-		08B299902005E4EB0051B7AC /* AQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996E2005E4EB0051B7AC /* AQViewController.m */; };
-		08B299912005E4EB0051B7AC /* PresentDismissViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */; };
-		08B299922005E4EB0051B7AC /* MemoryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299702005E4EB0051B7AC /* MemoryManageController.m */; };
-		08B299932005E4EB0051B7AC /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299712005E4EB0051B7AC /* ContactsListViewController.m */; };
-		08B299942005E4EB0051B7AC /* AQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299732005E4EB0051B7AC /* AQNavigationController.m */; };
-		08B299952005E4EB0051B7AC /* HybridWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299752005E4EB0051B7AC /* HybridWebViewController.m */; };
-		08B299962005E4EB0051B7AC /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299762005E4EB0051B7AC /* NetworkViewController.m */; };
-		08B299972005E4EB0051B7AC /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299782005E4EB0051B7AC /* DemoViewController.m */; };
-		08B299982005E4EB0051B7AC /* CookieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299792005E4EB0051B7AC /* CookieViewController.m */; };
-		08B299992005E4EB0051B7AC /* MutliThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997B2005E4EB0051B7AC /* MutliThreadController.m */; };
-		08B2999A2005E4EB0051B7AC /* JumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997C2005E4EB0051B7AC /* JumpViewController.m */; };
-		08B2999B2005E4EB0051B7AC /* StandardWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997D2005E4EB0051B7AC /* StandardWebViewController.m */; };
-		08B2999C2005E4EB0051B7AC /* MyUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2997E2005E4EB0051B7AC /* MyUIViewController.m */; };
-		08B2999E2005E4EB0051B7AC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299832005E4EB0051B7AC /* UIView+Toast.m */; };
-		08B299A62005E4F10051B7AC /* AQCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A12005E4F10051B7AC /* AQCookieManager.m */; };
-		08B299A72005E4F10051B7AC /* AQBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A42005E4F10051B7AC /* AQBlock.m */; };
-		08B299AA2005E56C0051B7AC /* NSString+aqnote.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299A92005E56C0051B7AC /* NSString+aqnote.m */; };
-		08B299ED200608A00051B7AC /* MIHMessageDigest5.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299AD200608A00051B7AC /* MIHMessageDigest5.m */; };
-		08B299EE200608A00051B7AC /* MIHDESKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299B2200608A00051B7AC /* MIHDESKey+Internal.m */; };
-		08B299EF200608A00051B7AC /* MIHDESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299B3200608A00051B7AC /* MIHDESKey.m */; };
-		08B299F0200608A00051B7AC /* MIHDESKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299B4200608A00051B7AC /* MIHDESKeyFactory.m */; };
-		08B299F1200608A00051B7AC /* MIHKeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299BB200608A00051B7AC /* MIHKeyPair.m */; };
-		08B299F2200608A00051B7AC /* MIHErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299BC200608A00051B7AC /* MIHErrors.m */; };
-		08B299F3200608A00051B7AC /* MIHRSAPrivateKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299C4200608A00051B7AC /* MIHRSAPrivateKey.m */; };
-		08B299F4200608A00051B7AC /* MIHRSAPrivateKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299C5200608A00051B7AC /* MIHRSAPrivateKey+Internal.m */; };
-		08B299F5200608A00051B7AC /* MIHRSAPublicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299C7200608A00051B7AC /* MIHRSAPublicKey.m */; };
-		08B299F6200608A00051B7AC /* MIHRSAKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299C9200608A00051B7AC /* MIHRSAKeyFactory.m */; };
-		08B299F7200608A00051B7AC /* MIHRSAPublicKey+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299CA200608A00051B7AC /* MIHRSAPublicKey+Internal.m */; };
-		08B299F8200608A00051B7AC /* MIHBigInteger+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299CF200608A00051B7AC /* MIHBigInteger+Factory.m */; };
-		08B299F9200608A00051B7AC /* MIHBigIntegerRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299D0200608A00051B7AC /* MIHBigIntegerRange.m */; };
-		08B299FA200608A00051B7AC /* MIHBigInteger+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299D4200608A00051B7AC /* MIHBigInteger+Internal.m */; };
-		08B299FB200608A00051B7AC /* MIHBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299D5200608A00051B7AC /* MIHBigInteger.m */; };
-		08B299FC200608A00051B7AC /* MIHCryptoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299D7200608A00051B7AC /* MIHCryptoConfiguration.m */; };
-		08B299FD200608A00051B7AC /* NSString+MIHConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299DB200608A00051B7AC /* NSString+MIHConversion.m */; };
-		08B299FE200608A00051B7AC /* MIHInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299DD200608A00051B7AC /* MIHInternal.m */; };
-		08B299FF200608A00051B7AC /* NSData+MIHConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299DE200608A00051B7AC /* NSData+MIHConversion.m */; };
-		08B29A00200608A00051B7AC /* MIHSecureHashAlgorithm256.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299E1200608A00051B7AC /* MIHSecureHashAlgorithm256.m */; };
-		08B29A01200608A00051B7AC /* MIHSecureHashAlgorithm384.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299E2200608A00051B7AC /* MIHSecureHashAlgorithm384.m */; };
-		08B29A02200608A00051B7AC /* MIHSecureHashAlgorithm512.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299E3200608A00051B7AC /* MIHSecureHashAlgorithm512.m */; };
-		08B29A03200608A00051B7AC /* MIHSecureHashAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299E4200608A00051B7AC /* MIHSecureHashAlgorithm.m */; };
-		08B29A04200608A00051B7AC /* MIHAESKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299E9200608A00051B7AC /* MIHAESKeyFactory.m */; };
-		08B29A05200608A00051B7AC /* MIHAESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B299EA200608A00051B7AC /* MIHAESKey.m */; };
 		08B29A1B200608C10051B7AC /* MIHMessageDigest5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A08200608C10051B7AC /* MIHMessageDigest5Tests.m */; };
 		08B29A1C200608C10051B7AC /* MIHDESKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A0A200608C10051B7AC /* MIHDESKeyTests.m */; };
 		08B29A1D200608C10051B7AC /* MIHDESKeyFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A0B200608C10051B7AC /* MIHDESKeyFactoryTests.m */; };
@@ -84,7 +92,6 @@
 		08B29A25200608C10051B7AC /* MIHSecureHashAlgorithm256Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A17200608C10051B7AC /* MIHSecureHashAlgorithm256Tests.m */; };
 		08B29A26200608C10051B7AC /* MIHAESKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A19200608C10051B7AC /* MIHAESKeyTests.m */; };
 		08B29A27200608C10051B7AC /* MIHAESKeyFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A1A200608C10051B7AC /* MIHAESKeyFactoryTests.m */; };
-		08B29A2B200617C60051B7AC /* AQWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B29A2A200617C60051B7AC /* AQWebView.m */; };
 		08F3AE721FD1223D0056A43F /* BoolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F3AE711FD1223D0056A43F /* BoolTest.m */; };
 		686D47DA71B688B736746B57 /* libPods-aqnoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEA99FCEF86F3C8D5C4700 /* libPods-aqnoteTests.a */; };
 		90ED808775395B28BD77DD79 /* libPods-aqnoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BCA56D98D189ED436C645 /* libPods-aqnoteUITests.a */; };
@@ -93,8 +100,6 @@
 		9A13494F1D502AC400A29EC3 /* OCKeyword2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13494E1D502AC400A29EC3 /* OCKeyword2Tests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A2980571D17DD8E0054D1AB /* aqnoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980561D17DD8E0054D1AB /* aqnoteUITests.m */; };
 		9A2980881D17DDF70054D1AB /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2980651D17DDF70054D1AB /* AppIcon.xcassets */; };
-		9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980691D17DDF70054D1AB /* AppDelegate.m */; };
-		9A29809A1D17DDF70054D1AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2980851D17DDF70054D1AB /* main.m */; };
 		9A2980A51D17DE520054D1AB /* EncodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809D1D17DE520054D1AB /* EncodeTests.m */; };
 		9A2980A61D17DE520054D1AB /* GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809E1D17DE520054D1AB /* GCDTests.m */; };
 		9A2980A71D17DE520054D1AB /* LLDBDebugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29809F1D17DE520054D1AB /* LLDBDebugTests.m */; };
@@ -104,7 +109,6 @@
 		9A2D868B1D365FB6002DF9CC /* NSThreadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */; };
 		9A4808861D406EE8006B8393 /* StaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808851D406EE8006B8393 /* StaticTests.m */; };
 		9A4808941D40A669006B8393 /* FontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808931D40A669006B8393 /* FontTests.m */; };
-		9A4808CD1D40D9E2006B8393 /* AQUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4808CC1D40D9E2006B8393 /* AQUtils.m */; };
 		9A596CD01D42236600117C0F /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCB1D42236600117C0F /* Benchmark.m */; };
 		9A596CD11D42236600117C0F /* LockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCC1D42236600117C0F /* LockTests.m */; };
 		9A596CD21D42236600117C0F /* Signal.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A596CCD1D42236600117C0F /* Signal.c */; };
@@ -133,128 +137,140 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		081D25521EE69758000DAED1 /* aqnote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aqnote.entitlements; sourceTree = "<group>"; };
 		081D25531EE697B3000DAED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		083E7C3820E5D0100082EDE0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		083E7C3A20E5D0BA0082EDE0 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		083E7C4E20E5E3950082EDE0 /* aqnote.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = aqnote.entitlements; path = aqnote/aqnote.entitlements; sourceTree = SOURCE_ROOT; };
+		083E7C5320E5E3AC0082EDE0 /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
+		083E7C5420E5E3AC0082EDE0 /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
+		083E7C5520E5E3AC0082EDE0 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		083E7C5620E5E3AC0082EDE0 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		083E7C5920E5E3AC0082EDE0 /* MIHMessageDigest5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHMessageDigest5.m; sourceTree = "<group>"; };
+		083E7C5A20E5E3AC0082EDE0 /* MIHMessageDigest5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHMessageDigest5.h; sourceTree = "<group>"; };
+		083E7C5C20E5E3AC0082EDE0 /* MIHDESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHDESKey.h; sourceTree = "<group>"; };
+		083E7C5D20E5E3AC0082EDE0 /* MIHDESKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHDESKeyFactory.h; sourceTree = "<group>"; };
+		083E7C5E20E5E3AC0082EDE0 /* MIHDESKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHDESKey+Internal.m"; sourceTree = "<group>"; };
+		083E7C5F20E5E3AC0082EDE0 /* MIHDESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKey.m; sourceTree = "<group>"; };
+		083E7C6020E5E3AC0082EDE0 /* MIHDESKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKeyFactory.m; sourceTree = "<group>"; };
+		083E7C6120E5E3AC0082EDE0 /* MIHDESKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHDESKey+Internal.h"; sourceTree = "<group>"; };
+		083E7C6320E5E3AC0082EDE0 /* MIHPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHPrivateKey.h; sourceTree = "<group>"; };
+		083E7C6420E5E3AC0082EDE0 /* MIHErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHErrors.h; sourceTree = "<group>"; };
+		083E7C6520E5E3AC0082EDE0 /* MIHSymmetricKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSymmetricKey.h; sourceTree = "<group>"; };
+		083E7C6620E5E3AC0082EDE0 /* MIHCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHCoding.h; sourceTree = "<group>"; };
+		083E7C6720E5E3AC0082EDE0 /* MIHKeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHKeyPair.m; sourceTree = "<group>"; };
+		083E7C6820E5E3AC0082EDE0 /* MIHErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHErrors.m; sourceTree = "<group>"; };
+		083E7C6920E5E3AC0082EDE0 /* MIHKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHKeyFactory.h; sourceTree = "<group>"; };
+		083E7C6A20E5E3AC0082EDE0 /* MIHNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHNumber.h; sourceTree = "<group>"; };
+		083E7C6B20E5E3AC0082EDE0 /* MIHPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHPublicKey.h; sourceTree = "<group>"; };
+		083E7C6C20E5E3AC0082EDE0 /* MIHKeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHKeyPair.h; sourceTree = "<group>"; };
+		083E7C6D20E5E3AC0082EDE0 /* MIHHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHHashAlgorithm.h; sourceTree = "<group>"; };
+		083E7C6F20E5E3AC0082EDE0 /* MIHRSAKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAKeyFactory.h; sourceTree = "<group>"; };
+		083E7C7020E5E3AC0082EDE0 /* MIHRSAPrivateKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAPrivateKey.m; sourceTree = "<group>"; };
+		083E7C7120E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHRSAPrivateKey+Internal.m"; sourceTree = "<group>"; };
+		083E7C7220E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHRSAPublicKey+Internal.h"; sourceTree = "<group>"; };
+		083E7C7320E5E3AC0082EDE0 /* MIHRSAPublicKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAPublicKey.m; sourceTree = "<group>"; };
+		083E7C7420E5E3AC0082EDE0 /* MIHRSAPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAPrivateKey.h; sourceTree = "<group>"; };
+		083E7C7520E5E3AC0082EDE0 /* MIHRSAKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAKeyFactory.m; sourceTree = "<group>"; };
+		083E7C7620E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHRSAPublicKey+Internal.m"; sourceTree = "<group>"; };
+		083E7C7720E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHRSAPrivateKey+Internal.h"; sourceTree = "<group>"; };
+		083E7C7820E5E3AC0082EDE0 /* MIHRSAPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAPublicKey.h; sourceTree = "<group>"; };
+		083E7C7A20E5E3AC0082EDE0 /* MIHBigInteger+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHBigInteger+Internal.h"; sourceTree = "<group>"; };
+		083E7C7B20E5E3AC0082EDE0 /* MIHBigInteger+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHBigInteger+Factory.m"; sourceTree = "<group>"; };
+		083E7C7C20E5E3AC0082EDE0 /* MIHBigIntegerRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHBigIntegerRange.m; sourceTree = "<group>"; };
+		083E7C7D20E5E3AC0082EDE0 /* MIHBigInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHBigInteger.h; sourceTree = "<group>"; };
+		083E7C7E20E5E3AC0082EDE0 /* MIHBigIntegerRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHBigIntegerRange.h; sourceTree = "<group>"; };
+		083E7C7F20E5E3AC0082EDE0 /* MIHBigInteger+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHBigInteger+Factory.h"; sourceTree = "<group>"; };
+		083E7C8020E5E3AC0082EDE0 /* MIHBigInteger+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHBigInteger+Internal.m"; sourceTree = "<group>"; };
+		083E7C8120E5E3AC0082EDE0 /* MIHBigInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHBigInteger.m; sourceTree = "<group>"; };
+		083E7C8320E5E3AC0082EDE0 /* MIHCryptoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHCryptoConfiguration.m; sourceTree = "<group>"; };
+		083E7C8420E5E3AC0082EDE0 /* NSString+MIHConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MIHConversion.h"; sourceTree = "<group>"; };
+		083E7C8520E5E3AC0082EDE0 /* NSData+MIHConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MIHConversion.h"; sourceTree = "<group>"; };
+		083E7C8620E5E3AC0082EDE0 /* MIHInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHInternal.h; sourceTree = "<group>"; };
+		083E7C8720E5E3AC0082EDE0 /* NSString+MIHConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MIHConversion.m"; sourceTree = "<group>"; };
+		083E7C8820E5E3AC0082EDE0 /* MIHCryptoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHCryptoConfiguration.h; sourceTree = "<group>"; };
+		083E7C8920E5E3AC0082EDE0 /* MIHInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHInternal.m; sourceTree = "<group>"; };
+		083E7C8A20E5E3AC0082EDE0 /* NSData+MIHConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MIHConversion.m"; sourceTree = "<group>"; };
+		083E7C8C20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm.h; sourceTree = "<group>"; };
+		083E7C8D20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm256.m; sourceTree = "<group>"; };
+		083E7C8E20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm384.m; sourceTree = "<group>"; };
+		083E7C8F20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm512.m; sourceTree = "<group>"; };
+		083E7C9020E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm.m; sourceTree = "<group>"; };
+		083E7C9120E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm256.h; sourceTree = "<group>"; };
+		083E7C9220E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm512.h; sourceTree = "<group>"; };
+		083E7C9320E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm384.h; sourceTree = "<group>"; };
+		083E7C9520E5E3AC0082EDE0 /* MIHAESKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKeyFactory.m; sourceTree = "<group>"; };
+		083E7C9620E5E3AC0082EDE0 /* MIHAESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKey.m; sourceTree = "<group>"; };
+		083E7C9720E5E3AC0082EDE0 /* MIHAESKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHAESKeyFactory.h; sourceTree = "<group>"; };
+		083E7C9820E5E3AC0082EDE0 /* MIHAESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHAESKey.h; sourceTree = "<group>"; };
+		083E7C9920E5E3AC0082EDE0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		083E7C9B20E5E3AC0082EDE0 /* AQKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQKeychain.h; sourceTree = "<group>"; };
+		083E7C9C20E5E3AC0082EDE0 /* NSString+aqnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+aqnote.m"; sourceTree = "<group>"; };
+		083E7C9D20E5E3AC0082EDE0 /* AQUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQUtils.h; sourceTree = "<group>"; };
+		083E7C9E20E5E3AC0082EDE0 /* NSString+aqnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+aqnote.h"; sourceTree = "<group>"; };
+		083E7C9F20E5E3AC0082EDE0 /* AQKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQKeychain.m; sourceTree = "<group>"; };
+		083E7CA020E5E3AC0082EDE0 /* AQUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUtils.m; sourceTree = "<group>"; };
+		083E7CA320E5E3AC0082EDE0 /* AQJumpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQJumpViewController.m; sourceTree = "<group>"; };
+		083E7CA420E5E3AC0082EDE0 /* AQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTableViewController.m; sourceTree = "<group>"; };
+		083E7CA720E5E3AC0082EDE0 /* AQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController.m; sourceTree = "<group>"; };
+		083E7CA820E5E3AC0082EDE0 /* AQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController.h; sourceTree = "<group>"; };
+		083E7CAA20E5E3AC0082EDE0 /* AQHyBridResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHyBridResult.h; sourceTree = "<group>"; };
+		083E7CAB20E5E3AC0082EDE0 /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
+		083E7CAC20E5E3AC0082EDE0 /* AQHybridService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridService.h; sourceTree = "<group>"; };
+		083E7CAD20E5E3AC0082EDE0 /* AQHybridHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridHandler.m; sourceTree = "<group>"; };
+		083E7CAE20E5E3AC0082EDE0 /* AQHybridContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridContext.h; sourceTree = "<group>"; };
+		083E7CAF20E5E3AC0082EDE0 /* ALBBHyBridResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBBHyBridResult.m; sourceTree = "<group>"; };
+		083E7CB020E5E3AC0082EDE0 /* AQHybridRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridRegister.m; sourceTree = "<group>"; };
+		083E7CB120E5E3AC0082EDE0 /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
+		083E7CB220E5E3AC0082EDE0 /* AQHybridService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridService.m; sourceTree = "<group>"; };
+		083E7CB320E5E3AC0082EDE0 /* AQHybridContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridContext.m; sourceTree = "<group>"; };
+		083E7CB420E5E3AC0082EDE0 /* AQHybridHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridHandler.h; sourceTree = "<group>"; };
+		083E7CB520E5E3AC0082EDE0 /* AQHybridRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridRegister.h; sourceTree = "<group>"; };
+		083E7CB620E5E3AC0082EDE0 /* StandardWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardWebViewController.m; sourceTree = "<group>"; };
+		083E7CB820E5E3AC0082EDE0 /* AQWebViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController2.h; sourceTree = "<group>"; };
+		083E7CB920E5E3AC0082EDE0 /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
+		083E7CBB20E5E3AC0082EDE0 /* AQHybrid2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid2.m; sourceTree = "<group>"; };
+		083E7CBC20E5E3AC0082EDE0 /* AQHybrid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid2.h; sourceTree = "<group>"; };
+		083E7CBD20E5E3AC0082EDE0 /* HybridWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridWebViewController.m; sourceTree = "<group>"; };
+		083E7CBE20E5E3AC0082EDE0 /* CookieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookieViewController.m; sourceTree = "<group>"; };
+		083E7CBF20E5E3AC0082EDE0 /* AQToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQToastViewController.m; sourceTree = "<group>"; };
+		083E7CC020E5E3AC0082EDE0 /* AQUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUIViewController.m; sourceTree = "<group>"; };
+		083E7CC120E5E3AC0082EDE0 /* AQPresentDismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQPresentDismissViewController.m; sourceTree = "<group>"; };
+		083E7CC220E5E3AC0082EDE0 /* AQButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQButtonViewController.m; sourceTree = "<group>"; };
+		083E7CC320E5E3AC0082EDE0 /* AQRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQRootViewController.m; sourceTree = "<group>"; };
+		083E7CC520E5E3AC0082EDE0 /* MemoryManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManageController.m; sourceTree = "<group>"; };
+		083E7CC620E5E3AC0082EDE0 /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
+		083E7CC920E5E3AC0082EDE0 /* AQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQNavigationController.m; sourceTree = "<group>"; };
+		083E7CCA20E5E3AC0082EDE0 /* AQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQNavigationController.h; sourceTree = "<group>"; };
+		083E7CCD20E5E3AC0082EDE0 /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
+		083E7CCF20E5E3AC0082EDE0 /* AddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListViewController.m; sourceTree = "<group>"; };
+		083E7CD020E5E3AC0082EDE0 /* AQRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRootViewController.h; sourceTree = "<group>"; };
+		083E7CD420E5E3AC0082EDE0 /* MutliThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutliThreadController.m; sourceTree = "<group>"; };
+		083E7CD720E5E3AC0082EDE0 /* AQCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCookieManager.m; sourceTree = "<group>"; };
+		083E7CD820E5E3AC0082EDE0 /* AQCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCookieManager.h; sourceTree = "<group>"; };
+		083E7CDA20E5E3AC0082EDE0 /* AQBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQBlock.m; sourceTree = "<group>"; };
+		083E7CDB20E5E3AC0082EDE0 /* AQBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQBlock.h; sourceTree = "<group>"; };
+		083E7CDC20E5E3AC0082EDE0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		083E7CDD20E5E3AC0082EDE0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		083E7CE020E5E3AC0082EDE0 /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
+		083E7CE120E5E3AC0082EDE0 /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
+		083E7CE220E5E3AC0082EDE0 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		083E7CE320E5E3AC0082EDE0 /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		083E7CE420E5E3AC0082EDE0 /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfo.h; sourceTree = "<group>"; };
+		083E7CE520E5E3AC0082EDE0 /* if_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_dl.h; sourceTree = "<group>"; };
+		083E7CE620E5E3AC0082EDE0 /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		083E7CE720E5E3AC0082EDE0 /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
+		083E7D2620E5E80E0082EDE0 /* AQNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AQNetworkViewController.m; sourceTree = "<group>"; };
+		083E7D2820E5E84B0082EDE0 /* MonitorNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorNetworkViewController.m; sourceTree = "<group>"; };
+		083E7D2920E5E84B0082EDE0 /* NDeviceMacAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDeviceMacAddressViewController.m; sourceTree = "<group>"; };
+		083E7D2C20E5E9510082EDE0 /* AQThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AQThreadViewController.m; sourceTree = "<group>"; };
 		08603004201ECAC40029355C /* GVAccessErrorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVAccessErrorTest.m; sourceTree = "<group>"; };
 		08603006201ECAF50029355C /* GVTestDO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVTestDO.m; sourceTree = "<group>"; };
 		08603008201ECB5F0029355C /* GVTestInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVTestInstance.h; sourceTree = "<group>"; };
 		08603009201ECB5F0029355C /* GVTestInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVTestInstance.m; sourceTree = "<group>"; };
 		0860300B201ECC7A0029355C /* GVTestDO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVTestDO.h; sourceTree = "<group>"; };
-		08959FEE1F32F6910010FE1B /* AQKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQKeychain.h; sourceTree = "<group>"; };
-		08959FEF1F32F6910010FE1B /* AQKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQKeychain.m; sourceTree = "<group>"; };
 		08AE6C441F6623720073A333 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		08AE6C461F66237D0073A333 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		08AE6C481F6623B40073A333 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
-		08B299482005E3730051B7AC /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
-		08B299492005E3730051B7AC /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
-		08B2994A2005E3730051B7AC /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
-		08B2994B2005E3730051B7AC /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
-		08B2994C2005E3730051B7AC /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfo.h; sourceTree = "<group>"; };
-		08B2994D2005E3730051B7AC /* if_dl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_dl.h; sourceTree = "<group>"; };
-		08B2994E2005E3730051B7AC /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
-		08B2994F2005E3730051B7AC /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
-		08B299542005E4EB0051B7AC /* ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
-		08B299572005E4EB0051B7AC /* AQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController.m; sourceTree = "<group>"; };
-		08B299582005E4EB0051B7AC /* AQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController.h; sourceTree = "<group>"; };
-		08B2995A2005E4EB0051B7AC /* AQHyBridResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHyBridResult.h; sourceTree = "<group>"; };
-		08B2995B2005E4EB0051B7AC /* AQHybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid.m; sourceTree = "<group>"; };
-		08B2995C2005E4EB0051B7AC /* AQHybridService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridService.h; sourceTree = "<group>"; };
-		08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridHandler.m; sourceTree = "<group>"; };
-		08B2995E2005E4EB0051B7AC /* AQHybridContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridContext.h; sourceTree = "<group>"; };
-		08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBBHyBridResult.m; sourceTree = "<group>"; };
-		08B299602005E4EB0051B7AC /* AQHybridRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridRegister.m; sourceTree = "<group>"; };
-		08B299612005E4EB0051B7AC /* AQHybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid.h; sourceTree = "<group>"; };
-		08B299622005E4EB0051B7AC /* AQHybridService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridService.m; sourceTree = "<group>"; };
-		08B299632005E4EB0051B7AC /* AQHybridContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybridContext.m; sourceTree = "<group>"; };
-		08B299642005E4EB0051B7AC /* AQHybridHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridHandler.h; sourceTree = "<group>"; };
-		08B299652005E4EB0051B7AC /* AQHybridRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybridRegister.h; sourceTree = "<group>"; };
-		08B299672005E4EB0051B7AC /* AQWebViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebViewController2.h; sourceTree = "<group>"; };
-		08B299682005E4EB0051B7AC /* AQWebViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebViewController2.m; sourceTree = "<group>"; };
-		08B2996A2005E4EB0051B7AC /* AQHybrid2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHybrid2.m; sourceTree = "<group>"; };
-		08B2996B2005E4EB0051B7AC /* AQHybrid2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHybrid2.h; sourceTree = "<group>"; };
-		08B2996C2005E4EB0051B7AC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacAddressViewController.m; sourceTree = "<group>"; };
-		08B2996E2005E4EB0051B7AC /* AQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQViewController.m; sourceTree = "<group>"; };
-		08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentDismissViewController.m; sourceTree = "<group>"; };
-		08B299702005E4EB0051B7AC /* MemoryManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManageController.m; sourceTree = "<group>"; };
-		08B299712005E4EB0051B7AC /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListViewController.m; sourceTree = "<group>"; };
-		08B299732005E4EB0051B7AC /* AQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQNavigationController.m; sourceTree = "<group>"; };
-		08B299742005E4EB0051B7AC /* AQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQNavigationController.h; sourceTree = "<group>"; };
-		08B299752005E4EB0051B7AC /* HybridWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridWebViewController.m; sourceTree = "<group>"; };
-		08B299762005E4EB0051B7AC /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
-		08B299772005E4EB0051B7AC /* AQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQViewController.h; sourceTree = "<group>"; };
-		08B299782005E4EB0051B7AC /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		08B299792005E4EB0051B7AC /* CookieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookieViewController.m; sourceTree = "<group>"; };
-		08B2997A2005E4EB0051B7AC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		08B2997B2005E4EB0051B7AC /* MutliThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutliThreadController.m; sourceTree = "<group>"; };
-		08B2997C2005E4EB0051B7AC /* JumpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpViewController.m; sourceTree = "<group>"; };
-		08B2997D2005E4EB0051B7AC /* StandardWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardWebViewController.m; sourceTree = "<group>"; };
-		08B2997E2005E4EB0051B7AC /* MyUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUIViewController.m; sourceTree = "<group>"; };
-		08B299812005E4EB0051B7AC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		08B299832005E4EB0051B7AC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		08B299A12005E4F10051B7AC /* AQCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCookieManager.m; sourceTree = "<group>"; };
-		08B299A22005E4F10051B7AC /* AQCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCookieManager.h; sourceTree = "<group>"; };
-		08B299A42005E4F10051B7AC /* AQBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQBlock.m; sourceTree = "<group>"; };
-		08B299A52005E4F10051B7AC /* AQBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQBlock.h; sourceTree = "<group>"; };
-		08B299A82005E56C0051B7AC /* NSString+aqnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+aqnote.h"; sourceTree = "<group>"; };
-		08B299A92005E56C0051B7AC /* NSString+aqnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+aqnote.m"; sourceTree = "<group>"; };
-		08B299AD200608A00051B7AC /* MIHMessageDigest5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHMessageDigest5.m; sourceTree = "<group>"; };
-		08B299AE200608A00051B7AC /* MIHMessageDigest5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHMessageDigest5.h; sourceTree = "<group>"; };
-		08B299B0200608A00051B7AC /* MIHDESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHDESKey.h; sourceTree = "<group>"; };
-		08B299B1200608A00051B7AC /* MIHDESKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHDESKeyFactory.h; sourceTree = "<group>"; };
-		08B299B2200608A00051B7AC /* MIHDESKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHDESKey+Internal.m"; sourceTree = "<group>"; };
-		08B299B3200608A00051B7AC /* MIHDESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKey.m; sourceTree = "<group>"; };
-		08B299B4200608A00051B7AC /* MIHDESKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKeyFactory.m; sourceTree = "<group>"; };
-		08B299B5200608A00051B7AC /* MIHDESKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHDESKey+Internal.h"; sourceTree = "<group>"; };
-		08B299B7200608A00051B7AC /* MIHPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHPrivateKey.h; sourceTree = "<group>"; };
-		08B299B8200608A00051B7AC /* MIHErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHErrors.h; sourceTree = "<group>"; };
-		08B299B9200608A00051B7AC /* MIHSymmetricKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSymmetricKey.h; sourceTree = "<group>"; };
-		08B299BA200608A00051B7AC /* MIHCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHCoding.h; sourceTree = "<group>"; };
-		08B299BB200608A00051B7AC /* MIHKeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHKeyPair.m; sourceTree = "<group>"; };
-		08B299BC200608A00051B7AC /* MIHErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHErrors.m; sourceTree = "<group>"; };
-		08B299BD200608A00051B7AC /* MIHKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHKeyFactory.h; sourceTree = "<group>"; };
-		08B299BE200608A00051B7AC /* MIHNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHNumber.h; sourceTree = "<group>"; };
-		08B299BF200608A00051B7AC /* MIHPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHPublicKey.h; sourceTree = "<group>"; };
-		08B299C0200608A00051B7AC /* MIHKeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHKeyPair.h; sourceTree = "<group>"; };
-		08B299C1200608A00051B7AC /* MIHHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHHashAlgorithm.h; sourceTree = "<group>"; };
-		08B299C3200608A00051B7AC /* MIHRSAKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAKeyFactory.h; sourceTree = "<group>"; };
-		08B299C4200608A00051B7AC /* MIHRSAPrivateKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAPrivateKey.m; sourceTree = "<group>"; };
-		08B299C5200608A00051B7AC /* MIHRSAPrivateKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHRSAPrivateKey+Internal.m"; sourceTree = "<group>"; };
-		08B299C6200608A00051B7AC /* MIHRSAPublicKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHRSAPublicKey+Internal.h"; sourceTree = "<group>"; };
-		08B299C7200608A00051B7AC /* MIHRSAPublicKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAPublicKey.m; sourceTree = "<group>"; };
-		08B299C8200608A00051B7AC /* MIHRSAPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAPrivateKey.h; sourceTree = "<group>"; };
-		08B299C9200608A00051B7AC /* MIHRSAKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHRSAKeyFactory.m; sourceTree = "<group>"; };
-		08B299CA200608A00051B7AC /* MIHRSAPublicKey+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHRSAPublicKey+Internal.m"; sourceTree = "<group>"; };
-		08B299CB200608A00051B7AC /* MIHRSAPrivateKey+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHRSAPrivateKey+Internal.h"; sourceTree = "<group>"; };
-		08B299CC200608A00051B7AC /* MIHRSAPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHRSAPublicKey.h; sourceTree = "<group>"; };
-		08B299CE200608A00051B7AC /* MIHBigInteger+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHBigInteger+Internal.h"; sourceTree = "<group>"; };
-		08B299CF200608A00051B7AC /* MIHBigInteger+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHBigInteger+Factory.m"; sourceTree = "<group>"; };
-		08B299D0200608A00051B7AC /* MIHBigIntegerRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHBigIntegerRange.m; sourceTree = "<group>"; };
-		08B299D1200608A00051B7AC /* MIHBigInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHBigInteger.h; sourceTree = "<group>"; };
-		08B299D2200608A00051B7AC /* MIHBigIntegerRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHBigIntegerRange.h; sourceTree = "<group>"; };
-		08B299D3200608A00051B7AC /* MIHBigInteger+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIHBigInteger+Factory.h"; sourceTree = "<group>"; };
-		08B299D4200608A00051B7AC /* MIHBigInteger+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIHBigInteger+Internal.m"; sourceTree = "<group>"; };
-		08B299D5200608A00051B7AC /* MIHBigInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHBigInteger.m; sourceTree = "<group>"; };
-		08B299D7200608A00051B7AC /* MIHCryptoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHCryptoConfiguration.m; sourceTree = "<group>"; };
-		08B299D8200608A00051B7AC /* NSString+MIHConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MIHConversion.h"; sourceTree = "<group>"; };
-		08B299D9200608A00051B7AC /* NSData+MIHConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MIHConversion.h"; sourceTree = "<group>"; };
-		08B299DA200608A00051B7AC /* MIHInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHInternal.h; sourceTree = "<group>"; };
-		08B299DB200608A00051B7AC /* NSString+MIHConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MIHConversion.m"; sourceTree = "<group>"; };
-		08B299DC200608A00051B7AC /* MIHCryptoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHCryptoConfiguration.h; sourceTree = "<group>"; };
-		08B299DD200608A00051B7AC /* MIHInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHInternal.m; sourceTree = "<group>"; };
-		08B299DE200608A00051B7AC /* NSData+MIHConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MIHConversion.m"; sourceTree = "<group>"; };
-		08B299E0200608A00051B7AC /* MIHSecureHashAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm.h; sourceTree = "<group>"; };
-		08B299E1200608A00051B7AC /* MIHSecureHashAlgorithm256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm256.m; sourceTree = "<group>"; };
-		08B299E2200608A00051B7AC /* MIHSecureHashAlgorithm384.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm384.m; sourceTree = "<group>"; };
-		08B299E3200608A00051B7AC /* MIHSecureHashAlgorithm512.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm512.m; sourceTree = "<group>"; };
-		08B299E4200608A00051B7AC /* MIHSecureHashAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm.m; sourceTree = "<group>"; };
-		08B299E5200608A00051B7AC /* MIHSecureHashAlgorithm256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm256.h; sourceTree = "<group>"; };
-		08B299E6200608A00051B7AC /* MIHSecureHashAlgorithm512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm512.h; sourceTree = "<group>"; };
-		08B299E7200608A00051B7AC /* MIHSecureHashAlgorithm384.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHSecureHashAlgorithm384.h; sourceTree = "<group>"; };
-		08B299E9200608A00051B7AC /* MIHAESKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKeyFactory.m; sourceTree = "<group>"; };
-		08B299EA200608A00051B7AC /* MIHAESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKey.m; sourceTree = "<group>"; };
-		08B299EB200608A00051B7AC /* MIHAESKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHAESKeyFactory.h; sourceTree = "<group>"; };
-		08B299EC200608A00051B7AC /* MIHAESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHAESKey.h; sourceTree = "<group>"; };
 		08B29A08200608C10051B7AC /* MIHMessageDigest5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHMessageDigest5Tests.m; sourceTree = "<group>"; };
 		08B29A0A200608C10051B7AC /* MIHDESKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKeyTests.m; sourceTree = "<group>"; };
 		08B29A0B200608C10051B7AC /* MIHDESKeyFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHDESKeyFactoryTests.m; sourceTree = "<group>"; };
@@ -268,8 +284,6 @@
 		08B29A17200608C10051B7AC /* MIHSecureHashAlgorithm256Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHSecureHashAlgorithm256Tests.m; sourceTree = "<group>"; };
 		08B29A19200608C10051B7AC /* MIHAESKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKeyTests.m; sourceTree = "<group>"; };
 		08B29A1A200608C10051B7AC /* MIHAESKeyFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHAESKeyFactoryTests.m; sourceTree = "<group>"; };
-		08B29A29200617C60051B7AC /* AQWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWebView.h; sourceTree = "<group>"; };
-		08B29A2A200617C60051B7AC /* AQWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWebView.m; sourceTree = "<group>"; };
 		08F3AE711FD1223D0056A43F /* BoolTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoolTest.m; sourceTree = "<group>"; };
 		0BB40D633674C182372A160D /* Pods-aqnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aqnote/Pods-aqnote.debug.xcconfig"; sourceTree = "<group>"; };
 		1CBB2905CD3E98446F86C3E7 /* Pods-aqnoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aqnoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aqnoteTests/Pods-aqnoteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,9 +298,6 @@
 		9A2980561D17DD8E0054D1AB /* aqnoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aqnoteUITests.m; sourceTree = "<group>"; };
 		9A2980581D17DD8E0054D1AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2980651D17DDF70054D1AB /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
-		9A2980681D17DDF70054D1AB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9A2980691D17DDF70054D1AB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9A2980851D17DDF70054D1AB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A29809D1D17DE520054D1AB /* EncodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeTests.m; sourceTree = "<group>"; };
 		9A29809E1D17DE520054D1AB /* GCDTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTests.m; sourceTree = "<group>"; };
 		9A29809F1D17DE520054D1AB /* LLDBDebugTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDBDebugTests.m; sourceTree = "<group>"; };
@@ -296,8 +307,6 @@
 		9A2D868A1D365FB6002DF9CC /* NSThreadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadTests.m; sourceTree = "<group>"; };
 		9A4808851D406EE8006B8393 /* StaticTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTests.m; sourceTree = "<group>"; };
 		9A4808931D40A669006B8393 /* FontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontTests.m; sourceTree = "<group>"; };
-		9A4808CB1D40D9E2006B8393 /* AQUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQUtils.h; sourceTree = "<group>"; };
-		9A4808CC1D40D9E2006B8393 /* AQUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQUtils.m; sourceTree = "<group>"; };
 		9A596CCA1D42236600117C0F /* Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Benchmark.h; sourceTree = "<group>"; };
 		9A596CCB1D42236600117C0F /* Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Benchmark.m; sourceTree = "<group>"; };
 		9A596CCC1D42236600117C0F /* LockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockTests.m; sourceTree = "<group>"; };
@@ -321,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083E7C3C20E5D1640082EDE0 /* AddressBook.framework in Frameworks */,
 				975047D5A77E709F45AF261D /* libPods-aqnote.a in Frameworks */,
 				08AE6C491F6623B40073A333 /* ExternalAccessory.framework in Frameworks */,
 				081D25541EE697B3000DAED1 /* HealthKit.framework in Frameworks */,
@@ -361,6 +371,391 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		083E7C4F20E5E3AC0082EDE0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C9920E5E3AC0082EDE0 /* AppDelegate.h */,
+				083E7CDD20E5E3AC0082EDE0 /* AppDelegate.m */,
+				083E7CDC20E5E3AC0082EDE0 /* main.m */,
+				083E7CD520E5E3AC0082EDE0 /* Components */,
+				083E7CA120E5E3AC0082EDE0 /* Controller */,
+				083E7C5720E5E3AC0082EDE0 /* Crypto */,
+				083E7CDE20E5E3AC0082EDE0 /* Device */,
+				083E7C5020E5E3AC0082EDE0 /* UI */,
+				083E7C9A20E5E3AC0082EDE0 /* Utils */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		083E7C5020E5E3AC0082EDE0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5120E5E3AC0082EDE0 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		083E7C5120E5E3AC0082EDE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5220E5E3AC0082EDE0 /* webView */,
+				083E7C5520E5E3AC0082EDE0 /* UIView+Toast.h */,
+				083E7C5620E5E3AC0082EDE0 /* UIView+Toast.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		083E7C5220E5E3AC0082EDE0 /* webView */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5320E5E3AC0082EDE0 /* AQWebView.h */,
+				083E7C5420E5E3AC0082EDE0 /* AQWebView.m */,
+			);
+			path = webView;
+			sourceTree = "<group>";
+		};
+		083E7C5720E5E3AC0082EDE0 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5820E5E3AC0082EDE0 /* MD5 */,
+				083E7C5B20E5E3AC0082EDE0 /* DES */,
+				083E7C6220E5E3AC0082EDE0 /* Core */,
+				083E7C6E20E5E3AC0082EDE0 /* RSA */,
+				083E7C7920E5E3AC0082EDE0 /* Mathematics */,
+				083E7C8220E5E3AC0082EDE0 /* Utils */,
+				083E7C8B20E5E3AC0082EDE0 /* SHA */,
+				083E7C9420E5E3AC0082EDE0 /* AES */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		083E7C5820E5E3AC0082EDE0 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5920E5E3AC0082EDE0 /* MIHMessageDigest5.m */,
+				083E7C5A20E5E3AC0082EDE0 /* MIHMessageDigest5.h */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		083E7C5B20E5E3AC0082EDE0 /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C5C20E5E3AC0082EDE0 /* MIHDESKey.h */,
+				083E7C5D20E5E3AC0082EDE0 /* MIHDESKeyFactory.h */,
+				083E7C5E20E5E3AC0082EDE0 /* MIHDESKey+Internal.m */,
+				083E7C5F20E5E3AC0082EDE0 /* MIHDESKey.m */,
+				083E7C6020E5E3AC0082EDE0 /* MIHDESKeyFactory.m */,
+				083E7C6120E5E3AC0082EDE0 /* MIHDESKey+Internal.h */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		083E7C6220E5E3AC0082EDE0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C6320E5E3AC0082EDE0 /* MIHPrivateKey.h */,
+				083E7C6420E5E3AC0082EDE0 /* MIHErrors.h */,
+				083E7C6520E5E3AC0082EDE0 /* MIHSymmetricKey.h */,
+				083E7C6620E5E3AC0082EDE0 /* MIHCoding.h */,
+				083E7C6720E5E3AC0082EDE0 /* MIHKeyPair.m */,
+				083E7C6820E5E3AC0082EDE0 /* MIHErrors.m */,
+				083E7C6920E5E3AC0082EDE0 /* MIHKeyFactory.h */,
+				083E7C6A20E5E3AC0082EDE0 /* MIHNumber.h */,
+				083E7C6B20E5E3AC0082EDE0 /* MIHPublicKey.h */,
+				083E7C6C20E5E3AC0082EDE0 /* MIHKeyPair.h */,
+				083E7C6D20E5E3AC0082EDE0 /* MIHHashAlgorithm.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		083E7C6E20E5E3AC0082EDE0 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C6F20E5E3AC0082EDE0 /* MIHRSAKeyFactory.h */,
+				083E7C7020E5E3AC0082EDE0 /* MIHRSAPrivateKey.m */,
+				083E7C7120E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.m */,
+				083E7C7220E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.h */,
+				083E7C7320E5E3AC0082EDE0 /* MIHRSAPublicKey.m */,
+				083E7C7420E5E3AC0082EDE0 /* MIHRSAPrivateKey.h */,
+				083E7C7520E5E3AC0082EDE0 /* MIHRSAKeyFactory.m */,
+				083E7C7620E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.m */,
+				083E7C7720E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.h */,
+				083E7C7820E5E3AC0082EDE0 /* MIHRSAPublicKey.h */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		083E7C7920E5E3AC0082EDE0 /* Mathematics */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C7A20E5E3AC0082EDE0 /* MIHBigInteger+Internal.h */,
+				083E7C7B20E5E3AC0082EDE0 /* MIHBigInteger+Factory.m */,
+				083E7C7C20E5E3AC0082EDE0 /* MIHBigIntegerRange.m */,
+				083E7C7D20E5E3AC0082EDE0 /* MIHBigInteger.h */,
+				083E7C7E20E5E3AC0082EDE0 /* MIHBigIntegerRange.h */,
+				083E7C7F20E5E3AC0082EDE0 /* MIHBigInteger+Factory.h */,
+				083E7C8020E5E3AC0082EDE0 /* MIHBigInteger+Internal.m */,
+				083E7C8120E5E3AC0082EDE0 /* MIHBigInteger.m */,
+			);
+			path = Mathematics;
+			sourceTree = "<group>";
+		};
+		083E7C8220E5E3AC0082EDE0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C8320E5E3AC0082EDE0 /* MIHCryptoConfiguration.m */,
+				083E7C8420E5E3AC0082EDE0 /* NSString+MIHConversion.h */,
+				083E7C8520E5E3AC0082EDE0 /* NSData+MIHConversion.h */,
+				083E7C8620E5E3AC0082EDE0 /* MIHInternal.h */,
+				083E7C8720E5E3AC0082EDE0 /* NSString+MIHConversion.m */,
+				083E7C8820E5E3AC0082EDE0 /* MIHCryptoConfiguration.h */,
+				083E7C8920E5E3AC0082EDE0 /* MIHInternal.m */,
+				083E7C8A20E5E3AC0082EDE0 /* NSData+MIHConversion.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		083E7C8B20E5E3AC0082EDE0 /* SHA */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C8C20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.h */,
+				083E7C8D20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.m */,
+				083E7C8E20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.m */,
+				083E7C8F20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.m */,
+				083E7C9020E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.m */,
+				083E7C9120E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.h */,
+				083E7C9220E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.h */,
+				083E7C9320E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.h */,
+			);
+			path = SHA;
+			sourceTree = "<group>";
+		};
+		083E7C9420E5E3AC0082EDE0 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C9520E5E3AC0082EDE0 /* MIHAESKeyFactory.m */,
+				083E7C9620E5E3AC0082EDE0 /* MIHAESKey.m */,
+				083E7C9720E5E3AC0082EDE0 /* MIHAESKeyFactory.h */,
+				083E7C9820E5E3AC0082EDE0 /* MIHAESKey.h */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+		083E7C9A20E5E3AC0082EDE0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				083E7C9B20E5E3AC0082EDE0 /* AQKeychain.h */,
+				083E7C9C20E5E3AC0082EDE0 /* NSString+aqnote.m */,
+				083E7C9D20E5E3AC0082EDE0 /* AQUtils.h */,
+				083E7C9E20E5E3AC0082EDE0 /* NSString+aqnote.h */,
+				083E7C9F20E5E3AC0082EDE0 /* AQKeychain.m */,
+				083E7CA020E5E3AC0082EDE0 /* AQUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		083E7CA120E5E3AC0082EDE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CCD20E5E3AC0082EDE0 /* AQViewController.h */,
+				083E7CD020E5E3AC0082EDE0 /* AQRootViewController.h */,
+				083E7CC620E5E3AC0082EDE0 /* AQViewController.m */,
+				083E7CC320E5E3AC0082EDE0 /* AQRootViewController.m */,
+				083E7CCE20E5E3AC0082EDE0 /* Address */,
+				083E7CD120E5E3AC0082EDE0 /* Device */,
+				083E7CC420E5E3AC0082EDE0 /* Memory */,
+				083E7CC820E5E3AC0082EDE0 /* Navigation */,
+				083E7CC720E5E3AC0082EDE0 /* Network */,
+				083E7CCB20E5E3AC0082EDE0 /* Storage */,
+				083E7CD320E5E3AC0082EDE0 /* Thread */,
+				083E7CA220E5E3AC0082EDE0 /* UI */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		083E7CA220E5E3AC0082EDE0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CC220E5E3AC0082EDE0 /* AQButtonViewController.m */,
+				083E7CA320E5E3AC0082EDE0 /* AQJumpViewController.m */,
+				083E7CC120E5E3AC0082EDE0 /* AQPresentDismissViewController.m */,
+				083E7CA420E5E3AC0082EDE0 /* AQTableViewController.m */,
+				083E7CBF20E5E3AC0082EDE0 /* AQToastViewController.m */,
+				083E7CC020E5E3AC0082EDE0 /* AQUIViewController.m */,
+				083E7CA520E5E3AC0082EDE0 /* WebView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		083E7CA520E5E3AC0082EDE0 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CA620E5E3AC0082EDE0 /* V1 */,
+				083E7CB620E5E3AC0082EDE0 /* StandardWebViewController.m */,
+				083E7CB720E5E3AC0082EDE0 /* V2 */,
+				083E7CBD20E5E3AC0082EDE0 /* HybridWebViewController.m */,
+				083E7CBE20E5E3AC0082EDE0 /* CookieViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		083E7CA620E5E3AC0082EDE0 /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CA720E5E3AC0082EDE0 /* AQWebViewController.m */,
+				083E7CA820E5E3AC0082EDE0 /* AQWebViewController.h */,
+				083E7CA920E5E3AC0082EDE0 /* Hybrid */,
+			);
+			path = V1;
+			sourceTree = "<group>";
+		};
+		083E7CA920E5E3AC0082EDE0 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CAA20E5E3AC0082EDE0 /* AQHyBridResult.h */,
+				083E7CAB20E5E3AC0082EDE0 /* AQHybrid.m */,
+				083E7CAC20E5E3AC0082EDE0 /* AQHybridService.h */,
+				083E7CAD20E5E3AC0082EDE0 /* AQHybridHandler.m */,
+				083E7CAE20E5E3AC0082EDE0 /* AQHybridContext.h */,
+				083E7CAF20E5E3AC0082EDE0 /* ALBBHyBridResult.m */,
+				083E7CB020E5E3AC0082EDE0 /* AQHybridRegister.m */,
+				083E7CB120E5E3AC0082EDE0 /* AQHybrid.h */,
+				083E7CB220E5E3AC0082EDE0 /* AQHybridService.m */,
+				083E7CB320E5E3AC0082EDE0 /* AQHybridContext.m */,
+				083E7CB420E5E3AC0082EDE0 /* AQHybridHandler.h */,
+				083E7CB520E5E3AC0082EDE0 /* AQHybridRegister.h */,
+			);
+			path = Hybrid;
+			sourceTree = "<group>";
+		};
+		083E7CB720E5E3AC0082EDE0 /* V2 */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CB820E5E3AC0082EDE0 /* AQWebViewController2.h */,
+				083E7CB920E5E3AC0082EDE0 /* AQWebViewController2.m */,
+				083E7CBA20E5E3AC0082EDE0 /* Hybrid */,
+			);
+			path = V2;
+			sourceTree = "<group>";
+		};
+		083E7CBA20E5E3AC0082EDE0 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CBB20E5E3AC0082EDE0 /* AQHybrid2.m */,
+				083E7CBC20E5E3AC0082EDE0 /* AQHybrid2.h */,
+			);
+			path = Hybrid;
+			sourceTree = "<group>";
+		};
+		083E7CC420E5E3AC0082EDE0 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CC520E5E3AC0082EDE0 /* MemoryManageController.m */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		083E7CC720E5E3AC0082EDE0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				083E7D2920E5E84B0082EDE0 /* NDeviceMacAddressViewController.m */,
+				083E7D2820E5E84B0082EDE0 /* MonitorNetworkViewController.m */,
+				083E7D2620E5E80E0082EDE0 /* AQNetworkViewController.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		083E7CC820E5E3AC0082EDE0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CC920E5E3AC0082EDE0 /* AQNavigationController.m */,
+				083E7CCA20E5E3AC0082EDE0 /* AQNavigationController.h */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		083E7CCB20E5E3AC0082EDE0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		083E7CCE20E5E3AC0082EDE0 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CCF20E5E3AC0082EDE0 /* AddressListViewController.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		083E7CD120E5E3AC0082EDE0 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		083E7CD320E5E3AC0082EDE0 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CD420E5E3AC0082EDE0 /* MutliThreadController.m */,
+				083E7D2C20E5E9510082EDE0 /* AQThreadViewController.m */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		083E7CD520E5E3AC0082EDE0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CD620E5E3AC0082EDE0 /* Cookie */,
+				083E7CD920E5E3AC0082EDE0 /* Callback */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		083E7CD620E5E3AC0082EDE0 /* Cookie */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CD720E5E3AC0082EDE0 /* AQCookieManager.m */,
+				083E7CD820E5E3AC0082EDE0 /* AQCookieManager.h */,
+			);
+			path = Cookie;
+			sourceTree = "<group>";
+		};
+		083E7CD920E5E3AC0082EDE0 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CDA20E5E3AC0082EDE0 /* AQBlock.m */,
+				083E7CDB20E5E3AC0082EDE0 /* AQBlock.h */,
+			);
+			path = Callback;
+			sourceTree = "<group>";
+		};
+		083E7CDE20E5E3AC0082EDE0 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CDF20E5E3AC0082EDE0 /* MacAddress */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		083E7CDF20E5E3AC0082EDE0 /* MacAddress */ = {
+			isa = PBXGroup;
+			children = (
+				083E7CE020E5E3AC0082EDE0 /* NICInfo.m */,
+				083E7CE120E5E3AC0082EDE0 /* NICInfoSummary.h */,
+				083E7CE220E5E3AC0082EDE0 /* route.h */,
+				083E7CE320E5E3AC0082EDE0 /* if_ether.h */,
+				083E7CE420E5E3AC0082EDE0 /* NICInfo.h */,
+				083E7CE520E5E3AC0082EDE0 /* if_dl.h */,
+				083E7CE620E5E3AC0082EDE0 /* if_arp.h */,
+				083E7CE720E5E3AC0082EDE0 /* NICInfoSummary.m */,
+			);
+			path = MacAddress;
+			sourceTree = "<group>";
+		};
 		08603001201ECA340029355C /* SEGV_ACCERR */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,295 +766,6 @@
 				08603009201ECB5F0029355C /* GVTestInstance.m */,
 			);
 			path = SEGV_ACCERR;
-			sourceTree = "<group>";
-		};
-		08B299462005E3730051B7AC /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				08B299472005E3730051B7AC /* MacAddress */,
-			);
-			path = Device;
-			sourceTree = "<group>";
-		};
-		08B299472005E3730051B7AC /* MacAddress */ = {
-			isa = PBXGroup;
-			children = (
-				08B299482005E3730051B7AC /* NICInfo.m */,
-				08B299492005E3730051B7AC /* NICInfoSummary.h */,
-				08B2994A2005E3730051B7AC /* route.h */,
-				08B2994B2005E3730051B7AC /* if_ether.h */,
-				08B2994C2005E3730051B7AC /* NICInfo.h */,
-				08B2994D2005E3730051B7AC /* if_dl.h */,
-				08B2994E2005E3730051B7AC /* if_arp.h */,
-				08B2994F2005E3730051B7AC /* NICInfoSummary.m */,
-			);
-			path = MacAddress;
-			sourceTree = "<group>";
-		};
-		08B299522005E4EB0051B7AC /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				08B299532005E4EB0051B7AC /* Controller */,
-				08B2997F2005E4EB0051B7AC /* View */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		08B299532005E4EB0051B7AC /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				08B299722005E4EB0051B7AC /* Navigation */,
-				08B299772005E4EB0051B7AC /* AQViewController.h */,
-				08B2996E2005E4EB0051B7AC /* AQViewController.m */,
-				08B299712005E4EB0051B7AC /* ContactsListViewController.m */,
-				08B299792005E4EB0051B7AC /* CookieViewController.m */,
-				08B299782005E4EB0051B7AC /* DemoViewController.m */,
-				08B2997D2005E4EB0051B7AC /* StandardWebViewController.m */,
-				08B299752005E4EB0051B7AC /* HybridWebViewController.m */,
-				08B2997C2005E4EB0051B7AC /* JumpViewController.m */,
-				08B2996D2005E4EB0051B7AC /* MacAddressViewController.m */,
-				08B299702005E4EB0051B7AC /* MemoryManageController.m */,
-				08B2997B2005E4EB0051B7AC /* MutliThreadController.m */,
-				08B2997E2005E4EB0051B7AC /* MyUIViewController.m */,
-				08B299762005E4EB0051B7AC /* NetworkViewController.m */,
-				08B2996F2005E4EB0051B7AC /* PresentDismissViewController.m */,
-				08B2997A2005E4EB0051B7AC /* RootViewController.h */,
-				08B2996C2005E4EB0051B7AC /* RootViewController.m */,
-				08B299542005E4EB0051B7AC /* ToastViewController.m */,
-				08B299552005E4EB0051B7AC /* WebViewController */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		08B299552005E4EB0051B7AC /* WebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				08B299562005E4EB0051B7AC /* V1 */,
-				08B299662005E4EB0051B7AC /* V2 */,
-			);
-			path = WebViewController;
-			sourceTree = "<group>";
-		};
-		08B299562005E4EB0051B7AC /* V1 */ = {
-			isa = PBXGroup;
-			children = (
-				08B299572005E4EB0051B7AC /* AQWebViewController.m */,
-				08B299582005E4EB0051B7AC /* AQWebViewController.h */,
-				08B299592005E4EB0051B7AC /* Hybrid */,
-			);
-			path = V1;
-			sourceTree = "<group>";
-		};
-		08B299592005E4EB0051B7AC /* Hybrid */ = {
-			isa = PBXGroup;
-			children = (
-				08B2995A2005E4EB0051B7AC /* AQHyBridResult.h */,
-				08B2995B2005E4EB0051B7AC /* AQHybrid.m */,
-				08B2995C2005E4EB0051B7AC /* AQHybridService.h */,
-				08B2995D2005E4EB0051B7AC /* AQHybridHandler.m */,
-				08B2995E2005E4EB0051B7AC /* AQHybridContext.h */,
-				08B2995F2005E4EB0051B7AC /* ALBBHyBridResult.m */,
-				08B299602005E4EB0051B7AC /* AQHybridRegister.m */,
-				08B299612005E4EB0051B7AC /* AQHybrid.h */,
-				08B299622005E4EB0051B7AC /* AQHybridService.m */,
-				08B299632005E4EB0051B7AC /* AQHybridContext.m */,
-				08B299642005E4EB0051B7AC /* AQHybridHandler.h */,
-				08B299652005E4EB0051B7AC /* AQHybridRegister.h */,
-			);
-			path = Hybrid;
-			sourceTree = "<group>";
-		};
-		08B299662005E4EB0051B7AC /* V2 */ = {
-			isa = PBXGroup;
-			children = (
-				08B299672005E4EB0051B7AC /* AQWebViewController2.h */,
-				08B299682005E4EB0051B7AC /* AQWebViewController2.m */,
-				08B299692005E4EB0051B7AC /* Hybrid */,
-			);
-			path = V2;
-			sourceTree = "<group>";
-		};
-		08B299692005E4EB0051B7AC /* Hybrid */ = {
-			isa = PBXGroup;
-			children = (
-				08B2996A2005E4EB0051B7AC /* AQHybrid2.m */,
-				08B2996B2005E4EB0051B7AC /* AQHybrid2.h */,
-			);
-			path = Hybrid;
-			sourceTree = "<group>";
-		};
-		08B299722005E4EB0051B7AC /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				08B299742005E4EB0051B7AC /* AQNavigationController.h */,
-				08B299732005E4EB0051B7AC /* AQNavigationController.m */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		08B2997F2005E4EB0051B7AC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				08B29A28200617C60051B7AC /* webView */,
-				08B299812005E4EB0051B7AC /* UIView+Toast.h */,
-				08B299832005E4EB0051B7AC /* UIView+Toast.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		08B2999F2005E4F10051B7AC /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				08B299A02005E4F10051B7AC /* Cookie */,
-				08B299A32005E4F10051B7AC /* Callback */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		08B299A02005E4F10051B7AC /* Cookie */ = {
-			isa = PBXGroup;
-			children = (
-				08B299A22005E4F10051B7AC /* AQCookieManager.h */,
-				08B299A12005E4F10051B7AC /* AQCookieManager.m */,
-			);
-			path = Cookie;
-			sourceTree = "<group>";
-		};
-		08B299A32005E4F10051B7AC /* Callback */ = {
-			isa = PBXGroup;
-			children = (
-				08B299A52005E4F10051B7AC /* AQBlock.h */,
-				08B299A42005E4F10051B7AC /* AQBlock.m */,
-			);
-			path = Callback;
-			sourceTree = "<group>";
-		};
-		08B299AB200608A00051B7AC /* Crypto */ = {
-			isa = PBXGroup;
-			children = (
-				08B299E8200608A00051B7AC /* AES */,
-				08B299B6200608A00051B7AC /* Core */,
-				08B299AF200608A00051B7AC /* DES */,
-				08B299CD200608A00051B7AC /* Mathematics */,
-				08B299AC200608A00051B7AC /* MD5 */,
-				08B299C2200608A00051B7AC /* RSA */,
-				08B299DF200608A00051B7AC /* SHA */,
-				08B299D6200608A00051B7AC /* Utils */,
-			);
-			path = Crypto;
-			sourceTree = "<group>";
-		};
-		08B299AC200608A00051B7AC /* MD5 */ = {
-			isa = PBXGroup;
-			children = (
-				08B299AE200608A00051B7AC /* MIHMessageDigest5.h */,
-				08B299AD200608A00051B7AC /* MIHMessageDigest5.m */,
-			);
-			path = MD5;
-			sourceTree = "<group>";
-		};
-		08B299AF200608A00051B7AC /* DES */ = {
-			isa = PBXGroup;
-			children = (
-				08B299B0200608A00051B7AC /* MIHDESKey.h */,
-				08B299B1200608A00051B7AC /* MIHDESKeyFactory.h */,
-				08B299B2200608A00051B7AC /* MIHDESKey+Internal.m */,
-				08B299B3200608A00051B7AC /* MIHDESKey.m */,
-				08B299B4200608A00051B7AC /* MIHDESKeyFactory.m */,
-				08B299B5200608A00051B7AC /* MIHDESKey+Internal.h */,
-			);
-			path = DES;
-			sourceTree = "<group>";
-		};
-		08B299B6200608A00051B7AC /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				08B299B7200608A00051B7AC /* MIHPrivateKey.h */,
-				08B299B8200608A00051B7AC /* MIHErrors.h */,
-				08B299B9200608A00051B7AC /* MIHSymmetricKey.h */,
-				08B299BA200608A00051B7AC /* MIHCoding.h */,
-				08B299BB200608A00051B7AC /* MIHKeyPair.m */,
-				08B299BC200608A00051B7AC /* MIHErrors.m */,
-				08B299BD200608A00051B7AC /* MIHKeyFactory.h */,
-				08B299BE200608A00051B7AC /* MIHNumber.h */,
-				08B299BF200608A00051B7AC /* MIHPublicKey.h */,
-				08B299C0200608A00051B7AC /* MIHKeyPair.h */,
-				08B299C1200608A00051B7AC /* MIHHashAlgorithm.h */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		08B299C2200608A00051B7AC /* RSA */ = {
-			isa = PBXGroup;
-			children = (
-				08B299C3200608A00051B7AC /* MIHRSAKeyFactory.h */,
-				08B299C4200608A00051B7AC /* MIHRSAPrivateKey.m */,
-				08B299C5200608A00051B7AC /* MIHRSAPrivateKey+Internal.m */,
-				08B299C6200608A00051B7AC /* MIHRSAPublicKey+Internal.h */,
-				08B299C7200608A00051B7AC /* MIHRSAPublicKey.m */,
-				08B299C8200608A00051B7AC /* MIHRSAPrivateKey.h */,
-				08B299C9200608A00051B7AC /* MIHRSAKeyFactory.m */,
-				08B299CA200608A00051B7AC /* MIHRSAPublicKey+Internal.m */,
-				08B299CB200608A00051B7AC /* MIHRSAPrivateKey+Internal.h */,
-				08B299CC200608A00051B7AC /* MIHRSAPublicKey.h */,
-			);
-			path = RSA;
-			sourceTree = "<group>";
-		};
-		08B299CD200608A00051B7AC /* Mathematics */ = {
-			isa = PBXGroup;
-			children = (
-				08B299CE200608A00051B7AC /* MIHBigInteger+Internal.h */,
-				08B299CF200608A00051B7AC /* MIHBigInteger+Factory.m */,
-				08B299D0200608A00051B7AC /* MIHBigIntegerRange.m */,
-				08B299D1200608A00051B7AC /* MIHBigInteger.h */,
-				08B299D2200608A00051B7AC /* MIHBigIntegerRange.h */,
-				08B299D3200608A00051B7AC /* MIHBigInteger+Factory.h */,
-				08B299D4200608A00051B7AC /* MIHBigInteger+Internal.m */,
-				08B299D5200608A00051B7AC /* MIHBigInteger.m */,
-			);
-			path = Mathematics;
-			sourceTree = "<group>";
-		};
-		08B299D6200608A00051B7AC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				08B299D7200608A00051B7AC /* MIHCryptoConfiguration.m */,
-				08B299D8200608A00051B7AC /* NSString+MIHConversion.h */,
-				08B299D9200608A00051B7AC /* NSData+MIHConversion.h */,
-				08B299DA200608A00051B7AC /* MIHInternal.h */,
-				08B299DB200608A00051B7AC /* NSString+MIHConversion.m */,
-				08B299DC200608A00051B7AC /* MIHCryptoConfiguration.h */,
-				08B299DD200608A00051B7AC /* MIHInternal.m */,
-				08B299DE200608A00051B7AC /* NSData+MIHConversion.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		08B299DF200608A00051B7AC /* SHA */ = {
-			isa = PBXGroup;
-			children = (
-				08B299E0200608A00051B7AC /* MIHSecureHashAlgorithm.h */,
-				08B299E1200608A00051B7AC /* MIHSecureHashAlgorithm256.m */,
-				08B299E2200608A00051B7AC /* MIHSecureHashAlgorithm384.m */,
-				08B299E3200608A00051B7AC /* MIHSecureHashAlgorithm512.m */,
-				08B299E4200608A00051B7AC /* MIHSecureHashAlgorithm.m */,
-				08B299E5200608A00051B7AC /* MIHSecureHashAlgorithm256.h */,
-				08B299E6200608A00051B7AC /* MIHSecureHashAlgorithm512.h */,
-				08B299E7200608A00051B7AC /* MIHSecureHashAlgorithm384.h */,
-			);
-			path = SHA;
-			sourceTree = "<group>";
-		};
-		08B299E8200608A00051B7AC /* AES */ = {
-			isa = PBXGroup;
-			children = (
-				08B299EC200608A00051B7AC /* MIHAESKey.h */,
-				08B299EA200608A00051B7AC /* MIHAESKey.m */,
-				08B299EB200608A00051B7AC /* MIHAESKeyFactory.h */,
-				08B299E9200608A00051B7AC /* MIHAESKeyFactory.m */,
-			);
-			path = AES;
 			sourceTree = "<group>";
 		};
 		08B29A06200608C10051B7AC /* Crypto */ = {
@@ -738,18 +844,11 @@
 			path = AES;
 			sourceTree = "<group>";
 		};
-		08B29A28200617C60051B7AC /* webView */ = {
-			isa = PBXGroup;
-			children = (
-				08B29A29200617C60051B7AC /* AQWebView.h */,
-				08B29A2A200617C60051B7AC /* AQWebView.m */,
-			);
-			path = webView;
-			sourceTree = "<group>";
-		};
 		984D5E8A9E37ED0C2C856308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				083E7C3A20E5D0BA0082EDE0 /* Contacts.framework */,
+				083E7C3820E5D0100082EDE0 /* AddressBook.framework */,
 				08AE6C481F6623B40073A333 /* ExternalAccessory.framework */,
 				08AE6C461F66237D0073A333 /* HomeKit.framework */,
 				08AE6C441F6623720073A333 /* AudioToolbox.framework */,
@@ -786,9 +885,8 @@
 		9A2980301D17DD8E0054D1AB /* aqnote */ = {
 			isa = PBXGroup;
 			children = (
-				081D25521EE69758000DAED1 /* aqnote.entitlements */,
+				083E7C4F20E5E3AC0082EDE0 /* Sources */,
 				9A2980641D17DDF70054D1AB /* Resources */,
-				9A2980671D17DDF70054D1AB /* Sources */,
 				9A2980421D17DD8E0054D1AB /* Info.plist */,
 			);
 			path = aqnote;
@@ -816,26 +914,12 @@
 		9A2980641D17DDF70054D1AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				083E7C4E20E5E3950082EDE0 /* aqnote.entitlements */,
 				9A2980651D17DDF70054D1AB /* AppIcon.xcassets */,
 				9A2980D91D17E1390054D1AB /* aqnote.bundle */,
 				9A2980DF1D17E30C0054D1AB /* Main.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		9A2980671D17DDF70054D1AB /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9A2980681D17DDF70054D1AB /* AppDelegate.h */,
-				9A2980691D17DDF70054D1AB /* AppDelegate.m */,
-				9A2980851D17DDF70054D1AB /* main.m */,
-				08B2999F2005E4F10051B7AC /* Components */,
-				08B299AB200608A00051B7AC /* Crypto */,
-				08B299462005E3730051B7AC /* Device */,
-				08B299522005E4EB0051B7AC /* UI */,
-				9A4808CA1D40D9E2006B8393 /* Utils */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		9A29809C1D17DE520054D1AB /* Sources */ = {
@@ -859,19 +943,6 @@
 				08F3AE711FD1223D0056A43F /* BoolTest.m */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		9A4808CA1D40D9E2006B8393 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				08B299A82005E56C0051B7AC /* NSString+aqnote.h */,
-				08B299A92005E56C0051B7AC /* NSString+aqnote.m */,
-				08959FEE1F32F6910010FE1B /* AQKeychain.h */,
-				08959FEF1F32F6910010FE1B /* AQKeychain.m */,
-				9A4808CB1D40D9E2006B8393 /* AQUtils.h */,
-				9A4808CC1D40D9E2006B8393 /* AQUtils.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		9A596CC91D42236600117C0F /* misc */ = {
@@ -898,8 +969,6 @@
 				9A29802A1D17DD8E0054D1AB /* Sources */,
 				9A29802B1D17DD8E0054D1AB /* Frameworks */,
 				9A29802C1D17DD8E0054D1AB /* Resources */,
-				AE5B534881D431654D9D776D /* [CP] Embed Pods Frameworks */,
-				A3C3C6CDD77DC632095E3AAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -918,8 +987,6 @@
 				9A2980431D17DD8E0054D1AB /* Sources */,
 				9A2980441D17DD8E0054D1AB /* Frameworks */,
 				9A2980451D17DD8E0054D1AB /* Resources */,
-				EA1B3AFD7EF9A6CECEC8E0F3 /* [CP] Embed Pods Frameworks */,
-				0123C4EC4123BE104A233FA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -939,8 +1006,6 @@
 				9A29804E1D17DD8E0054D1AB /* Sources */,
 				9A29804F1D17DD8E0054D1AB /* Frameworks */,
 				9A2980501D17DD8E0054D1AB /* Resources */,
-				41FB292D34FBB43BE6FDFFBD /* [CP] Copy Pods Resources */,
-				4366042EBD61BA11FA6D6A9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1049,51 +1114,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0123C4EC4123BE104A233FA7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnoteTests/Pods-aqnoteTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41FB292D34FBB43BE6FDFFBD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnoteUITests/Pods-aqnoteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4366042EBD61BA11FA6D6A9B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnoteUITests/Pods-aqnoteUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7D6B0591234940A700745884 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1110,36 +1130,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3C3C6CDD77DC632095E3AAE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnote/Pods-aqnote-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE5B534881D431654D9D776D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnote/Pods-aqnote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5FB57B3419E5DA36B0F62F3 /* [CP] Check Pods Manifest.lock */ = {
@@ -1178,21 +1168,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA1B3AFD7EF9A6CECEC8E0F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aqnoteTests/Pods-aqnoteTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1200,67 +1175,70 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08B2999A2005E4EB0051B7AC /* JumpViewController.m in Sources */,
-				9A29808A1D17DDF70054D1AB /* AppDelegate.m in Sources */,
-				08B299512005E3730051B7AC /* NICInfoSummary.m in Sources */,
-				08B299F5200608A00051B7AC /* MIHRSAPublicKey.m in Sources */,
-				08B299ED200608A00051B7AC /* MIHMessageDigest5.m in Sources */,
-				08B2998C2005E4EB0051B7AC /* AQWebViewController2.m in Sources */,
-				08B299962005E4EB0051B7AC /* NetworkViewController.m in Sources */,
-				08B299F1200608A00051B7AC /* MIHKeyPair.m in Sources */,
-				08B299872005E4EB0051B7AC /* AQHybridHandler.m in Sources */,
-				08B29A04200608A00051B7AC /* MIHAESKeyFactory.m in Sources */,
-				08B2999B2005E4EB0051B7AC /* StandardWebViewController.m in Sources */,
-				08B299EF200608A00051B7AC /* MIHDESKey.m in Sources */,
-				08B29A2B200617C60051B7AC /* AQWebView.m in Sources */,
-				08B2998B2005E4EB0051B7AC /* AQHybridContext.m in Sources */,
-				08B2999E2005E4EB0051B7AC /* UIView+Toast.m in Sources */,
-				08B299A72005E4F10051B7AC /* AQBlock.m in Sources */,
-				08B299FC200608A00051B7AC /* MIHCryptoConfiguration.m in Sources */,
-				08B299972005E4EB0051B7AC /* DemoViewController.m in Sources */,
-				08B299AA2005E56C0051B7AC /* NSString+aqnote.m in Sources */,
-				08B299FD200608A00051B7AC /* NSString+MIHConversion.m in Sources */,
-				08B299F2200608A00051B7AC /* MIHErrors.m in Sources */,
-				08B29A00200608A00051B7AC /* MIHSecureHashAlgorithm256.m in Sources */,
-				08B29A02200608A00051B7AC /* MIHSecureHashAlgorithm512.m in Sources */,
-				08B299F7200608A00051B7AC /* MIHRSAPublicKey+Internal.m in Sources */,
-				08B299F9200608A00051B7AC /* MIHBigIntegerRange.m in Sources */,
-				08B2998F2005E4EB0051B7AC /* MacAddressViewController.m in Sources */,
-				08B29A01200608A00051B7AC /* MIHSecureHashAlgorithm384.m in Sources */,
-				08B299F8200608A00051B7AC /* MIHBigInteger+Factory.m in Sources */,
-				08B2998A2005E4EB0051B7AC /* AQHybridService.m in Sources */,
-				08B299F0200608A00051B7AC /* MIHDESKeyFactory.m in Sources */,
-				08B299912005E4EB0051B7AC /* PresentDismissViewController.m in Sources */,
-				08B299882005E4EB0051B7AC /* ALBBHyBridResult.m in Sources */,
-				08B299942005E4EB0051B7AC /* AQNavigationController.m in Sources */,
-				08B299842005E4EB0051B7AC /* ToastViewController.m in Sources */,
-				08B299FE200608A00051B7AC /* MIHInternal.m in Sources */,
-				08959FF01F32F6910010FE1B /* AQKeychain.m in Sources */,
-				08B299982005E4EB0051B7AC /* CookieViewController.m in Sources */,
-				08B29A05200608A00051B7AC /* MIHAESKey.m in Sources */,
-				08B29A03200608A00051B7AC /* MIHSecureHashAlgorithm.m in Sources */,
-				08B299A62005E4F10051B7AC /* AQCookieManager.m in Sources */,
-				08B2999C2005E4EB0051B7AC /* MyUIViewController.m in Sources */,
-				08B299FF200608A00051B7AC /* NSData+MIHConversion.m in Sources */,
-				08B299992005E4EB0051B7AC /* MutliThreadController.m in Sources */,
-				08B299FB200608A00051B7AC /* MIHBigInteger.m in Sources */,
-				08B299EE200608A00051B7AC /* MIHDESKey+Internal.m in Sources */,
-				9A4808CD1D40D9E2006B8393 /* AQUtils.m in Sources */,
-				08B2998D2005E4EB0051B7AC /* AQHybrid2.m in Sources */,
-				08B299952005E4EB0051B7AC /* HybridWebViewController.m in Sources */,
-				9A29809A1D17DDF70054D1AB /* main.m in Sources */,
-				08B299FA200608A00051B7AC /* MIHBigInteger+Internal.m in Sources */,
-				08B299922005E4EB0051B7AC /* MemoryManageController.m in Sources */,
-				08B299902005E4EB0051B7AC /* AQViewController.m in Sources */,
-				08B299F6200608A00051B7AC /* MIHRSAKeyFactory.m in Sources */,
-				08B299862005E4EB0051B7AC /* AQHybrid.m in Sources */,
-				08B299932005E4EB0051B7AC /* ContactsListViewController.m in Sources */,
-				08B299F4200608A00051B7AC /* MIHRSAPrivateKey+Internal.m in Sources */,
-				08B2998E2005E4EB0051B7AC /* RootViewController.m in Sources */,
-				08B299502005E3730051B7AC /* NICInfo.m in Sources */,
-				08B299852005E4EB0051B7AC /* AQWebViewController.m in Sources */,
-				08B299F3200608A00051B7AC /* MIHRSAPrivateKey.m in Sources */,
-				08B299892005E4EB0051B7AC /* AQHybridRegister.m in Sources */,
+				083E7D1720E5E3AC0082EDE0 /* AQButtonViewController.m in Sources */,
+				083E7D1A20E5E3AC0082EDE0 /* AQViewController.m in Sources */,
+				083E7D2020E5E3AC0082EDE0 /* AQCookieManager.m in Sources */,
+				083E7D1120E5E3AC0082EDE0 /* AQHybrid2.m in Sources */,
+				083E7CE920E5E3AC0082EDE0 /* UIView+Toast.m in Sources */,
+				083E7CEF20E5E3AC0082EDE0 /* MIHErrors.m in Sources */,
+				083E7CE820E5E3AC0082EDE0 /* AQWebView.m in Sources */,
+				083E7CEC20E5E3AC0082EDE0 /* MIHDESKey.m in Sources */,
+				083E7CF220E5E3AC0082EDE0 /* MIHRSAPublicKey.m in Sources */,
+				083E7CEB20E5E3AC0082EDE0 /* MIHDESKey+Internal.m in Sources */,
+				083E7D1F20E5E3AC0082EDE0 /* MutliThreadController.m in Sources */,
+				083E7D1820E5E3AC0082EDE0 /* AQRootViewController.m in Sources */,
+				083E7CFE20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm384.m in Sources */,
+				083E7CF320E5E3AC0082EDE0 /* MIHRSAKeyFactory.m in Sources */,
+				083E7CFD20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm256.m in Sources */,
+				083E7D2220E5E3AC0082EDE0 /* main.m in Sources */,
+				083E7D0E20E5E3AC0082EDE0 /* AQHybridContext.m in Sources */,
+				083E7CED20E5E3AC0082EDE0 /* MIHDESKeyFactory.m in Sources */,
+				083E7CEA20E5E3AC0082EDE0 /* MIHMessageDigest5.m in Sources */,
+				083E7D0720E5E3AC0082EDE0 /* AQTableViewController.m in Sources */,
+				083E7CF720E5E3AC0082EDE0 /* MIHBigInteger+Internal.m in Sources */,
+				083E7CF920E5E3AC0082EDE0 /* MIHCryptoConfiguration.m in Sources */,
+				083E7D1D20E5E3AC0082EDE0 /* AddressListViewController.m in Sources */,
+				083E7CFC20E5E3AC0082EDE0 /* NSData+MIHConversion.m in Sources */,
+				083E7D2B20E5E84B0082EDE0 /* NDeviceMacAddressViewController.m in Sources */,
+				083E7D0D20E5E3AC0082EDE0 /* AQHybridService.m in Sources */,
+				083E7D1320E5E3AC0082EDE0 /* CookieViewController.m in Sources */,
+				083E7D0220E5E3AC0082EDE0 /* MIHAESKey.m in Sources */,
+				083E7D2D20E5E9510082EDE0 /* AQThreadViewController.m in Sources */,
+				083E7D0620E5E3AC0082EDE0 /* AQJumpViewController.m in Sources */,
+				083E7D0920E5E3AC0082EDE0 /* AQHybrid.m in Sources */,
+				083E7D2520E5E3AC0082EDE0 /* NICInfoSummary.m in Sources */,
+				083E7D0F20E5E3AC0082EDE0 /* StandardWebViewController.m in Sources */,
+				083E7D1220E5E3AC0082EDE0 /* HybridWebViewController.m in Sources */,
+				083E7D0320E5E3AC0082EDE0 /* NSString+aqnote.m in Sources */,
+				083E7D2720E5E80E0082EDE0 /* AQNetworkViewController.m in Sources */,
+				083E7CFF20E5E3AC0082EDE0 /* MIHSecureHashAlgorithm512.m in Sources */,
+				083E7D2A20E5E84B0082EDE0 /* MonitorNetworkViewController.m in Sources */,
+				083E7D2420E5E3AC0082EDE0 /* NICInfo.m in Sources */,
+				083E7CF520E5E3AC0082EDE0 /* MIHBigInteger+Factory.m in Sources */,
+				083E7D0A20E5E3AC0082EDE0 /* AQHybridHandler.m in Sources */,
+				083E7D0020E5E3AC0082EDE0 /* MIHSecureHashAlgorithm.m in Sources */,
+				083E7D0420E5E3AC0082EDE0 /* AQKeychain.m in Sources */,
+				083E7CEE20E5E3AC0082EDE0 /* MIHKeyPair.m in Sources */,
+				083E7CF120E5E3AC0082EDE0 /* MIHRSAPrivateKey+Internal.m in Sources */,
+				083E7D1520E5E3AC0082EDE0 /* AQUIViewController.m in Sources */,
+				083E7CF620E5E3AC0082EDE0 /* MIHBigIntegerRange.m in Sources */,
+				083E7D0B20E5E3AC0082EDE0 /* ALBBHyBridResult.m in Sources */,
+				083E7CF420E5E3AC0082EDE0 /* MIHRSAPublicKey+Internal.m in Sources */,
+				083E7D2320E5E3AC0082EDE0 /* AppDelegate.m in Sources */,
+				083E7D0820E5E3AC0082EDE0 /* AQWebViewController.m in Sources */,
+				083E7D1920E5E3AC0082EDE0 /* MemoryManageController.m in Sources */,
+				083E7CF820E5E3AC0082EDE0 /* MIHBigInteger.m in Sources */,
+				083E7D1020E5E3AC0082EDE0 /* AQWebViewController2.m in Sources */,
+				083E7D2120E5E3AC0082EDE0 /* AQBlock.m in Sources */,
+				083E7CF020E5E3AC0082EDE0 /* MIHRSAPrivateKey.m in Sources */,
+				083E7D1620E5E3AC0082EDE0 /* AQPresentDismissViewController.m in Sources */,
+				083E7D0120E5E3AC0082EDE0 /* MIHAESKeyFactory.m in Sources */,
+				083E7D0520E5E3AC0082EDE0 /* AQUtils.m in Sources */,
+				083E7CFA20E5E3AC0082EDE0 /* NSString+MIHConversion.m in Sources */,
+				083E7CFB20E5E3AC0082EDE0 /* MIHInternal.m in Sources */,
+				083E7D1B20E5E3AC0082EDE0 /* AQNavigationController.m in Sources */,
+				083E7D1420E5E3AC0082EDE0 /* AQToastViewController.m in Sources */,
+				083E7D0C20E5E3AC0082EDE0 /* AQHybridRegister.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
