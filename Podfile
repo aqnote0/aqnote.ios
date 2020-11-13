@@ -1,7 +1,7 @@
 platform :ios, '6.0'
 
 #source 'git@github.com:aqnote/specs.git'
-source 'https://github.com/aqnotecom/com.aqnote.ios.specs.git'
+source 'https://github.com/aqnote0/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 #post_install do |installer_representation|
